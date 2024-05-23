@@ -1,0 +1,166 @@
+.text-body {
+  background: #d8d8d8;
+  width: 100%;
+  height: 100vh;
+  .text-box {
+    .content-box {
+      display: flex;
+      justify-content: center;
+      padding-top: 20vw;
+      height: 100vh;
+
+      .black-box {
+        font-family: "Cormorant Garamond";
+        font-size: 2vw;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        color: #232323;
+        .black1 {
+          //   clip-path: polygon(0 100%, 0 24%, 100% 100%, 100% 76%);
+          //   clip-path: polygon(0 100%, 0 75%, 100% 100%, 100% 100%);
+          z-index: 1;
+          .clip-text {
+            div {
+              div {
+                clip-path: inset(100% 0% 0% 0%);
+              }
+            }
+          }
+        }
+        .black2 {
+          z-index: 1;
+          .clip-text {
+            div {
+              div {
+                clip-path: inset(100% 0% 0% 0%);
+              }
+            }
+          }
+        }
+        .black3 {
+          z-index: 1;
+          .clip-text {
+            div {
+              div {
+                clip-path: inset(100% 0% 0% 0%);
+              }
+            }
+          }
+        }
+        .black4 {
+          z-index: 1;
+          .clip-text {
+            div {
+              div {
+                clip-path: inset(100% 0% 0% 0%);
+              }
+            }
+          }
+        }
+
+        .gold-box {
+          font-family: "Cormorant Garamond";
+          font-size: 2vw;
+          display: flex;
+          position: absolute;
+          flex-direction: column;
+          color: #dda868;
+          top: 0px;
+          left: 0px;
+          .gold1 {
+            z-index: 10;
+            .clip-text {
+              div {
+                div {
+                  clip-path: inset(100% 0% 0% 0%);
+                }
+              }
+            }
+          }
+          .gold2 {
+            z-index: 10;
+            .clip-text {
+              div {
+                div {
+                  clip-path: inset(100% 0% 0% 0%);
+                }
+              }
+            }
+          }
+          .gold3 {
+            z-index: 10;
+            .clip-text {
+              div {
+                div {
+                  clip-path: inset(100% 0% 0% 0%);
+                }
+              }
+            }
+          }
+          .gold4 {
+            z-index: 10;
+            .clip-text {
+              div {
+                div {
+                  clip-path: inset(100% 0% 0% 0%);
+                }
+              }
+            }
+          }
+        }
+
+        .black2-box {
+          font-family: "Cormorant Garamond";
+          font-size: 2vw;
+          display: flex;
+          position: absolute;
+          flex-direction: column;
+          top: 0px;
+          left: 0px;
+          color: #232323;
+          .black2-1 {
+            z-index: 20;
+            .clip-text {
+              div {
+                div {
+                  clip-path: inset(100% 0% 0% 0%);
+                }
+              }
+            }
+          }
+          .black2-2 {
+            z-index: 20;
+            .clip-text {
+              div {
+                div {
+                  clip-path: inset(100% 0% 0% 0%);
+                }
+              }
+            }
+          }
+          .black2-3 {
+            z-index: 20;
+            .clip-text {
+              div {
+                div {
+                  clip-path: inset(100% 0% 0% 0%);
+                }
+              }
+            }
+          }
+          .black2-4 {
+            z-index: 20;
+            .clip-text {
+              div {
+                div {
+                  clip-path: inset(100% 0% 0% 0%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
