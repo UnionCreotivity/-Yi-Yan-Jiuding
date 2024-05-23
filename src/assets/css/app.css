@@ -160,8 +160,8 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-mask-image: url(../assets/images/資產.svg);
-          mask-image: url(../assets/images/資產.svg);
+  -webkit-mask-image: url(../images/資產.svg);
+          mask-image: url(../images/資產.svg);
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-size: 0%;
