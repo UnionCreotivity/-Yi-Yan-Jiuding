@@ -2,6 +2,33 @@
   background: #d8d8d8;
   width: 100%;
   // height: 100vh;
+  .loading-screen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999999;
+    background: #d8d8d8;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    overflow: hidden;
+
+    .logo-box {
+      margin-right: 3vw;
+
+      .loading-text {
+        font-family: "Noto Serif TC";
+        align-items: center;
+
+        font-size: 9vw;
+
+        color: #000;
+      }
+    }
+  }
   .main-ani-box {
     .index-box {
       overflow: hidden;

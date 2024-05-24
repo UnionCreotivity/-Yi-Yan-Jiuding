@@ -5,40 +5,53 @@ window.onload = function () {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-    // 獲取畫布元素
-    // let canvasEl = document.getElementById('canvas');
-    // let context = canvasEl.getContext('2d');
+    function videoChange() {
+        const videoSources = [
+            "../assets/images/BG_black_1.mp4",
+            "../assets/images/BG_blue_1.mp4",
 
-    // // 創建視頻元素
-    // let videoEl = document.createElement('video');
-    // videoEl.src = '/src/assets/images/BG_black_1.mp4';
-    // videoEl.muted = true; // 靜音
-    // videoEl.autoplay = false; // 關閉自動播放
-    // videoEl.playsInline = true; // 使其能在行內播放（移動端適用）
-    // videoEl.style.display = 'none'; // 隱藏視頻元素
-    // document.body.appendChild(videoEl);
+        ];
 
-    // // 當視頻資料加載完成後設定畫布尺寸
-    // videoEl.addEventListener('loadeddata', function () {
-    //     canvasEl.width = videoEl.videoWidth;
-    //     canvasEl.height = videoEl.videoHeight;
-    //     // 在觸摸事件中開始播放影片
-    //     canvasEl.addEventListener('touchstart', function () {
-    //         if (videoEl.paused) {
-    //             videoEl.play();
-    //         }
-    //     });
-    //     updateCanvas();
-    // });
 
-    // function updateCanvas() {
-    //     if (!videoEl.paused && !videoEl.ended) {
-    //         // 繪製視頻幀到畫布上
-    //         context.drawImage(videoEl, 0, 0, canvasEl.width, canvasEl.height);
-    //         // 請求下一幀
-    //         requestAnimationFrame(updateCanvas);
-    //     }
-    // }
+        const randomIndex = Math.floor(Math.random() * videoSources.length);
+        const selectedVideo = videoSources[randomIndex];
+
+
+        const videoElement = document.getElementById('video');
+        videoElement.src = selectedVideo;
+
+    }
+    videoChange();
+
+    function loading() {
+        let loadingScreen = document.querySelector(".loading-screen");
+        let allBody = document.querySelector(".container");
+
+        let loadingText = document.getElementById("loading-text");
+        let percent = 1;
+
+        function updateProgress() {
+
+            loadingText.textContent = percent;
+            percent++;
+            if (percent <= 100) {
+                setTimeout(updateProgress, 10);
+            } else {
+
+                let tl = gsap.timeline({});
+                tl.to(loadingText, { duration: 1, y: '100%', ease: 'power2.inOut' })
+                    .to(loadingScreen, { duration: 1, opacity: 0, y: '-100%', ease: "power1.inOut" }, '<0.5')
+                    .to(allBody, { duration: 1, opacity: 1 }, '<0.3')
+                    .to(loadingScreen, { duration: 1, display: 'none', })
+
+                openAni();
+            }
+
+        }
+
+        updateProgress();
+    }
+    loading()
 
     function c1Ani() {
         let title1 = gsap.utils.toArray(".index-box .content-box .title-1");
@@ -58,10 +71,10 @@ window.onload = function () {
             scrollTrigger: {
                 trigger: '.content-box',
                 start: 'top top',
-                end: '+=100%',
+                end: '+=150%',
                 scrub: 2,
                 pin: true,
-                pinSpacing: false
+                pinSpacing: false,
             }
         });
 
@@ -156,10 +169,10 @@ window.onload = function () {
                 // start: 'top top',
                 // end: '+=100%',
                 start: 'top top',
-                end: '+=350%',
+                end: '+=400%',
                 scrub: 3,
                 pin: true,
-                pinSpacing: true
+                pinSpacing: true,
             }
         });
         tl
