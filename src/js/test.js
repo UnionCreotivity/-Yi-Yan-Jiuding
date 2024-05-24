@@ -4,7 +4,7 @@ window.onload = function () {
     var window_height = window.innerHeight;
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
-
+    var selectedVideo;
     function videoChange() {
         const videoSources = [
             "../assets/images/BG_black_1.mp4",
@@ -12,9 +12,8 @@ window.onload = function () {
 
         ];
 
-
         const randomIndex = Math.floor(Math.random() * videoSources.length);
-        const selectedVideo = videoSources[randomIndex];
+        selectedVideo = videoSources[randomIndex];
 
 
         const videoElement = document.getElementById('video');
@@ -22,6 +21,12 @@ window.onload = function () {
 
     }
     videoChange();
+
+    function videoMask() {
+        const videoElement = document.getElementById('c2-mask-video');
+        videoElement.src = selectedVideo;
+    }
+    videoMask();
 
     function loading() {
         let loadingScreen = document.querySelector(".loading-screen");
@@ -51,7 +56,7 @@ window.onload = function () {
 
         updateProgress();
     }
-    loading()
+    loading();
 
     function c1Ani() {
         let title1 = gsap.utils.toArray(".index-box .content-box .title-1");
@@ -71,7 +76,7 @@ window.onload = function () {
             scrollTrigger: {
                 trigger: '.content-box',
                 start: 'top top',
-                end: '+=150%',
+                end: '+=170%',
                 scrub: 2,
                 pin: true,
                 pinSpacing: false,
@@ -107,6 +112,7 @@ window.onload = function () {
             }, '<')
             .to('.outer', {
                 clipPath: 'polygon(-20% -20%, 120% 107%, 120% 120%, -20% -7%)',
+
             })
             .to(splitEN1[0].chars, {
                 duration: 1,
@@ -137,6 +143,7 @@ window.onload = function () {
             }, '<')
             .to('.outer', {
                 clipPath: 'polygon(50% 0%, 50% 100%, 50% 100%, 50% 0%)', //直線
+
             }, '<0.6')
             .to('.c1-logo', {
                 opacity: 0,
@@ -169,7 +176,7 @@ window.onload = function () {
                 // start: 'top top',
                 // end: '+=100%',
                 start: 'top top',
-                end: '+=400%',
+                end: '+=490%',
                 scrub: 3,
                 pin: true,
                 pinSpacing: true,
@@ -268,10 +275,10 @@ window.onload = function () {
             .to('.red-logo', { duration: 1, opacity: 1, }, '<0.8')
             .to('.red-logo', { duration: 1, opacity: 0, }, '<0.15')
             .to('.c2-img', { duration: 1, opacity: 1, ease: 'power1.inOut', }, '<0.2')
-            .to('.c2-video', { duration: 1, maskSize: '7%', ease: 'power1.inOut' }, '<0.3')
+            .to('.c2-video', { duration: 3, maskSize: '7%', ease: 'power1.inOut' }, '<0.3')
             .fromTo('.c2-video', { maskPosition: '53%' },
-                { duration: 5, maskSize: '1300%', maskPosition: '45%' })
-            .to('.black-box', { duration: 2, y: '-40vw' }, '<0.3')
+                { duration: 5, maskSize: '1300%', maskPosition: '45%', ease: 'power1.inOut' })
+            .to('.black-box', { duration: 2, y: '-40vw' }, '<0.6')
             .fromTo('.card3', { y: '10vw' }, { y: 0, duration: 3, opacity: 1, ease: 'power1.inOut', }, '<2')
 
 
