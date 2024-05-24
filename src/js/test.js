@@ -258,7 +258,7 @@ window.onload = function () {
             .to('.c2-video', { duration: 1, maskSize: '7%', ease: 'power1.inOut' }, '<0.3')
             .fromTo('.c2-video', { maskPosition: '53%' },
                 { duration: 5, maskSize: '1300%', maskPosition: '45%' })
-            .to('.black-box', { duration: 2, y: '-30vw' }, '<0.3')
+            .to('.black-box', { duration: 2, y: '-40vw' }, '<0.3')
             .fromTo('.card3', { y: '10vw' }, { y: 0, duration: 3, opacity: 1, ease: 'power1.inOut', }, '<2')
 
 

@@ -128,6 +128,26 @@
   padding-right: 42vw !important;
   position: relative;
 }
+@media all and (max-width: 1920px) {
+  .test-body .main-ani-box .text-box .c2-text-content-box {
+    padding-top: 23vw;
+  }
+}
+@media all and (max-width: 1440px) {
+  .test-body .main-ani-box .text-box .c2-text-content-box {
+    padding-top: 29%;
+  }
+}
+@media all and (max-width: 1366px) {
+  .test-body .main-ani-box .text-box .c2-text-content-box {
+    padding-top: 22%;
+  }
+}
+@media all and (max-width: 1280px) {
+  .test-body .main-ani-box .text-box .c2-text-content-box {
+    padding-top: 28%;
+  }
+}
 .test-body .main-ani-box .text-box .c2-text-content-box .red-logo {
   position: absolute;
   width: 2%;
