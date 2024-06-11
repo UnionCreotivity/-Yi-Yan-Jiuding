@@ -76,9 +76,9 @@ window.onload = function () {
 
         loop: true,
         speed: 1500,
-        // autoplay: {
-        //     delay: 3000,
-        // },
+        autoplay: {
+            delay: 3000,
+        },
 
         navigation: {
             nextEl: ".news-next",
@@ -103,6 +103,7 @@ window.onload = function () {
             loop: true,
             spaceBetween: 20,
             allowTouchMove: false,
+            speed: 1500,
             on: {
                 init: function (swiper) {
                     rightSwiperIndex = this.activeIndex;
@@ -119,7 +120,11 @@ window.onload = function () {
                 nextEl: ".left-swiper-next",
                 prevEl: ".left-swiper-prev",
             },
-
+            speed: 1500,
+            autoplay: {
+                delay: 3000,
+            },
+            allowTouchMove: false,
             on: {
                 slideNextTransitionStart: function (swiper) {
                     rightSwiper.slideNext();
