@@ -3543,6 +3543,11 @@ footer div {
   margin-top: 8vw;
   width: 63%;
 }
+@media all and (max-width: 1920px) {
+  .project-content-body .project-content-container .reserve-box {
+    width: 70%;
+  }
+}
 .project-content-body .project-content-container .reserve-box .reserve-title-box {
   display: flex;
   flex-direction: column;
@@ -3580,12 +3585,16 @@ footer div {
   display: flex;
   padding: 3.5vw 4vw;
   margin-top: 2.5vw;
-  min-width: 1560px;
 }
 .project-content-body .project-content-container .reserve-box .form-box .left-box {
   display: flex;
   flex-direction: column;
   width: 70%;
+}
+@media all and (max-width: 1680px) {
+  .project-content-body .project-content-container .reserve-box .form-box .left-box {
+    width: 94%;
+  }
 }
 .project-content-body .project-content-container .reserve-box .form-box .left-box .input-box {
   display: flex;
@@ -3603,6 +3612,11 @@ footer div {
   -moz-text-align-last: justify;
        text-align-last: justify;
   align-self: center;
+}
+@media all and (max-width: 1680px) {
+  .project-content-body .project-content-container .reserve-box .form-box .left-box .input-box .input-title {
+    width: 20%;
+  }
 }
 .project-content-body .project-content-container .reserve-box .form-box .left-box .input-box span {
   color: #ff0000;
@@ -3638,6 +3652,11 @@ footer div {
   -moz-text-align-last: justify;
        text-align-last: justify;
 }
+@media all and (max-width: 1680px) {
+  .project-content-body .project-content-container .reserve-box .form-box .left-box .textarea-box .input-title {
+    width: 20%;
+  }
+}
 .project-content-body .project-content-container .reserve-box .form-box .left-box .textarea-box textarea {
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
@@ -3652,6 +3671,21 @@ footer div {
   width: 75%;
   padding-left: 1vw;
   font-family: "Noto Serif TC";
+}
+@media all and (max-width: 1920px) {
+  .project-content-body .project-content-container .reserve-box .form-box .left-box .textarea-box textarea {
+    height: 18.9vw;
+  }
+}
+@media all and (max-width: 1366px) {
+  .project-content-body .project-content-container .reserve-box .form-box .left-box .textarea-box textarea {
+    height: 19.5vw;
+  }
+}
+@media all and (max-width: 1280px) {
+  .project-content-body .project-content-container .reserve-box .form-box .left-box .textarea-box textarea {
+    height: 20.5vw;
+  }
 }
 .project-content-body .project-content-container .reserve-box .form-box .left-box .button-box {
   display: flex;

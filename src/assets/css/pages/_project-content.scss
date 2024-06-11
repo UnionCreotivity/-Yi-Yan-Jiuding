@@ -212,7 +212,9 @@
       margin: 0 auto;
       margin-top: 8vw;
       width: 63%;
-
+      @media all and (max-width: 1920px) {
+        width: 70%;
+      }
       .reserve-title-box {
         display: flex;
         flex-direction: column;
@@ -231,12 +233,14 @@
         display: flex;
         padding: 3.5vw 4vw;
         margin-top: 2.5vw;
-        min-width: 1560px;
+        // min-width: 1560px;
         .left-box {
           display: flex;
           flex-direction: column;
           width: 70%;
-
+          @media all and (max-width: 1680px) {
+            width: 94%;
+          }
           .input-box {
             display: flex;
             margin-bottom: 1.5vw;
@@ -251,6 +255,10 @@
               display: block;
               text-align-last: justify;
               align-self: center;
+
+              @media all and (max-width: 1680px) {
+                width: 20%;
+              }
             }
             span {
               color: #ff0000;
@@ -286,6 +294,10 @@
 
               display: block;
               text-align-last: justify;
+
+              @media all and (max-width: 1680px) {
+                width: 20%;
+              }
             }
             textarea {
               background-color: rgb(rgb(255, 255, 255), 0.5);
@@ -301,6 +313,15 @@
               width: 75%;
               padding-left: 1vw;
               font-family: "Noto Serif TC";
+              @media all and (max-width: 1920px) {
+                height: 18.9vw;
+              }
+              @media all and (max-width: 1366px) {
+                height: 19.5vw;
+              }
+              @media all and (max-width: 1280px) {
+                height: 20.5vw;
+              }
             }
           }
 
@@ -325,6 +346,7 @@
         }
         .right-box {
           text-align: end;
+
           img {
             width: 90%;
           }
