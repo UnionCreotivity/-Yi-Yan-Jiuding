@@ -22,7 +22,7 @@
 
     @media all and (max-width: 1440px) {
       padding-top: 13vw;
-      height: 100vh;
+      height: 94vh;
     }
 
     @media all and (max-width: 1366px) {
@@ -210,6 +210,17 @@
       line-height: 1.2;
       right: 7vw;
       bottom: 4vw;
+      @media all and (max-width: 1920px) {
+        bottom: 4%;
+      }
+
+      @media all and (max-width: 1680px) {
+        bottom: 13%;
+      }
+
+      @media all and (max-width: 1440px) {
+        bottom: 8%;
+      }
 
       @media all and (max-width: 1024px) {
         font-size: $font-moblie-45;

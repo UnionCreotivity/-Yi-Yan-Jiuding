@@ -332,7 +332,7 @@ footer div {
 @media all and (max-width: 1440px) {
   .index-body .c1-container {
     padding-top: 13vw;
-    height: 100vh;
+    height: 94vh;
   }
 }
 @media all and (max-width: 1366px) {
@@ -525,6 +525,21 @@ footer div {
   line-height: 1.2;
   right: 7vw;
   bottom: 4vw;
+}
+@media all and (max-width: 1920px) {
+  .index-body .c1-container .title-box {
+    bottom: 4%;
+  }
+}
+@media all and (max-width: 1680px) {
+  .index-body .c1-container .title-box {
+    bottom: 13%;
+  }
+}
+@media all and (max-width: 1440px) {
+  .index-body .c1-container .title-box {
+    bottom: 8%;
+  }
 }
 @media all and (max-width: 1024px) {
   .index-body .c1-container .title-box {
