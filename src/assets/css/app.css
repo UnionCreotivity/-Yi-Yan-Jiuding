@@ -332,7 +332,7 @@ footer div {
 @media all and (max-width: 1440px) {
   .index-body .c1-container {
     padding-top: 13vw;
-    height: 94vh;
+    height: 100vh;
   }
 }
 @media all and (max-width: 1366px) {
