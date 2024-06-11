@@ -342,11 +342,17 @@
     }
 
     .scroll-top {
-      width: 2vw;
+      width: 3vw;
       position: absolute;
-      bottom: 8vw;
+      bottom: 10vw;
       right: 16vw;
       cursor: pointer;
+
+      @media all and (max-width: 1024px) {
+        width: 7vw;
+        bottom: 10%;
+        right: 7%;
+      }
     }
   }
 }

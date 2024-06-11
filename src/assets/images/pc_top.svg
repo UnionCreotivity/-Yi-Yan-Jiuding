@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.77 106.97">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #757575;
+        font-family: CormorantGaramond-SemiBold, 'Cormorant Garamond';
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #aaa;
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        letter-spacing: .2em;
+      }
+
+      .cls-5 {
+        letter-spacing: .18em;
+      }
+    </style>
+  </defs>
+  <g id="text">
+    <g>
+      <text class="cls-1" transform="translate(23.01 74.23) rotate(90)"><tspan class="cls-5" x="0" y="0">T</tspan><tspan class="cls-4" x="11.54" y="0">OP</tspan></text>
+      <g>
+        <circle class="cls-3" cx="27.39" cy="27.39" r="27.39"/>
+        <polyline class="cls-2" points="22.41 25.09 28.36 14.24 28.36 41.81"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -182,6 +182,12 @@
           bottom: 0vw;
           right: 16vw;
           cursor: pointer;
+
+          @media all and (max-width: 1024px) {
+            width: 7vw;
+            // bottom: 10%;
+            right: 7%;
+          }
         }
       }
     }
