@@ -13,7 +13,7 @@
       padding-top: 13.5vw;
     }
     @media all and (max-width: 1440px) {
-      padding-top: 15vw;
+      padding-top: 13vw;
     }
     .top-content-box {
       display: flex;
@@ -136,9 +136,7 @@
       @media all and (max-width: 1680px) {
         margin-top: 10vw;
       }
-      @media all and (max-width: 1440px) {
-        margin-top: 12.5vw;
-      }
+
       .swiper-wrapper {
         width: 100%;
         .swiper-slide {
