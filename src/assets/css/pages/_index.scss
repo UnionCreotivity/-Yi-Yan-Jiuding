@@ -1053,7 +1053,6 @@
                   font-family: "Noto Serif TC";
                   letter-spacing: 0.15em;
                   color: #232323;
-                  font-weight: bold;
                   @media all and (max-width: 1024px) {
                     font-size: $font-moblie-24;
                   }
@@ -1065,7 +1064,7 @@
                 font-family: "Noto Serif TC";
                 letter-spacing: 0.15em;
                 color: #232323;
-                font-weight: bold;
+                font-weight: 600;
                 @media all and (max-width: 1024px) {
                   font-size: $font-moblie-30;
                   font-weight: 600;
