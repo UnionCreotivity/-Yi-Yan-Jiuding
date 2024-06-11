@@ -190,9 +190,14 @@ window.onload = function () {
                 "<"
             )
             .to(
-                ".fb-box,.line-box,.yt-box",
-                { duration: 1, filter: "grayscale(0) brightness(1)" },
+                ".gray-fb,.gray-yt,.gray-line",
+                { duration: 1, opacity: 0 },
                 "<"
+            )
+            .to(
+                ".color-fb,.color-yt,.color-line",
+                { duration: 1, opacity: 1 },
+                "<0.3"
             )
             .to(
                 ".c1-container .left-box .text-box",
