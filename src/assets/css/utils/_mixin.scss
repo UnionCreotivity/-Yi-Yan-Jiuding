@@ -1,17 +1,141 @@
-@mixin indexMain() {
+@mixin indexENtitle() {
+  color: #dda868;
+  font-size: $font-68;
+  font-family: "Cormorant Garamond";
+  @media all and (max-width: 1024px) {
+    font-size: $font-moblie-45;
+  }
+}
 
-    font-size: 1.5vw;
-    letter-spacing: 1em;
-    font-family: "Noto Serif TC", serif;
-    font-weight: bold;
-
-    @media all and (max-width:1440px) {
-        margin-bottom: 0vw;
-        font-size: 1.8vw;
+@mixin indexZHtitle() {
+  color: #fff;
+  font-size: $font-30;
+  font-family: "Noto Serif TC";
+  letter-spacing: 0.3em;
+  writing-mode: tb-rl;
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+  //   border-left: 1px solid #fff;
+  //   border-bottom: 1px solid #d7d3ce;
+  @media all and (max-width: 1024px) {
+    writing-mode: initial;
+    font-size: $font-moblie-40;
+  }
+  &:after {
+    content: " ";
+    position: absolute;
+    bottom: 3%;
+    left: 0px;
+    height: calc(100% - 0.3em);
+    width: 1px;
+    background-color: #d7d3ce;
+    pointer-events: none;
+    @media all and (max-width: 1024px) {
+      height: 1px;
+      width: calc(100% - 0.3em);
     }
+  }
+}
 
-    @media all and (max-width:1024px) {
-        font-size: $moblie-big-title;
-        font-weight: 500;
+@mixin indexContent() {
+  color: #fff;
+  font-size: $font-18;
+  font-family: "Noto Serif TC";
+  letter-spacing: 0.4em;
+  line-height: 2vw;
+  @media all and (max-width: 1024px) {
+    font-size: $font-moblie-30;
+    line-height: 7vw;
+  }
+}
+
+@mixin indexMore() {
+  color: #fff;
+  font-size: $font-18;
+  font-family: "Cormorant Garamond";
+  font-weight: bold;
+  letter-spacing: 0.4em;
+  @media all and (max-width: 1024px) {
+    font-size: $font-moblie-24;
+  }
+}
+
+@mixin pageBigZHTitle() {
+  color: #fff;
+  font-size: $font-40;
+  font-family: "Noto Serif TC";
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  position: relative;
+  padding-bottom: 0.5vw;
+  @media all and (max-width: 1024px) {
+    font-size: $font-moblie-45;
+    padding-bottom: 2vw;
+  }
+  &:after {
+    content: " ";
+    position: absolute;
+    bottom: 0%;
+    left: 0px;
+    width: calc(100% - 0.3em);
+    height: 1.5px;
+    background-color: #fff;
+    pointer-events: none;
+    @media all and (max-width: 1680px) {
+      height: 1px;
     }
+  }
+}
+
+@mixin pageBigENTitle() {
+  color: #fff;
+  font-size: $font-24;
+  font-family: "Cormorant Garamond";
+  letter-spacing: 0.2em;
+  text-shadow: #888888 0 0 10px;
+  @media all and (max-width: 1024px) {
+    font-size: $font-moblie-45;
+    letter-spacing: 0.1em;
+    margin-top: 1.5vw;
+  }
+}
+
+//
+@mixin pageZHTitle() {
+  color: #232323;
+  font-size: $font-34;
+  font-weight: 600;
+  font-family: "Noto Serif TC";
+  letter-spacing: 0.3em;
+  @media all and (max-width: 1024px) {
+    font-size: $font-moblie-40;
+  }
+}
+
+@mixin pageENTitle() {
+  color: #757575;
+  font-size: $font-20;
+  font-weight: bold;
+  font-family: "Cormorant Garamond";
+  letter-spacing: 0.15em;
+  margin-top: 0.5vw;
+
+  @media all and (max-width: 1024px) {
+    font-size: $font-moblie-30;
+    margin-top: 1.5vw;
+  }
+}
+
+@mixin pageContent() {
+  color: #232323;
+  font-size: $font-18;
+  font-family: "微軟正黑體";
+  letter-spacing: 0.2em;
+  margin-top: 2vw;
+  line-height: 2.1;
+
+  @media all and (max-width: 1024px) {
+    font-size: $font-moblie-30;
+  }
 }

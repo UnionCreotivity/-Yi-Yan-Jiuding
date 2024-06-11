@@ -1,0 +1,272 @@
+.contact-body {
+  width: 100%;
+  display: flex;
+  position: relative;
+  background-image: url(../images/contact/bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media all and (max-width: 1024px) {
+    background-image: url(../images/contact/bg_moblie.webp);
+    background-size: contain;
+  }
+  .contact-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    margin: 0 auto;
+    @media all and (max-width: 1024px) {
+      padding-top: 11vw;
+    }
+
+    @media all and (max-width: 500px) {
+      padding-top: 18vw;
+      padding-bottom: 18vw;
+    }
+
+    .top-title-box {
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 10vw;
+      @media all and (max-width: 1920px) {
+        margin-top: 11vw;
+      }
+      .big-zh-title {
+        @include pageBigZHTitle();
+      }
+
+      .big-en-title {
+        @include pageBigENTitle();
+        margin-top: 1vw;
+      }
+    }
+
+    .form-box {
+      display: flex;
+      margin-bottom: 17vw;
+      margin-top: 5vw;
+      justify-content: center;
+      @media all and (max-width: 1920px) {
+        margin-top: 6vw;
+      }
+      @media all and (max-width: 1024px) {
+        margin-top: 12vw;
+        margin-bottom: 47vw;
+      }
+      .contact-form-box {
+        display: flex;
+        flex-direction: column;
+        padding: 4vw 5.5vw;
+        width: 45%;
+        background-color: rgb(rgb(255, 255, 255), 0.27);
+        backdrop-filter: blur(5px);
+        min-width: 850px;
+        @media all and (max-width: 1920px) {
+          padding: 5vw 6.5vw;
+        }
+        @media all and (max-width: 1366px) {
+          padding: 5vw 7vw;
+        }
+        @media all and (max-width: 1024px) {
+          padding: 6vw 5vw;
+          padding-bottom: 7.5vw;
+          min-width: initial;
+          width: 88%;
+        }
+      }
+      .input-box {
+        display: flex;
+        margin-bottom: 1.5vw;
+        @media all and (max-width: 1920px) {
+          margin-bottom: 3vw;
+        }
+        @media all and (max-width: 1024px) {
+          margin-bottom: 6vw;
+        }
+        .input-title {
+          color: #ffffff;
+          letter-spacing: 0.2em;
+          font-weight: 500;
+          font-family: "Noto Serif TC";
+          font-size: $font-18;
+          width: 16%;
+          text-align: justify;
+          display: block;
+          text-align-last: justify;
+          align-self: center;
+          text-shadow: #232323 0 0 10px;
+
+          @media all and (max-width: 1920px) {
+            width: 18%;
+          }
+
+          @media all and (max-width: 1440px) {
+            width: 16%;
+          }
+
+          @media all and (max-width: 1366px) {
+            width: 14%;
+          }
+
+          @media all and (max-width: 1024px) {
+            font-size: $font-moblie-30;
+            width: 50%;
+          }
+        }
+        span {
+          color: #ff0000;
+          font-size: $font-20;
+          padding-top: 0.5vw;
+          padding-left: 0.1vw;
+          @media all and (max-width: 1024px) {
+            font-size: $font-moblie-30;
+          }
+        }
+        input {
+          background-color: rgb(rgb(255, 255, 255), 0.5);
+          border: none;
+          width: 75%;
+          margin-left: 2vw;
+          line-height: 2vw;
+          align-self: center;
+          color: #232323;
+          letter-spacing: 0.15em;
+          font-weight: 500;
+          font-size: $font-18;
+          font-family: "Noto Serif TC";
+          @media all and (max-width: 1920px) {
+            width: 100%;
+            margin-left: 2.5vw;
+            line-height: 3vw;
+            line-height: 6.5vw;
+          }
+
+          @media all and (max-width: 1024px) {
+            font-size: $font-moblie-28;
+            padding-left: 1vw;
+          }
+        }
+
+        .button-box {
+          display: flex;
+          justify-content: center;
+          padding-left: 7vw;
+          margin-top: 1.5vw;
+          button {
+            background-color: #b78044;
+            color: #ffffff;
+            font-size: $font-18;
+            font-weight: 500;
+            font-family: "Noto Serif TC";
+            padding: 0.4vw 1vw;
+            padding-left: 1.3vw;
+            letter-spacing: 0.3em;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+      .textarea-box {
+        display: flex;
+        @media all and (max-width: 1024px) {
+          width: 100%;
+        }
+        .input-title {
+          color: #ffffff;
+          letter-spacing: 0.2em;
+          font-weight: bold;
+          font-family: "Noto Serif TC";
+          font-size: $font-18;
+          width: 16%;
+          text-align: justify;
+          display: block;
+          text-align-last: justify;
+          @media all and (max-width: 1920px) {
+            width: 18%;
+          }
+
+          @media all and (max-width: 1440px) {
+            width: 16%;
+          }
+
+          @media all and (max-width: 1366px) {
+            width: 14%;
+          }
+
+          @media all and (max-width: 1024px) {
+            font-size: $font-moblie-30;
+            width: 31.5%;
+          }
+        }
+        textarea {
+          background-color: rgb(rgb(255, 255, 255), 0.5);
+          border: none;
+          margin-left: 2.4vw;
+          resize: none;
+          font-size: $font-18;
+          line-height: 1.5vw;
+          height: 13.3vw;
+          width: 75%;
+          height: 11vw;
+          font-family: "Noto Serif TC";
+          @media all and (max-width: 1920px) {
+            width: 100%;
+            margin-left: 3.1vw;
+            height: 14vw;
+          }
+
+          @media all and (max-width: 1024px) {
+            margin-left: 4.2vw;
+            width: 63%;
+            height: 28vw;
+            font-size: $font-moblie-28;
+            line-height: 5.5vw;
+            padding-left: 1vw;
+          }
+
+          @media all and (max-width: 500px) {
+            height: 36vw;
+          }
+        }
+      }
+      .button-box {
+        display: flex;
+        justify-content: center;
+        padding-left: 7vw;
+        margin-top: 1.5vw;
+
+        @media all and (max-width: 1440px) {
+          padding-left: 10vw;
+        }
+
+        @media all and (max-width: 1024px) {
+          padding-left: 0vw;
+          margin-top: 7vw;
+        }
+
+        button {
+          background-color: #b78044;
+          color: #ffffff;
+          font-size: $font-18;
+          font-weight: 500;
+          font-family: "Noto Serif TC";
+          padding: 0.4vw 0.8vw;
+          padding-left: 1.1vw;
+          letter-spacing: 0.3em;
+          border: none;
+          cursor: pointer;
+
+          @media all and (max-width: 1024px) {
+            font-size: $font-moblie-30;
+            padding: 1.8vw 2.5vw;
+            padding-left: 3.8vw;
+          }
+        }
+      }
+    }
+  }
+}

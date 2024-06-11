@@ -1,0 +1,189 @@
+.news-content-body {
+  background-color: #d8d8d8;
+  position: relative;
+
+  .news-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10vw;
+
+    .page-container {
+      width: 100%;
+      position: relative;
+
+      .top-box {
+        background-color: #b78044;
+        width: 100%;
+        padding-top: 10vw;
+        padding-bottom: 2vw;
+        display: flex;
+        flex-direction: column;
+
+        .img-box {
+          width: 100%;
+          display: flex;
+          justify-content: right;
+
+          img {
+            width: 85%;
+            object-fit: cover;
+          }
+        }
+        .title-box {
+          display: flex;
+          color: white;
+          font-family: "Noto Serif TC";
+          margin-top: 1.5vw;
+          width: 85%;
+          align-self: end;
+          .date-box {
+            display: flex;
+            align-items: center;
+            .year {
+              font-size: $font-14;
+              letter-spacing: 0.3em;
+            }
+            .date {
+              font-weight: 500;
+              font-size: $font-22;
+              letter-spacing: 0.4em;
+              margin-left: 1vw;
+            }
+          }
+          .title {
+            font-weight: 500;
+            font-size: $font-28;
+            letter-spacing: 0.3em;
+            position: relative;
+            padding-bottom: 0.8vw;
+            margin-left: 1.7vw;
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: 0%;
+              left: 0px;
+              width: calc(100% - 0.3em);
+              height: 1.5px;
+              background-color: #fff;
+              pointer-events: none;
+              @media all and (max-width: 1680px) {
+                height: 1px;
+              }
+            }
+          }
+        }
+      }
+
+      .bottom-box {
+        position: relative;
+        padding-bottom: 7vw;
+
+        .left-link-box {
+          position: absolute;
+          top: 0vw;
+          left: 15vw;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .text {
+            font-size: $font-14;
+            font-family: "Cormorant Garamond";
+            letter-spacing: 0.15em;
+            writing-mode: tb-rl;
+            font-weight: 500;
+          }
+          .link-item {
+            margin-top: 1vw;
+            cursor: pointer;
+            img {
+              width: 1.5vw;
+            }
+          }
+        }
+
+        .contnet-box {
+          display: flex;
+          flex-direction: column;
+          width: 42%;
+          margin: 0 auto;
+          border-left: 2px solid #757575;
+          padding-left: 7vw;
+          margin-top: 3vw;
+          @media all and (max-width: 1680px) {
+            border-left: 1px solid #757575;
+          }
+          .content {
+            @include pageContent();
+            margin-top: 0.3vw;
+            text-align: justify;
+          }
+          img {
+            width: 100%;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+          }
+          .swiper-box {
+            display: flex;
+            width: 100%;
+            position: relative;
+            .swiper-wrapper {
+              width: 100%;
+              .swiper-slide {
+                position: relative;
+                img {
+                  width: 100%;
+                }
+              }
+            }
+            .swiper-controller {
+              .slider-controller {
+                .prev1 {
+                  position: absolute;
+                  top: 10vw;
+                  left: 1vw;
+                  z-index: 999;
+                  cursor: pointer;
+
+                  img {
+                    width: 2vw;
+                  }
+                }
+                .next1 {
+                  position: absolute;
+                  top: 10vw;
+                  right: 1vw;
+                  z-index: 999;
+                  cursor: pointer;
+
+                  img {
+                    width: 2vw;
+                  }
+                }
+              }
+            }
+            .swiper-pagination-horizontal {
+              bottom: 4vw;
+            }
+            .swiper-pagination-bullet {
+              background-color: white;
+              width: 1.7vw;
+              height: 0.15vw;
+              border-radius: 0px;
+              margin-right: 0.1vw;
+            }
+          }
+        }
+
+        .scroll-top {
+          width: 3vw;
+          position: absolute;
+          bottom: 0vw;
+          right: 16vw;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

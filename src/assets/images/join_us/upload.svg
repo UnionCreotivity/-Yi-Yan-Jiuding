@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.17 30.31">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #232323;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        opacity: .5;
+      }
+    </style>
+  </defs>
+  <g id="text">
+    <g>
+      <polyline class="cls-1" points="11.59 19.96 16.73 10.57 16.73 30.31"/>
+      <path class="cls-2" d="M22.21,29.14c4.35-2.13,7.59-6.31,8.31-11.47C31.67,9.41,25.91,1.79,17.66,.65,9.41-.5,1.79,5.26,.65,13.51c-.93,6.7,2.69,12.99,8.51,15.73"/>
+    </g>
+  </g>
+</svg>

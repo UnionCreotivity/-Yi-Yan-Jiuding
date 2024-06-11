@@ -1,0 +1,43 @@
+footer {
+  background-color: #434343;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  color: #aaaaaa;
+  font-size: $font-15;
+  font-family: "微軟正黑體";
+  letter-spacing: 0.2em;
+  display: flex;
+  justify-content: center;
+  padding: 1vw 0vw;
+  align-items: center;
+  @media all and (max-width: 1024px) {
+    flex-direction: column;
+    font-size: $font-moblie-25;
+    line-height: 2;
+    padding: 3vw 0vw;
+  }
+  .company {
+    color: #ffffff;
+    font-size: $font-17;
+    font-weight: 500;
+    font-family: "Noto Serif TC";
+    letter-spacing: 0.2em;
+
+    @media all and (max-width: 1024px) {
+      font-size: $font-moblie-28;
+      margin-bottom: 2vw;
+    }
+  }
+
+  .email {
+    @media all and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  div {
+    margin-left: 2vw;
+  }
+}

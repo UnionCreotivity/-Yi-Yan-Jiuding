@@ -4,8 +4,20 @@
 @import "utils/variables";
 
 //layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/menu";
 
 //Pages
 @import "pages/index";
-@import "pages/text";
+@import "pages/about";
+@import "pages/project";
+@import "pages/project-content";
+@import "pages/news";
+@import "pages/news-content";
+@import "pages/join-us";
+@import "pages/contact";
+@import "pages/history";
+@import "pages/history-content";
+
 //components

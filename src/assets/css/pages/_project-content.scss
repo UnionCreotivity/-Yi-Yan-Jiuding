@@ -1,0 +1,352 @@
+.project-content-body {
+  width: 100%;
+  background-color: #d8d8d8;
+  position: relative;
+  .project-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 8vw;
+    padding-bottom: 10vw;
+    position: relative;
+    .top-content-box {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      width: 85%;
+      .left-box {
+        width: 40%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        padding-left: 5vw;
+        img {
+          width: 94%;
+        }
+      }
+      .right-box {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+
+        padding-left: 4vw;
+        .project-title-box {
+          display: flex;
+          flex-direction: column;
+          .year {
+            font-size: $font-45;
+            font-weight: bold;
+            font-family: "Noto Serif TC";
+            letter-spacing: 0.25em;
+            color: #b78044;
+          }
+          .project-name {
+            @include pageZHTitle();
+            margin-top: 0.5vw;
+            margin-bottom: 1vw;
+          }
+          .project-local {
+            display: flex;
+            .local {
+              font-weight: 600;
+              font-family: "Noto Serif TC";
+              color: #b78044;
+              background-color: rgb(rgb(255, 255, 255), 0.4);
+              padding: 0.35vw 0.5vw;
+              letter-spacing: 0.2em;
+            }
+          }
+        }
+
+        .content-box {
+          display: flex;
+          flex-direction: column;
+          border-top: 1.5px solid #757575;
+          border-bottom: 1.5px solid #757575;
+          margin-top: 2vw;
+          padding-top: 2vw;
+          padding-bottom: 2vw;
+          margin-bottom: 2vw;
+          width: 92%;
+          @media all and (max-width: 1680px) {
+            border-top: 1px solid #757575;
+            border-bottom: 1px solid #757575;
+          }
+
+          .content-item {
+            display: flex;
+            margin-bottom: 1vw;
+            .item-title {
+              color: #757575;
+              font-size: $font-18;
+              font-family: "微軟正黑體";
+              letter-spacing: 0.2em;
+              margin-right: 2vw;
+              width: 12%;
+              align-self: center;
+            }
+            .content {
+              color: #232323;
+              font-size: $font-18;
+              font-family: "微軟正黑體";
+              letter-spacing: 0.2em;
+              align-self: center;
+            }
+          }
+        }
+
+        .link-box {
+          display: flex;
+          .link-item {
+            display: flex;
+            margin-right: 1vw;
+            img {
+              width: 1.7vw;
+            }
+            a {
+              color: #232323;
+              font-size: $font-18;
+              font-family: "微軟正黑體";
+              letter-spacing: 0.2em;
+              align-self: center;
+              margin-left: 0.7vw;
+              padding-bottom: 0.3vw;
+              border-bottom: 1.5px solid #aaaaaa;
+              text-decoration: none;
+              @media all and (max-width: 1680px) {
+                border-bottom: 1px solid #aaaaaa;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .swiper-box {
+      display: flex;
+      width: 100%;
+      margin-top: 5vw;
+      .swiper-wrapper {
+        width: 100%;
+        .swiper-slide {
+          position: relative;
+          img {
+            width: 100%;
+          }
+
+          &::after {
+            color: white;
+            font-size: $font-15;
+            font-family: "微軟正黑體";
+            letter-spacing: 0.2em;
+            content: "實景拍攝圖";
+            position: absolute;
+            bottom: 1vw;
+            right: 1vw;
+          }
+        }
+      }
+      .swiper-controller {
+        .slider-controller {
+          .prev1 {
+            position: absolute;
+            top: 23vw;
+            left: 2vw;
+            z-index: 999;
+            cursor: pointer;
+
+            img {
+              width: 2vw;
+            }
+          }
+          .next1 {
+            position: absolute;
+            top: 23vw;
+            right: 2vw;
+            z-index: 999;
+            cursor: pointer;
+
+            img {
+              width: 2vw;
+            }
+          }
+        }
+      }
+      .swiper-pagination-horizontal {
+        bottom: 40px;
+      }
+      .swiper-pagination-bullet {
+        background-color: white;
+        width: 43px;
+        height: 4px;
+        border-radius: 0px;
+        margin-right: 0.45vw;
+      }
+    }
+
+    .swiper-text {
+      color: #000;
+      font-size: $font-17;
+      font-family: "微軟正黑體";
+      letter-spacing: 0.2em;
+      margin: 0 auto;
+      margin-top: 2.5vw;
+      width: 80%;
+    }
+
+    .reserve-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      margin-top: 8vw;
+      width: 63%;
+
+      .reserve-title-box {
+        display: flex;
+        flex-direction: column;
+        .zh-title {
+          @include pageZHTitle();
+          text-align: center;
+        }
+        .en-title {
+          @include pageENTitle();
+          text-align: center;
+        }
+      }
+
+      .form-box {
+        background-color: rgb(rgb(255, 255, 255), 0.25);
+        display: flex;
+        padding: 3.5vw 4vw;
+        margin-top: 2.5vw;
+        min-width: 1560px;
+        .left-box {
+          display: flex;
+          flex-direction: column;
+          width: 70%;
+
+          .input-box {
+            display: flex;
+            margin-bottom: 1.5vw;
+            .input-title {
+              color: #232323;
+              letter-spacing: 0.2em;
+              font-weight: bold;
+              font-family: "Noto Serif TC";
+              font-size: $font-18;
+              width: 16%;
+              text-align: justify;
+              display: block;
+              text-align-last: justify;
+              align-self: center;
+            }
+            span {
+              color: #ff0000;
+              font-size: $font-20;
+              padding-top: 0.3vw;
+            }
+            input {
+              background-color: rgb(rgb(255, 255, 255), 0.5);
+              border: none;
+              width: 75%;
+              margin-left: 2vw;
+              line-height: 2vw;
+              align-self: center;
+              color: #232323;
+              letter-spacing: 0.15em;
+              font-weight: 500;
+              font-size: $font-18;
+              padding-left: 1vw;
+              font-family: "Noto Serif TC";
+            }
+          }
+
+          .textarea-box {
+            display: flex;
+            .input-title {
+              color: #232323;
+              letter-spacing: 0.2em;
+              font-weight: bold;
+              font-family: "Noto Serif TC";
+              font-size: $font-18;
+              width: 16%;
+              text-align: justify;
+
+              display: block;
+              text-align-last: justify;
+            }
+            textarea {
+              background-color: rgb(rgb(255, 255, 255), 0.5);
+              border: none;
+              margin-left: 2.4vw;
+              resize: none;
+              font-size: $font-18;
+              letter-spacing: 0.15em;
+              line-height: 2vw;
+              color: #232323;
+              height: 13.3vw;
+              font-weight: 500;
+              width: 75%;
+              padding-left: 1vw;
+              font-family: "Noto Serif TC";
+            }
+          }
+
+          .button-box {
+            display: flex;
+            justify-content: center;
+            padding-left: 7vw;
+            margin-top: 1.5vw;
+            button {
+              background-color: #b78044;
+              color: #ffffff;
+              font-size: $font-18;
+              font-weight: 500;
+              font-family: "Noto Serif TC";
+              padding: 0.4vw 1vw;
+              padding-left: 1.3vw;
+              letter-spacing: 0.3em;
+              border: none;
+              cursor: pointer;
+            }
+          }
+        }
+        .right-box {
+          text-align: end;
+          img {
+            width: 90%;
+          }
+        }
+      }
+    }
+
+    .back-btn-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 7vw;
+      .back-btn {
+        color: #000000;
+        font-size: $font-17;
+        font-family: "微軟正黑體";
+        border: 1px solid #757575;
+        background: none;
+        padding: 0.6vw 1.3vw;
+        padding-right: 1vw;
+        letter-spacing: 0.2em;
+        a {
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .scroll-top {
+      width: 2vw;
+      position: absolute;
+      bottom: 8vw;
+      right: 16vw;
+      cursor: pointer;
+    }
+  }
+}

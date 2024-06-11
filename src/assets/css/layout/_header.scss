@@ -1,0 +1,46 @@
+header {
+  width: 100%;
+  display: flex;
+  padding: 1vw 8vw;
+  padding-bottom: 1vw;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #232323;
+  background-color: rgba(35, 35, 35, 0.95);
+  z-index: 99;
+
+  @media all and (max-width: 1024px) {
+    align-items: center;
+    padding: 2vw 5vw;
+  }
+
+  .logo-box {
+    width: 8vw;
+    @media all and (max-width: 1024px) {
+      width: 22vw;
+    }
+
+    @media all and (max-width: 500px) {
+      width: 26vw;
+    }
+    a {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .menu-box {
+    width: 3.5vw;
+    align-self: center;
+    cursor: pointer;
+    @media all and (max-width: 1024px) {
+      width: 7.5vw;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.project-body {
+  background-image: url(../images/project/project_bg.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  position: relative;
+  .project-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 8vw;
+    padding-bottom: 10vw;
+    @media all and (max-width: 1920px) {
+      padding-top: 9vw;
+    }
+    .top-img-box {
+      width: 85%;
+      margin: 0 auto;
+      position: relative;
+      img {
+        width: 100%;
+        z-index: 1;
+      }
+
+      .top-title-box {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        text-align: center;
+        .big-zh-title {
+          @include pageBigZHTitle();
+        }
+
+        .big-en-title {
+          @include pageBigENTitle();
+          margin-top: 1vw;
+        }
+      }
+
+      .project-tab-nav-box {
+        display: flex;
+        position: absolute;
+        bottom: -13%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #b78044;
+        width: 90%;
+        justify-content: center;
+        padding-top: 0.8vw;
+        padding-bottom: 0.8vw;
+        .project-nav-item {
+          @include indexContent();
+          position: relative;
+          padding: 0.2% 4.2%;
+          font-weight: 500;
+          cursor: pointer;
+
+          &:nth-child(1) {
+            border-right: 2px solid white;
+            @media all and (max-width: 1680px) {
+              border-right: 1px solid white;
+            }
+          }
+
+          &:nth-child(2) {
+            border-right: 2px solid white;
+            @media all and (max-width: 1680px) {
+              border-right: 1px solid white;
+            }
+          }
+        }
+
+        .project-nav-active {
+          background-color: rgb(255, 255, 255, 0.2);
+          -webkit-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+          -webkit-transition: all 0.8s ease-in;
+          -o-transition: all 0.8s ease-in;
+          transition: all 0.8s ease-in;
+        }
+      }
+    }
+
+    .page-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 6vw;
+      .project-box {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        .project-item-box {
+          display: flex;
+          width: 78%;
+          flex-wrap: wrap;
+          justify-content: left;
+
+          .project-item {
+            // width: 24%;
+            flex-basis: 24%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 5vw;
+            padding: 0% 1%;
+            img {
+              width: 100%;
+              border-bottom: 2px solid #b78044;
+              box-shadow: 5px 5px 15px rgb(196, 196, 196);
+            }
+
+            .project-content {
+              display: flex;
+              width: 100%;
+              justify-content: space-between;
+              margin-top: 0.9vw;
+              .project-name {
+                font-size: $font-18;
+                color: #232323;
+                font-family: "Noto Serif TC";
+                font-weight: bold;
+                margin-right: 1vw;
+                letter-spacing: 0.3em;
+                align-self: center;
+              }
+
+              .project-local {
+                font-size: $font-15;
+                color: #b78044;
+                font-family: "Noto Serif TC";
+                background-color: #efefef;
+                font-weight: 600;
+                letter-spacing: 0.2em;
+                align-self: center;
+                padding: 0.3vw 0.7vw;
+              }
+            }
+          }
+        }
+
+        .project-item-box {
+          -webkit-transition: all 0.6s ease-in;
+          -o-transition: all 0.6s ease-in;
+          transition: all 0.6s ease-in;
+          display: none;
+          opacity: 0;
+        }
+
+        .project-item-box.active {
+          opacity: 1;
+          display: flex;
+        }
+      }
+    }
+  }
+}

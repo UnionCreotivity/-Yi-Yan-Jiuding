@@ -1,0 +1,390 @@
+.history-content-body {
+  width: 100%;
+  background-color: #d8d8d8;
+  position: relative;
+  .history-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 8vw;
+    padding-bottom: 10vw;
+    position: relative;
+    @media all and (max-width: 1920px) {
+      padding-top: 9vw;
+    }
+    @media all and (max-width: 1024px) {
+      padding-top: 17vw;
+      padding-bottom: 50vw;
+    }
+    .top-content-box {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      width: 85%;
+
+      @media all and (max-width: 1024px) {
+        flex-direction: column;
+        width: 88%;
+      }
+      .left-box {
+        width: 40%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        padding-left: 5vw;
+
+        @media all and (max-width: 1024px) {
+          display: none;
+        }
+
+        img {
+          width: 94%;
+        }
+      }
+      .right-box {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 4vw;
+        @media all and (max-width: 1024px) {
+          width: 100%;
+          padding-left: 0vw;
+        }
+        .img-box {
+          display: none;
+          @media all and (max-width: 1024px) {
+            display: flex;
+            width: 100%;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .project-title-box {
+          display: flex;
+          flex-direction: column;
+          @media all and (max-width: 1024px) {
+            margin-bottom: 10vw;
+          }
+          .project-name-year-box {
+            display: flex;
+            flex-direction: column;
+            @media all and (max-width: 1024px) {
+              flex-direction: row;
+              justify-content: center;
+              margin-bottom: 2vw;
+            }
+            .year {
+              font-size: $font-45;
+              font-weight: bold;
+              font-family: "Noto Serif TC";
+              letter-spacing: 0.25em;
+              color: #b78044;
+              @media all and (max-width: 1024px) {
+                font-size: $font-moblie-45;
+                margin-right: 5vw;
+              }
+            }
+            .project-name {
+              @include pageZHTitle();
+              margin-top: 0.5vw;
+              margin-bottom: 1vw;
+            }
+          }
+
+          .project-local {
+            display: flex;
+            @media all and (max-width: 1024px) {
+              justify-content: center;
+            }
+            .local {
+              font-weight: 600;
+              font-family: "Noto Serif TC";
+              color: #b78044;
+              background-color: rgb(rgb(255, 255, 255), 0.4);
+              padding: 0.35vw 0.5vw;
+              letter-spacing: 0.2em;
+              font-size: $font-15;
+              @media all and (max-width: 1024px) {
+                font-size: $font-moblie-30;
+                background-color: rgb(rgb(170, 170, 170), 0.2);
+                padding: 2vw 3.2vw;
+                padding-left: 4vw;
+              }
+            }
+          }
+        }
+
+        .content-box {
+          display: flex;
+          flex-direction: column;
+          border-top: 1.5px solid #757575;
+          border-bottom: 1.5px solid #757575;
+          margin-top: 2vw;
+          padding-top: 2vw;
+          margin-bottom: 2vw;
+          width: 92%;
+
+          @media all and (max-width: 1680px) {
+            border-top: 1px solid #757575;
+            border-bottom: 1px solid #757575;
+          }
+
+          @media all and (max-width: 1024px) {
+            border-top: none;
+            border-bottom: none;
+            width: 100%;
+            margin-top: 7vw;
+            padding-top: 0vw;
+            margin-bottom: 5vw;
+          }
+
+          .content-item {
+            display: flex;
+            margin-bottom: 1vw;
+            @media all and (max-width: 1024px) {
+              margin-bottom: 3vw;
+            }
+            .item-title {
+              color: #757575;
+              font-size: $font-18;
+              font-family: "微軟正黑體";
+              letter-spacing: 0.2em;
+              margin-right: 2vw;
+              width: 12%;
+              align-self: center;
+
+              @media all and (max-width: 1024px) {
+                font-size: $font-moblie-30;
+                width: 31%;
+                font-weight: bold;
+              }
+            }
+            .content {
+              color: #232323;
+              font-size: $font-18;
+              font-family: "微軟正黑體";
+              letter-spacing: 0.2em;
+              align-self: center;
+              @media all and (max-width: 1024px) {
+                font-size: $font-moblie-30;
+              }
+            }
+
+            .history-content {
+              color: #232323;
+              font-size: $font-18;
+              font-family: "微軟正黑體";
+              letter-spacing: 0.2em;
+              align-self: center;
+              margin-top: 2vw;
+              @media all and (max-width: 1024px) {
+                font-size: $font-moblie-30;
+                line-height: 2;
+                border-bottom: 1px solid #757575;
+              }
+            }
+          }
+        }
+
+        .link-box {
+          display: flex;
+
+          .link-item {
+            display: flex;
+            margin-right: 1vw;
+            @media all and (max-width: 1024px) {
+              margin-right: 6vw;
+            }
+            img {
+              width: 1.7vw;
+              @media all and (max-width: 1024px) {
+                width: 6vw;
+              }
+            }
+            a {
+              color: #232323;
+              font-size: $font-18;
+              font-family: "微軟正黑體";
+              letter-spacing: 0.2em;
+              align-self: center;
+              margin-left: 0.7vw;
+              padding-bottom: 0.3vw;
+              border-bottom: 1.5px solid #aaaaaa;
+              text-decoration: none;
+              @media all and (max-width: 1680px) {
+                border-bottom: 1px solid #aaaaaa;
+              }
+              @media all and (max-width: 1024px) {
+                font-size: $font-moblie-30;
+                margin-left: 2.5vw;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .history-main-content {
+      display: flex;
+      flex-direction: column;
+
+      .swiper-box {
+        display: flex;
+        width: 100%;
+        margin-top: 5vw;
+
+        @media all and (max-width: 1024px) {
+          margin: 0 auto;
+          margin-top: 10vw;
+          width: 88%;
+        }
+        .swiper-wrapper {
+          width: 100%;
+
+          .swiper-slide {
+            position: relative;
+            img {
+              width: 100%;
+            }
+
+            &::after {
+              color: white;
+              font-size: $font-15;
+              font-family: "微軟正黑體";
+              letter-spacing: 0.2em;
+              content: "實景拍攝圖";
+              position: absolute;
+              bottom: 1vw;
+              right: 1vw;
+
+              @media all and (max-width: 1024px) {
+                font-size: 2.8vw;
+                bottom: 2%;
+                right: 1.5%;
+              }
+            }
+          }
+        }
+        .swiper-controller {
+          .slider-controller {
+            .prev1 {
+              position: absolute;
+              top: 23vw;
+              left: 2vw;
+              z-index: 999;
+              cursor: pointer;
+
+              @media all and (max-width: 1024px) {
+                top: 45%;
+                left: 6%;
+              }
+              img {
+                width: 2vw;
+                @media all and (max-width: 1024px) {
+                  width: 7vw;
+                }
+              }
+            }
+            .next1 {
+              position: absolute;
+              top: 23vw;
+              right: 2vw;
+              z-index: 999;
+              cursor: pointer;
+
+              @media all and (max-width: 1024px) {
+                top: 45%;
+                right: 6%;
+              }
+
+              img {
+                width: 2vw;
+                @media all and (max-width: 1024px) {
+                  width: 7vw;
+                }
+              }
+            }
+          }
+        }
+        .swiper-pagination-horizontal {
+          bottom: 40px;
+        }
+        .swiper-pagination-bullet {
+          background-color: white;
+          width: 43px;
+          height: 4px;
+          border-radius: 0px;
+          margin-right: 0.45vw;
+        }
+      }
+      .text-box {
+        margin: 0 auto;
+        margin-top: 2.5vw;
+        width: 75%;
+        border-bottom: 1px solid #232323;
+        @media all and (max-width: 1024px) {
+          width: 88%;
+          margin-top: 6vw;
+        }
+        .text {
+          color: #000;
+          font-size: $font-17;
+          font-family: "微軟正黑體";
+          letter-spacing: 0.2em;
+          margin-bottom: 2.5vw;
+
+          @media all and (max-width: 1024px) {
+            font-size: $font-moblie-30;
+            text-align: justify;
+            line-height: 2;
+          }
+        }
+      }
+    }
+
+    .back-btn-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 5vw;
+
+      @media all and (max-width: 1024px) {
+        margin-top: 14vw;
+      }
+      .back-btn {
+        font-size: $font-17;
+        font-family: "微軟正黑體";
+        border: 1px solid #757575;
+        background: none;
+        padding: 0.6vw 1.3vw;
+        padding-right: 1vw;
+        letter-spacing: 0.2em;
+
+        @media all and (max-width: 1024px) {
+          font-size: $font-moblie-30;
+          padding: 2vw 3.2vw;
+          padding-left: 4vw;
+        }
+
+        a {
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .scroll-top {
+      width: 2vw;
+      position: absolute;
+      bottom: 8vw;
+      right: 16vw;
+      cursor: pointer;
+
+      @media all and (max-width: 1024px) {
+        width: 7vw;
+        bottom: 10%;
+        right: 7%;
+      }
+    }
+  }
+}
