@@ -9,6 +9,12 @@
     padding-top: 9.5vw;
     padding-bottom: 10vw;
     position: relative;
+    @media all and (max-width: 1680px) {
+      padding-top: 13.5vw;
+    }
+    @media all and (max-width: 1440px) {
+      padding-top: 15vw;
+    }
     .top-content-box {
       display: flex;
       justify-content: center;
@@ -126,6 +132,12 @@
       display: flex;
       width: 100%;
       margin-top: 6vw;
+      @media all and (max-width: 1680px) {
+        margin-top: 10vw;
+      }
+      @media all and (max-width: 1440px) {
+        margin-top: 12.5vw;
+      }
       .swiper-wrapper {
         width: 100%;
         .swiper-slide {

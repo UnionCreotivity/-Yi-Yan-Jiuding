@@ -9,8 +9,12 @@
     padding-top: 9.5vw;
     padding-bottom: 10vw;
     position: relative;
-    @media all and (max-width: 1920px) {
-      padding-top: 9vw;
+
+    @media all and (max-width: 1680px) {
+      padding-top: 13.5vw;
+    }
+    @media all and (max-width: 1440px) {
+      padding-top: 15vw;
     }
     @media all and (max-width: 1024px) {
       padding-top: 17vw;
@@ -233,7 +237,12 @@
         display: flex;
         width: 100%;
         margin-top: 6vw;
-
+        @media all and (max-width: 1680px) {
+          margin-top: 10vw;
+        }
+        @media all and (max-width: 1440px) {
+          margin-top: 12.5vw;
+        }
         @media all and (max-width: 1024px) {
           margin: 0 auto;
           margin-top: 10vw;

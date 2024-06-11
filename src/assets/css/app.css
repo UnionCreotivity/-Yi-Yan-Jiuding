@@ -3335,6 +3335,16 @@ footer div {
   padding-bottom: 10vw;
   position: relative;
 }
+@media all and (max-width: 1680px) {
+  .project-content-body .project-content-container {
+    padding-top: 13.5vw;
+  }
+}
+@media all and (max-width: 1440px) {
+  .project-content-body .project-content-container {
+    padding-top: 15vw;
+  }
+}
 .project-content-body .project-content-container .top-content-box {
   display: flex;
   justify-content: center;
@@ -3460,6 +3470,16 @@ footer div {
   display: flex;
   width: 100%;
   margin-top: 6vw;
+}
+@media all and (max-width: 1680px) {
+  .project-content-body .project-content-container .swiper-box {
+    margin-top: 10vw;
+  }
+}
+@media all and (max-width: 1440px) {
+  .project-content-body .project-content-container .swiper-box {
+    margin-top: 12.5vw;
+  }
 }
 .project-content-body .project-content-container .swiper-box .swiper-wrapper {
   width: 100%;
@@ -5463,9 +5483,14 @@ footer div {
   padding-bottom: 10vw;
   position: relative;
 }
-@media all and (max-width: 1920px) {
+@media all and (max-width: 1680px) {
   .history-content-body .history-content-container {
-    padding-top: 9vw;
+    padding-top: 13.5vw;
+  }
+}
+@media all and (max-width: 1440px) {
+  .history-content-body .history-content-container {
+    padding-top: 15vw;
   }
 }
 @media all and (max-width: 1024px) {
@@ -5725,6 +5750,16 @@ footer div {
   display: flex;
   width: 100%;
   margin-top: 6vw;
+}
+@media all and (max-width: 1680px) {
+  .history-content-body .history-content-container .history-main-content .swiper-box {
+    margin-top: 10vw;
+  }
+}
+@media all and (max-width: 1440px) {
+  .history-content-body .history-content-container .history-main-content .swiper-box {
+    margin-top: 12.5vw;
+  }
 }
 @media all and (max-width: 1024px) {
   .history-content-body .history-content-container .history-main-content .swiper-box {
