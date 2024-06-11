@@ -4982,6 +4982,7 @@ footer div {
 @media all and (max-width: 1920px) {
   .contact-body .contact-container .form-box .contact-form-box {
     padding: 5vw 6.5vw;
+    width: 60%;
   }
 }
 @media all and (max-width: 1366px) {
