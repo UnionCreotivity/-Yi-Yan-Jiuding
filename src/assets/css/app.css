@@ -11,6 +11,30 @@ button {
   cursor: pointer;
 }
 
+.loading-screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999999;
+  background: #d8d8d8;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+}
+.loading-screen .logo-box {
+  margin-right: 3vw;
+}
+.loading-screen .logo-box .loading-text {
+  font-family: "Noto Serif TC";
+  align-items: center;
+  font-size: 1.5vw;
+  color: #000;
+}
+
 header {
   width: 100%;
   display: flex;

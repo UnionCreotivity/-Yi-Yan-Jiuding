@@ -50,6 +50,28 @@ window.onload = function () {
     }
     menuOpen();
 
+
+    let loadingScreen = document.querySelector(".loading-screen");
+    let loadingText = document.getElementById("loading-text");
+    let percent = 1;
+    function updateProgress() {
+
+        loadingText.textContent = percent + " %";
+        percent++;
+        if (percent <= 100) {
+            setTimeout(updateProgress, 10);
+        } else {
+
+            let tl = gsap.timeline({});
+            tl.to(loadingScreen, { duration: 1, opacity: 0, ease: "power1.inOut" })
+                .to(loadingScreen, { duration: 1, display: 'none', })
+
+        }
+
+    }
+
+    updateProgress();
+
     const mySwiper = new Swiper(".project-swiper", {
 
         loop: true,
@@ -159,17 +181,6 @@ window.onload = function () {
     }
 
 
-
-
-
-
-    // function setPlaybackRate() {
-    //     var video = document.querySelector("#tree-video");
-    //     video.onplay = function () {
-    //         video.playbackRate = 0.5;
-    //     };
-    // }
-    // setPlaybackRate();
 
     function c1PinAni() {
         let tl = gsap.timeline({
