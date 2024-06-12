@@ -303,10 +303,10 @@
         }
         .en-title {
           @include indexENtitle();
-          color: #757575;
+          color: #232323;
           margin-right: 3vw;
           @media all and (max-width: 1024px) {
-            color: #757575;
+            color: #232323;
             margin-right: 0vw;
             margin-top: 1.5vw;
           }
@@ -371,8 +371,8 @@
               content: " ";
               position: absolute;
               bottom: 40%;
-              left: 6.5vw;
-              width: 8%;
+              left: 7.1vw;
+              width: 4%;
               height: 2px;
               background-color: #232323;
               pointer-events: none;
@@ -738,7 +738,7 @@
 
         @media all and (max-width: 1024px) {
           margin-left: 0vw;
-          color: #757575;
+          color: #232323;
           margin-right: 0vw;
           margin-top: 1.5vw;
         }
@@ -962,10 +962,10 @@
         @include indexENtitle();
         margin-right: 2vw;
         margin-top: -0.9vw;
-        color: #757575;
+        color: #232323;
         @media all and (max-width: 1024px) {
           margin-left: 0vw;
-          color: #757575;
+          color: #232323;
           margin-right: 0vw;
           margin-top: 1.5vw;
         }
