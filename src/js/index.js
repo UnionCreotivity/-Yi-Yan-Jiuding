@@ -218,7 +218,7 @@ window.onload = function () {
             .to(".first-bg", { duration: 1, opacity: 0 })
             .to(".second-bg", { duration: 1, opacity: 1 }, "<");
     }
-    c1PinAni();
+    // c1PinAni();
 
     function c2Ani() {
 

@@ -102,7 +102,7 @@
         font-family: "微軟正黑體";
         font-size: $font-17;
         div {
-          margin-top: 1vw;
+          // margin-top: 1vw;
           letter-spacing: 0.2em;
           align-self: center;
         }
@@ -283,7 +283,7 @@
       flex-direction: column;
       width: 100%;
       position: relative;
-      padding-top: 13vw;
+      padding-top: 11vw;
       // padding-bottom: 10vw;
       padding-left: 17%;
       @media all and (max-width: 1024px) {
@@ -293,8 +293,9 @@
       }
       .title-box {
         display: flex;
-        align-items: center;
-        margin-bottom: 2vw;
+
+        flex-direction: column;
+        margin-bottom: 3vw;
         opacity: 0;
         @media all and (max-width: 1024px) {
           opacity: 1;
@@ -302,7 +303,7 @@
         }
         .en-title {
           @include indexENtitle();
-          color: #fff;
+          color: #757575;
           margin-right: 3vw;
           @media all and (max-width: 1024px) {
             color: #757575;
@@ -319,7 +320,6 @@
           display: inline-block;
           position: relative;
           font-weight: 500;
-          padding-bottom: 0.3vw;
 
           @media all and (max-width: 1024px) {
             font-size: $font-moblie-40;
@@ -327,16 +327,20 @@
             padding-bottom: 2vw;
             margin-left: 2vw;
           }
-
-          &:after {
-            content: " ";
-            position: absolute;
-            bottom: 0%;
-            left: 0px;
-            width: calc(100% - 0.3em);
-            height: 1px;
-            background-color: #232323;
-            pointer-events: none;
+          .title {
+            display: inline-block;
+            padding-bottom: 0.3vw;
+            position: relative;
+            &:after {
+              content: " ";
+              position: absolute;
+              bottom: 0%;
+              left: 0px;
+              width: calc(100% - 0.3em);
+              height: 1px;
+              background-color: #232323;
+              pointer-events: none;
+            }
           }
         }
       }
@@ -567,6 +571,7 @@
         .center-box {
           padding-top: 6.5vw;
           opacity: 0;
+          display: none;
           @media all and (max-width: 1024px) {
             opacity: 1;
             text-align: center;
@@ -582,8 +587,10 @@
 
         .right-box {
           opacity: 0;
+          margin-top: -4vw;
           @media all and (max-width: 1024px) {
             opacity: 1;
+
             padding-left: 4vw;
             padding-right: 4vw;
           }
@@ -633,31 +640,28 @@
           }
 
           .more-box {
-            display: flex;
-            flex-direction: column;
+            z-index: 10;
+            @include indexMore();
+            cursor: pointer;
             margin-top: 3vw;
-            text-align: center;
-            @media all and (max-width: 1024px) {
-              flex-direction: row;
-              justify-content: center;
-              margin-top: 8vw;
-            }
+            display: flex;
+            justify-content: left;
             div {
-              @include indexMore();
               display: flex;
+              align-items: center;
+            }
+            a {
               color: #b78044;
-              flex-direction: column;
-              @media all and (max-width: 1024px) {
-                flex-direction: row;
-                align-items: center;
-                margin-right: 3vw;
-              }
+              align-items: center;
             }
             img {
-              width: 5.5vw;
+              width: 2vw;
+              align-items: center;
+              margin-left: 0.5vw;
+
               @media all and (max-width: 1024px) {
-                vertical-align: middle;
                 width: 54px;
+                margin-left: 3vw;
               }
               @media all and (max-width: 500px) {
                 width: 6vw;
@@ -720,6 +724,7 @@
 
     .title-box {
       display: flex;
+      flex-direction: column;
       @media all and (max-width: 1024px) {
         flex-direction: column-reverse;
         display: flex;
@@ -739,31 +744,39 @@
         }
       }
       .zh-title {
-        @include indexZHtitle();
-        color: black;
+        color: #232323;
+        font-size: $font-30;
+        font-family: "Noto Serif TC";
+        letter-spacing: 0.3em;
+        display: inline-block;
+        position: relative;
+        font-weight: 500;
+
         @media all and (max-width: 1024px) {
+          font-size: $font-moblie-40;
+          letter-spacing: 0.4em;
           padding-bottom: 2vw;
           margin-left: 2vw;
         }
-        &:after {
-          content: " ";
-          position: absolute;
-          bottom: 3%;
-          left: 0px;
-          height: calc(100% - 0.3em);
-          width: 1px;
-          background-color: black;
-          pointer-events: none;
-          @media all and (max-width: 1024px) {
-            height: 1px;
+        .title {
+          display: inline-block;
+          padding-bottom: 0.3vw;
+          position: relative;
+          &:after {
+            content: " ";
+            position: absolute;
             bottom: 0%;
+            left: 0px;
             width: calc(100% - 0.3em);
+            height: 1px;
+            background-color: #232323;
+            pointer-events: none;
           }
         }
       }
       .project-line {
         width: 100%;
-        margin-left: 5vw;
+        margin-left: 29vw;
 
         @media all and (max-width: 1024px) {
           display: none;
@@ -772,7 +785,7 @@
     }
 
     .more-box {
-      margin-top: -2vw;
+      margin-top: 2vw;
       z-index: 2;
       cursor: pointer;
       @media all and (max-width: 1024px) {
@@ -938,6 +951,7 @@
 
     .title-box {
       display: flex;
+      flex-direction: column;
       z-index: 9;
       @media all and (max-width: 1024px) {
         flex-direction: column-reverse;
@@ -948,7 +962,7 @@
         @include indexENtitle();
         margin-right: 2vw;
         margin-top: -0.9vw;
-        color: white;
+        color: #757575;
         @media all and (max-width: 1024px) {
           margin-left: 0vw;
           color: #757575;
@@ -959,9 +973,10 @@
       .zh-title {
         @include indexZHtitle();
         color: #232323;
-        display: flex;
+        display: inline-block;
         flex-direction: column;
         position: relative;
+        padding-bottom: 0.3vw;
         @media all and (max-width: 1024px) {
           padding-bottom: 2vw;
           margin-left: 2vw;
@@ -971,14 +986,52 @@
           position: absolute;
           bottom: 3%;
           left: 0px;
-          height: calc(100% - 0.3em);
-          width: 1px;
+
           background-color: black;
           pointer-events: none;
           @media all and (max-width: 1024px) {
             height: 1px;
             bottom: 0%;
             width: calc(100% - 0.3em);
+          }
+        }
+      }
+      .more-box {
+        margin-top: 2vw;
+        z-index: 2;
+        cursor: pointer;
+        @media all and (max-width: 1024px) {
+          display: flex;
+          align-items: center;
+          order: 3;
+          margin-top: 12vw;
+          justify-content: center;
+        }
+        div {
+          display: flex;
+        }
+        a {
+          @include indexMore();
+          color: #b78044;
+          display: flex;
+
+          .more-text {
+            align-self: center;
+            margin-right: 0.5vw;
+            @media all and (max-width: 1024px) {
+              margin-right: 3vw;
+            }
+          }
+          .more-icon {
+            width: 2vw;
+            @media all and (max-width: 1024px) {
+              width: 54px;
+            }
+
+            @media all and (max-width: 500px) {
+              width: 6vw;
+              min-width: 35px;
+            }
           }
         }
       }
@@ -1117,43 +1170,6 @@
         }
       }
     }
-    .more-box {
-      display: none;
-      z-index: 2;
-      cursor: pointer;
-      @media all and (max-width: 1024px) {
-        display: flex;
-        align-items: center;
-        margin-top: 7vw;
-        justify-content: center;
-      }
-      div {
-        display: flex;
-      }
-      a {
-        @include indexMore();
-        color: #b78044;
-        display: flex;
-
-        .more-text {
-          align-self: center;
-          margin-right: 0.5vw;
-          @media all and (max-width: 1024px) {
-            margin-right: 3vw;
-          }
-        }
-        .more-icon {
-          width: 2vw;
-          @media all and (max-width: 1024px) {
-            width: 54px;
-          }
-          @media all and (max-width: 500px) {
-            width: 6vw;
-            min-width: 35px;
-          }
-        }
-      }
-    }
   }
 
   .index-join-container {
@@ -1170,10 +1186,6 @@
     @media all and (max-width: 1680px) {
       min-height: 67vh;
       height: 77vh;
-    }
-
-    @media all and (max-width: 1400px) {
-      height: 67vh;
     }
 
     @media all and (max-width: 1024px) {
@@ -1389,15 +1401,17 @@
     }
 
     .title-box {
-      padding-top: 8vw;
+      padding-top: 4vw;
       display: flex;
       flex-direction: column;
+      text-align: center;
       @media all and (max-width: 1024px) {
         padding-top: 0vw;
         order: 1;
       }
       .title {
         display: flex;
+        flex-direction: column;
         @media all and (max-width: 1024px) {
           flex-direction: column-reverse;
           display: flex;
@@ -1405,7 +1419,7 @@
         }
         .en-title {
           @include indexENtitle();
-          margin-right: 2vw;
+
           margin-top: 0vw;
           @media all and (max-width: 1024px) {
             display: none;
@@ -1424,6 +1438,7 @@
         .zh-title {
           @include indexZHtitle();
           color: white;
+          padding-bottom: 0.3vw;
           @media all and (max-width: 1024px) {
             padding-bottom: 2vw;
             margin-left: 2vw;
@@ -1433,8 +1448,7 @@
             position: absolute;
             bottom: 3%;
             left: 0px;
-            height: calc(100% - 0.3em);
-            width: 1px;
+
             background-color: white;
             pointer-events: none;
             @media all and (max-width: 1024px) {
@@ -1447,6 +1461,7 @@
       }
       .more-box {
         z-index: 2;
+        margin: 0 auto;
         margin-top: 2vw;
         cursor: pointer;
 
@@ -1604,47 +1619,6 @@
           visibility: hidden;
           opacity: 0;
           transition: 1s ease-in-out;
-        }
-      }
-    }
-
-    .more-box {
-      z-index: 2;
-      margin-top: 2vw;
-      cursor: pointer;
-      display: none;
-      @media all and (max-width: 1024px) {
-        padding-top: 0vw;
-        margin-top: 12vw;
-        order: 3;
-        display: flex;
-        justify-content: center;
-      }
-
-      div {
-        display: flex;
-      }
-      a {
-        @include indexMore();
-        color: #b78044;
-        display: flex;
-
-        .more-text {
-          align-self: center;
-          margin-right: 0.5vw;
-          @media all and (max-width: 1024px) {
-            margin-right: 3vw;
-          }
-        }
-        .more-icon {
-          width: 2vw;
-          @media all and (max-width: 1024px) {
-            width: 54px;
-          }
-          @media all and (max-width: 500px) {
-            width: 6vw;
-            min-width: 35px;
-          }
         }
       }
     }

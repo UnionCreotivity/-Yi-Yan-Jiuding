@@ -12,7 +12,6 @@
   font-size: $font-30;
   font-family: "Noto Serif TC";
   letter-spacing: 0.3em;
-  writing-mode: tb-rl;
   display: inline-block;
   position: relative;
   font-weight: 500;
@@ -27,8 +26,8 @@
     position: absolute;
     bottom: 3%;
     left: 0px;
-    height: calc(100% - 0.3em);
-    width: 1px;
+    width: calc(100% - 0.3em);
+    height: 1px;
     background-color: #d7d3ce;
     pointer-events: none;
     @media all and (max-width: 1024px) {

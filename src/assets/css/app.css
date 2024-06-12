@@ -258,7 +258,7 @@ footer div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 10vw;
+  margin-top: 6vw;
   padding-top: 2.5vw;
   padding-bottom: 0.5vw;
   border-top: 1px solid #848484;
@@ -443,7 +443,6 @@ footer div {
   font-size: 0.9vw;
 }
 .index-body .c1-container .left-box .text-box div {
-  margin-top: 1vw;
   letter-spacing: 0.2em;
   align-self: center;
 }
@@ -624,7 +623,7 @@ footer div {
   flex-direction: column;
   width: 100%;
   position: relative;
-  padding-top: 13vw;
+  padding-top: 11vw;
   padding-left: 17%;
 }
 @media all and (max-width: 1024px) {
@@ -636,8 +635,8 @@ footer div {
 }
 .index-body .main-content .david-ogivy-box .title-box {
   display: flex;
-  align-items: center;
-  margin-bottom: 2vw;
+  flex-direction: column;
+  margin-bottom: 3vw;
   opacity: 0;
 }
 @media all and (max-width: 1024px) {
@@ -650,7 +649,7 @@ footer div {
   color: #dda868;
   font-size: 3.7vw;
   font-family: "Cormorant Garamond";
-  color: #fff;
+  color: #757575;
   margin-right: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -673,7 +672,6 @@ footer div {
   display: inline-block;
   position: relative;
   font-weight: 500;
-  padding-bottom: 0.3vw;
 }
 @media all and (max-width: 1024px) {
   .index-body .main-content .david-ogivy-box .title-box .zh-title {
@@ -683,7 +681,12 @@ footer div {
     margin-left: 2vw;
   }
 }
-.index-body .main-content .david-ogivy-box .title-box .zh-title:after {
+.index-body .main-content .david-ogivy-box .title-box .zh-title .title {
+  display: inline-block;
+  padding-bottom: 0.3vw;
+  position: relative;
+}
+.index-body .main-content .david-ogivy-box .title-box .zh-title .title:after {
   content: " ";
   position: absolute;
   bottom: 0%;
@@ -883,6 +886,7 @@ footer div {
 .index-body .main-content .david-ogivy-box .bottom-content-box .center-box {
   padding-top: 6.5vw;
   opacity: 0;
+  display: none;
 }
 @media all and (max-width: 1024px) {
   .index-body .main-content .david-ogivy-box .bottom-content-box .center-box {
@@ -901,6 +905,7 @@ footer div {
 }
 .index-body .main-content .david-ogivy-box .bottom-content-box .right-box {
   opacity: 0;
+  margin-top: -4vw;
 }
 @media all and (max-width: 1024px) {
   .index-body .main-content .david-ogivy-box .bottom-content-box .right-box {
@@ -966,47 +971,39 @@ footer div {
   }
 }
 .index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box {
-  display: flex;
-  flex-direction: column;
-  margin-top: 3vw;
-  text-align: center;
-}
-@media all and (max-width: 1024px) {
-  .index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box {
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 8vw;
-  }
-}
-.index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box div {
+  z-index: 10;
   color: #fff;
   font-size: 1vw;
   font-family: "Cormorant Garamond";
   font-weight: bold;
   letter-spacing: 0.4em;
+  cursor: pointer;
+  margin-top: 3vw;
   display: flex;
-  color: #b78044;
-  flex-direction: column;
+  justify-content: left;
 }
 @media all and (max-width: 1024px) {
-  .index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box div {
+  .index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box {
     font-size: 3.2vw;
   }
 }
-@media all and (max-width: 1024px) {
-  .index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box div {
-    flex-direction: row;
-    align-items: center;
-    margin-right: 3vw;
-  }
+.index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box div {
+  display: flex;
+  align-items: center;
+}
+.index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box a {
+  color: #b78044;
+  align-items: center;
 }
 .index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box img {
-  width: 5.5vw;
+  width: 2vw;
+  align-items: center;
+  margin-left: 0.5vw;
 }
 @media all and (max-width: 1024px) {
   .index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box img {
-    vertical-align: middle;
     width: 54px;
+    margin-left: 3vw;
   }
 }
 @media all and (max-width: 500px) {
@@ -1065,6 +1062,7 @@ footer div {
 }
 .index-body .project-container .title-box {
   display: flex;
+  flex-direction: column;
 }
 @media all and (max-width: 1024px) {
   .index-body .project-container .title-box {
@@ -1095,64 +1093,40 @@ footer div {
   }
 }
 .index-body .project-container .title-box .zh-title {
-  color: #fff;
+  color: #232323;
   font-size: 1.6vw;
   font-family: "Noto Serif TC";
   letter-spacing: 0.3em;
-  writing-mode: tb-rl;
   display: inline-block;
   position: relative;
   font-weight: 500;
-  color: black;
 }
 @media all and (max-width: 1024px) {
   .index-body .project-container .title-box .zh-title {
-    writing-mode: initial;
     font-size: 5.2vw;
-  }
-}
-.index-body .project-container .title-box .zh-title:after {
-  content: " ";
-  position: absolute;
-  bottom: 3%;
-  left: 0px;
-  height: calc(100% - 0.3em);
-  width: 1px;
-  background-color: #d7d3ce;
-  pointer-events: none;
-}
-@media all and (max-width: 1024px) {
-  .index-body .project-container .title-box .zh-title:after {
-    height: 1px;
-    width: calc(100% - 0.3em);
-  }
-}
-@media all and (max-width: 1024px) {
-  .index-body .project-container .title-box .zh-title {
+    letter-spacing: 0.4em;
     padding-bottom: 2vw;
     margin-left: 2vw;
   }
 }
-.index-body .project-container .title-box .zh-title:after {
+.index-body .project-container .title-box .zh-title .title {
+  display: inline-block;
+  padding-bottom: 0.3vw;
+  position: relative;
+}
+.index-body .project-container .title-box .zh-title .title:after {
   content: " ";
   position: absolute;
-  bottom: 3%;
+  bottom: 0%;
   left: 0px;
-  height: calc(100% - 0.3em);
-  width: 1px;
-  background-color: black;
+  width: calc(100% - 0.3em);
+  height: 1px;
+  background-color: #232323;
   pointer-events: none;
-}
-@media all and (max-width: 1024px) {
-  .index-body .project-container .title-box .zh-title:after {
-    height: 1px;
-    bottom: 0%;
-    width: calc(100% - 0.3em);
-  }
 }
 .index-body .project-container .title-box .project-line {
   width: 100%;
-  margin-left: 5vw;
+  margin-left: 29vw;
 }
 @media all and (max-width: 1024px) {
   .index-body .project-container .title-box .project-line {
@@ -1160,7 +1134,7 @@ footer div {
   }
 }
 .index-body .project-container .more-box {
-  margin-top: -2vw;
+  margin-top: 2vw;
   z-index: 2;
   cursor: pointer;
 }
@@ -1356,6 +1330,7 @@ footer div {
 }
 .index-body .news-container .title-box {
   display: flex;
+  flex-direction: column;
   z-index: 9;
 }
 @media all and (max-width: 1024px) {
@@ -1371,7 +1346,7 @@ footer div {
   font-family: "Cormorant Garamond";
   margin-right: 2vw;
   margin-top: -0.9vw;
-  color: white;
+  color: #757575;
 }
 @media all and (max-width: 1024px) {
   .index-body .news-container .title-box .en-title {
@@ -1391,14 +1366,14 @@ footer div {
   font-size: 1.6vw;
   font-family: "Noto Serif TC";
   letter-spacing: 0.3em;
-  writing-mode: tb-rl;
   display: inline-block;
   position: relative;
   font-weight: 500;
   color: #232323;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   position: relative;
+  padding-bottom: 0.3vw;
 }
 @media all and (max-width: 1024px) {
   .index-body .news-container .title-box .zh-title {
@@ -1411,8 +1386,8 @@ footer div {
   position: absolute;
   bottom: 3%;
   left: 0px;
-  height: calc(100% - 0.3em);
-  width: 1px;
+  width: calc(100% - 0.3em);
+  height: 1px;
   background-color: #d7d3ce;
   pointer-events: none;
 }
@@ -1433,8 +1408,6 @@ footer div {
   position: absolute;
   bottom: 3%;
   left: 0px;
-  height: calc(100% - 0.3em);
-  width: 1px;
   background-color: black;
   pointer-events: none;
 }
@@ -1443,6 +1416,60 @@ footer div {
     height: 1px;
     bottom: 0%;
     width: calc(100% - 0.3em);
+  }
+}
+.index-body .news-container .title-box .more-box {
+  margin-top: 2vw;
+  z-index: 2;
+  cursor: pointer;
+}
+@media all and (max-width: 1024px) {
+  .index-body .news-container .title-box .more-box {
+    display: flex;
+    align-items: center;
+    order: 3;
+    margin-top: 12vw;
+    justify-content: center;
+  }
+}
+.index-body .news-container .title-box .more-box div {
+  display: flex;
+}
+.index-body .news-container .title-box .more-box a {
+  color: #fff;
+  font-size: 1vw;
+  font-family: "Cormorant Garamond";
+  font-weight: bold;
+  letter-spacing: 0.4em;
+  color: #b78044;
+  display: flex;
+}
+@media all and (max-width: 1024px) {
+  .index-body .news-container .title-box .more-box a {
+    font-size: 3.2vw;
+  }
+}
+.index-body .news-container .title-box .more-box a .more-text {
+  align-self: center;
+  margin-right: 0.5vw;
+}
+@media all and (max-width: 1024px) {
+  .index-body .news-container .title-box .more-box a .more-text {
+    margin-right: 3vw;
+  }
+}
+.index-body .news-container .title-box .more-box a .more-icon {
+  width: 2vw;
+}
+@media all and (max-width: 1024px) {
+  .index-body .news-container .title-box .more-box a .more-icon {
+    width: 54px;
+  }
+}
+@media all and (max-width: 500px) {
+  .index-body .news-container .title-box .more-box a .more-icon {
+    width: 6vw;
+    min-width: 35px;
   }
 }
 .index-body .news-container .swiper-box {
@@ -1594,59 +1621,6 @@ footer div {
   opacity: 0;
   transition: 1s ease-in-out;
 }
-.index-body .news-container .more-box {
-  display: none;
-  z-index: 2;
-  cursor: pointer;
-}
-@media all and (max-width: 1024px) {
-  .index-body .news-container .more-box {
-    display: flex;
-    align-items: center;
-    margin-top: 7vw;
-    justify-content: center;
-  }
-}
-.index-body .news-container .more-box div {
-  display: flex;
-}
-.index-body .news-container .more-box a {
-  color: #fff;
-  font-size: 1vw;
-  font-family: "Cormorant Garamond";
-  font-weight: bold;
-  letter-spacing: 0.4em;
-  color: #b78044;
-  display: flex;
-}
-@media all and (max-width: 1024px) {
-  .index-body .news-container .more-box a {
-    font-size: 3.2vw;
-  }
-}
-.index-body .news-container .more-box a .more-text {
-  align-self: center;
-  margin-right: 0.5vw;
-}
-@media all and (max-width: 1024px) {
-  .index-body .news-container .more-box a .more-text {
-    margin-right: 3vw;
-  }
-}
-.index-body .news-container .more-box a .more-icon {
-  width: 2vw;
-}
-@media all and (max-width: 1024px) {
-  .index-body .news-container .more-box a .more-icon {
-    width: 54px;
-  }
-}
-@media all and (max-width: 500px) {
-  .index-body .news-container .more-box a .more-icon {
-    width: 6vw;
-    min-width: 35px;
-  }
-}
 .index-body .index-join-container {
   display: flex;
   width: 100%;
@@ -1663,11 +1637,6 @@ footer div {
   .index-body .index-join-container {
     min-height: 67vh;
     height: 77vh;
-  }
-}
-@media all and (max-width: 1400px) {
-  .index-body .index-join-container {
-    height: 67vh;
   }
 }
 @media all and (max-width: 1024px) {
@@ -1752,7 +1721,6 @@ footer div {
     font-size: 1.6vw;
     font-family: "Noto Serif TC";
     letter-spacing: 0.3em;
-    writing-mode: tb-rl;
     display: inline-block;
     position: relative;
     font-weight: 500;
@@ -1772,8 +1740,8 @@ footer div {
     position: absolute;
     bottom: 3%;
     left: 0px;
-    height: calc(100% - 0.3em);
-    width: 1px;
+    width: calc(100% - 0.3em);
+    height: 1px;
     background-color: #d7d3ce;
     pointer-events: none;
   }
@@ -1940,9 +1908,10 @@ footer div {
   cursor: pointer;
 }
 .index-body .news2-container .title-box {
-  padding-top: 8vw;
+  padding-top: 4vw;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 @media all and (max-width: 1024px) {
   .index-body .news2-container .title-box {
@@ -1952,6 +1921,7 @@ footer div {
 }
 .index-body .news2-container .title-box .title {
   display: flex;
+  flex-direction: column;
 }
 @media all and (max-width: 1024px) {
   .index-body .news2-container .title-box .title {
@@ -1964,7 +1934,6 @@ footer div {
   color: #dda868;
   font-size: 3.7vw;
   font-family: "Cormorant Garamond";
-  margin-right: 2vw;
   margin-top: 0vw;
 }
 @media all and (max-width: 1024px) {
@@ -2000,11 +1969,11 @@ footer div {
   font-size: 1.6vw;
   font-family: "Noto Serif TC";
   letter-spacing: 0.3em;
-  writing-mode: tb-rl;
   display: inline-block;
   position: relative;
   font-weight: 500;
   color: white;
+  padding-bottom: 0.3vw;
 }
 @media all and (max-width: 1024px) {
   .index-body .news2-container .title-box .title .zh-title {
@@ -2017,8 +1986,8 @@ footer div {
   position: absolute;
   bottom: 3%;
   left: 0px;
-  height: calc(100% - 0.3em);
-  width: 1px;
+  width: calc(100% - 0.3em);
+  height: 1px;
   background-color: #d7d3ce;
   pointer-events: none;
 }
@@ -2039,8 +2008,6 @@ footer div {
   position: absolute;
   bottom: 3%;
   left: 0px;
-  height: calc(100% - 0.3em);
-  width: 1px;
   background-color: white;
   pointer-events: none;
 }
@@ -2053,6 +2020,7 @@ footer div {
 }
 .index-body .news2-container .title-box .more-box {
   z-index: 2;
+  margin: 0 auto;
   margin-top: 2vw;
   cursor: pointer;
 }
@@ -2238,61 +2206,6 @@ footer div {
   visibility: hidden;
   opacity: 0;
   transition: 1s ease-in-out;
-}
-.index-body .news2-container .more-box {
-  z-index: 2;
-  margin-top: 2vw;
-  cursor: pointer;
-  display: none;
-}
-@media all and (max-width: 1024px) {
-  .index-body .news2-container .more-box {
-    padding-top: 0vw;
-    margin-top: 12vw;
-    order: 3;
-    display: flex;
-    justify-content: center;
-  }
-}
-.index-body .news2-container .more-box div {
-  display: flex;
-}
-.index-body .news2-container .more-box a {
-  color: #fff;
-  font-size: 1vw;
-  font-family: "Cormorant Garamond";
-  font-weight: bold;
-  letter-spacing: 0.4em;
-  color: #b78044;
-  display: flex;
-}
-@media all and (max-width: 1024px) {
-  .index-body .news2-container .more-box a {
-    font-size: 3.2vw;
-  }
-}
-.index-body .news2-container .more-box a .more-text {
-  align-self: center;
-  margin-right: 0.5vw;
-}
-@media all and (max-width: 1024px) {
-  .index-body .news2-container .more-box a .more-text {
-    margin-right: 3vw;
-  }
-}
-.index-body .news2-container .more-box a .more-icon {
-  width: 2vw;
-}
-@media all and (max-width: 1024px) {
-  .index-body .news2-container .more-box a .more-icon {
-    width: 54px;
-  }
-}
-@media all and (max-width: 500px) {
-  .index-body .news2-container .more-box a .more-icon {
-    width: 6vw;
-    min-width: 35px;
-  }
 }
 
 .about-body {
