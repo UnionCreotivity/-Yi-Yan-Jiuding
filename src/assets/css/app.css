@@ -3332,7 +3332,6 @@ footer div {
   border-bottom: 1.5px solid #757575;
   margin-top: 2vw;
   padding-top: 2vw;
-  padding-bottom: 2vw;
   margin-bottom: 2vw;
   width: 92%;
 }
@@ -3361,6 +3360,14 @@ footer div {
   font-family: "微軟正黑體";
   letter-spacing: 0.2em;
   align-self: center;
+}
+.project-content-body .project-content-container .top-content-box .right-box .content-box .content-item .history-content {
+  color: #232323;
+  font-size: 1vw;
+  font-family: "微軟正黑體";
+  letter-spacing: 0.2em;
+  align-self: center;
+  margin-top: 2vw;
 }
 .project-content-body .project-content-container .top-content-box .right-box .link-box {
   display: flex;

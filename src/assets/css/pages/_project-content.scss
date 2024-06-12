@@ -72,7 +72,6 @@
           border-bottom: 1.5px solid #757575;
           margin-top: 2vw;
           padding-top: 2vw;
-          padding-bottom: 2vw;
           margin-bottom: 2vw;
           width: 92%;
           @media all and (max-width: 1680px) {
@@ -98,6 +97,15 @@
               font-family: "微軟正黑體";
               letter-spacing: 0.2em;
               align-self: center;
+            }
+
+            .history-content {
+              color: #232323;
+              font-size: $font-18;
+              font-family: "微軟正黑體";
+              letter-spacing: 0.2em;
+              align-self: center;
+              margin-top: 2vw;
             }
           }
         }
