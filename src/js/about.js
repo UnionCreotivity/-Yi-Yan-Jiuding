@@ -86,8 +86,8 @@ window.onload = function () {
 
                 tabContent[index].style.display = "flex";
                 if (index === 1) {
-                    circlePinAni();
                     circleScrollAni();
+                    circlePinAni();
                 }
 
                 setTimeout(() => {
