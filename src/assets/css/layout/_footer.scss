@@ -4,7 +4,7 @@ footer {
   bottom: 0px;
   left: 0px;
   width: 100%;
-  color: #aaaaaa;
+  color: #d8d8d8;
   font-size: $font-15;
   font-family: "微軟正黑體";
   letter-spacing: 0.2em;
@@ -18,18 +18,18 @@ footer {
     line-height: 2;
     padding: 3vw 0vw;
   }
-  .company {
-    color: #ffffff;
-    font-size: $font-17;
-    font-weight: 500;
-    font-family: "Noto Serif TC";
-    letter-spacing: 0.2em;
+  // .company {
+  //   color: #ffffff;
+  //   font-size: $font-17;
+  //   font-weight: 500;
+  //   font-family: "Noto Serif TC";
+  //   letter-spacing: 0.2em;
 
-    @media all and (max-width: 1024px) {
-      font-size: $font-moblie-28;
-      margin-bottom: 2vw;
-    }
-  }
+  //   @media all and (max-width: 1024px) {
+  //     font-size: $font-moblie-28;
+  //     margin-bottom: 2vw;
+  //   }
+  // }
 
   .email {
     @media all and (max-width: 1024px) {
@@ -38,6 +38,6 @@ footer {
   }
 
   div {
-    margin-left: 2vw;
+    margin-left: 1.8vw;
   }
 }

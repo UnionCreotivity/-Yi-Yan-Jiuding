@@ -90,7 +90,7 @@ footer {
   bottom: 0px;
   left: 0px;
   width: 100%;
-  color: #aaaaaa;
+  color: #d8d8d8;
   font-size: 0.75vw;
   font-family: "微軟正黑體";
   letter-spacing: 0.2em;
@@ -107,26 +107,13 @@ footer {
     padding: 3vw 0vw;
   }
 }
-footer .company {
-  color: #ffffff;
-  font-size: 0.9vw;
-  font-weight: 500;
-  font-family: "Noto Serif TC";
-  letter-spacing: 0.2em;
-}
-@media all and (max-width: 1024px) {
-  footer .company {
-    font-size: 3.6vw;
-    margin-bottom: 2vw;
-  }
-}
 @media all and (max-width: 1024px) {
   footer .email {
     display: none;
   }
 }
 footer div {
-  margin-left: 2vw;
+  margin-left: 1.8vw;
 }
 
 .menu-container-box {
