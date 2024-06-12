@@ -74,12 +74,11 @@
             font-size: $font-28;
             letter-spacing: 0.3em;
             position: relative;
-            padding-bottom: 0.8vw;
             margin-left: 1.7vw;
             &:after {
               content: "";
               position: absolute;
-              bottom: 0%;
+              bottom: -22%;
               left: 0px;
               width: calc(100% - 0.3em);
               height: 1.5px;
