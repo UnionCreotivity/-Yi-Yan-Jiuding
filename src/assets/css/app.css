@@ -1754,8 +1754,9 @@ footer div {
   font-family: "Noto Serif TC";
   letter-spacing: 0.4em;
   color: #fff;
-  font-weight: 500;
   margin-bottom: 4vw;
+  text-align: center;
+  line-height: 2.1;
 }
 @media all and (max-width: 1024px) {
   .index-body .index-join-container .content {
