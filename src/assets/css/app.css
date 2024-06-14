@@ -1015,6 +1015,11 @@ footer div {
     font-size: 3.2vw;
   }
 }
+@media all and (max-width: 500px) {
+  .index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box {
+    font-size: 3.5vw;
+  }
+}
 @media all and (max-width: 1024px) {
   .index-body .main-content .david-ogivy-box .bottom-content-box .right-box .more-box {
     justify-content: center;
@@ -1201,6 +1206,11 @@ footer div {
 @media all and (max-width: 1024px) {
   .index-body .project-container .more-box a {
     font-size: 3.2vw;
+  }
+}
+@media all and (max-width: 500px) {
+  .index-body .project-container .more-box a {
+    font-size: 3.5vw;
   }
 }
 .index-body .project-container .more-box a .more-text {
@@ -1488,6 +1498,11 @@ footer div {
     font-size: 3.2vw;
   }
 }
+@media all and (max-width: 500px) {
+  .index-body .news-container .title-box .more-box a {
+    font-size: 3.5vw;
+  }
+}
 .index-body .news-container .title-box .more-box a .more-text {
   align-self: center;
   margin-right: 0.5vw;
@@ -1690,6 +1705,11 @@ footer div {
 @media all and (max-width: 1024px) {
   .index-body .news-container .mobile-more-box a {
     font-size: 3.2vw;
+  }
+}
+@media all and (max-width: 500px) {
+  .index-body .news-container .mobile-more-box a {
+    font-size: 3.5vw;
   }
 }
 .index-body .news-container .mobile-more-box a .more-text {
@@ -1901,6 +1921,11 @@ footer div {
 @media all and (max-width: 1024px) {
   .index-body .index-join-container .more-box {
     font-size: 3.2vw;
+  }
+}
+@media all and (max-width: 500px) {
+  .index-body .index-join-container .more-box {
+    font-size: 3.5vw;
   }
 }
 .index-body .index-join-container .more-box div {
@@ -2144,6 +2169,11 @@ footer div {
     font-size: 3.2vw;
   }
 }
+@media all and (max-width: 500px) {
+  .index-body .news2-container .title-box .more-box a {
+    font-size: 3.5vw;
+  }
+}
 .index-body .news2-container .title-box .more-box a .more-text {
   align-self: center;
   margin-right: 0.5vw;
@@ -2333,6 +2363,11 @@ footer div {
 @media all and (max-width: 1024px) {
   .index-body .news2-container .mobile-more-box a {
     font-size: 3.2vw;
+  }
+}
+@media all and (max-width: 500px) {
+  .index-body .news2-container .mobile-more-box a {
+    font-size: 3.5vw;
   }
 }
 .index-body .news2-container .mobile-more-box a .more-text {
