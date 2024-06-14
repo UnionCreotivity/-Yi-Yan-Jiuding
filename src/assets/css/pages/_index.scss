@@ -1400,7 +1400,7 @@
     position: relative;
     overflow: hidden;
     justify-content: space-between;
-    background-image: url(../images/index/bg.png);
+    background-image: url(../images/index/bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 12vw;
@@ -1508,7 +1508,7 @@
         }
         .zh-title {
           @include indexZHtitle();
-          color: white;
+          color: #232323;
           padding-bottom: 0.3vw;
           @media all and (max-width: 1024px) {
             padding-bottom: 2vw;
@@ -1520,7 +1520,7 @@
             bottom: 3%;
             left: 0px;
 
-            background-color: white;
+            background-color: #232323;
             pointer-events: none;
             @media all and (max-width: 1024px) {
               height: 1px;

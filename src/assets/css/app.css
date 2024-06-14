@@ -1936,7 +1936,7 @@ footer div {
   position: relative;
   overflow: hidden;
   justify-content: space-between;
-  background-image: url(../images/index/bg.png);
+  background-image: url(../images/index/bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 12vw;
@@ -2071,7 +2071,7 @@ footer div {
   display: inline-block;
   position: relative;
   font-weight: 500;
-  color: white;
+  color: #232323;
   padding-bottom: 0.3vw;
 }
 @media all and (max-width: 1024px) {
@@ -2107,7 +2107,7 @@ footer div {
   position: absolute;
   bottom: 3%;
   left: 0px;
-  background-color: white;
+  background-color: #232323;
   pointer-events: none;
 }
 @media all and (max-width: 1024px) {
