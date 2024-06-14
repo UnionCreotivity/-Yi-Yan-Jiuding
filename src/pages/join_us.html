@@ -96,15 +96,18 @@
         </div>
     </div>
 
-    <div class="loading-screen">
+    <!-- <div class="loading-screen">
         <div class="logo-box">
             <div class="loading-text" id="loading-text">0%</div>
         </div>
-    </div>
+    </div> -->
 
     <div class="join-us-container">
         <div class="top-img-box">
-            <img class="top-img" src="../assets/images/join_us/10.webp" alt="" srcset="">
+            <picture>
+                <source srcset="../assets/images/join_us/top_img_mobile.webp" media="(max-width: 1024px)">
+                <img class="top-img" src="../assets/images/join_us/10.webp" alt="" srcset="">
+            </picture>
             <div class="top-title-box">
                 <div class="big-zh-title">人才招募</div>
                 <div class="big-en-title">JOIN US</div>
@@ -119,6 +122,10 @@
                 <div class="wonderful-box">
                     <div class="title-box">
                         <div class="zh-title">締造美好未來，與我們一起啟航</div>
+                        <div class="zh-title-mobile">
+                            締造美好未來<br>
+                            與我們一起啟航
+                        </div>
                         <div class="en-title">WONDERFUL</div>
                     </div>
                     <div class="content">
@@ -128,9 +135,16 @@
                         打破過去刻板印象，在專業形象下，<br>
                         展現人性柔情的一面。
                     </div>
-                    <img class="join-us-img1" src="../assets/images/join_us/9.webp" alt="" srcset="">
-                </div>
 
+                    <div class="content-mobile">
+                        在招募員工時，銷售經驗為本公司用人最注重的環節，並將訓練人才視為傳承的社會責任，不斷給予新人機會，培訓出獨當一面的專業人才，打破過去刻板印象，在專業形象下，展現人性柔情的一面。
+                    </div>
+                    <picture>
+                        <source srcset="../assets/images/join_us/9_mobile.webp" media="(max-width: 1024px)">
+                        <img class="join-us-img1" src="../assets/images/join_us/9.webp" alt="" srcset="">
+                    </picture>
+
+                </div>
                 <div class="together-box">
                     <div class="title-box">
                         <div class="zh-title">加入我們的行列</div>
@@ -141,32 +155,35 @@
                         不僅關心你的工作，更重視你的幸福。<br>
                         一起加入我們，享受工作，締造成功！
                     </div>
+                    <div class="content-mobile">
+                        在我們的幸福企業裡，不僅關心你的工作，更重視你的幸福。一起加入我們，享受工作，締造成功！
+                    </div>
                 </div>
                 <div class="swiper-box">
                     <div class="bk-slider">
                         <div class="swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="../assets/images/join_us/1.png" alt="" srcset="">
+                                    <img src="../assets/images/join_us/1.webp" alt="" srcset="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../assets/images/join_us/2.png" alt="" srcset="">
+                                    <img src="../assets/images/join_us/2.webp" alt="" srcset="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../assets/images/join_us/3.png" alt="" srcset="">
+                                    <img src="../assets/images/join_us/3.webp" alt="" srcset="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../assets/images/join_us/4.png" alt="" srcset="">
+                                    <img src="../assets/images/join_us/4.webp" alt="" srcset="">
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <img src="../assets/images/join_us/6.png" alt="" srcset="">
+                                    <img src="../assets/images/join_us/6.webp" alt="" srcset="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../assets/images/join_us/7.png" alt="" srcset="">
+                                    <img src="../assets/images/join_us/7.webp" alt="" srcset="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../assets/images/join_us/8.png" alt="" srcset="">
+                                    <img src="../assets/images/join_us/8.webp" alt="" srcset="">
                                 </div>
                             </div>
                             <div class="swiper-pagination swiperpagination1"></div>
@@ -181,8 +198,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -197,6 +212,8 @@
                     歡迎具備熱情與創造力的人才加入團隊。<br>
                     一研九鼎提供完善培訓計劃，<br>
                     如果你想挑戰自我、實現夢想，期待你的加入。
+                </div>
+                <div class="content-mobile">我們正在尋覓優秀的菁英！歡迎具備熱情與創造力的人才加入團隊。一研九鼎提供完善培訓計劃，如果你想挑戰自我、實現夢想，期待你的加入。
                 </div>
                 <div class="link-104">
                     <a href="https://www.104.com.tw/company/10qij254">查看職缺列表</a>
@@ -219,15 +236,14 @@
                             <span>*</span>
                             <input type="text" name="" id="">
                         </div>
-                        <div class="input-box">
-                            <div class="input-title">應徵區域</div>
+                        <div class="input-box select-input-box">
+                            <div class="input-title select-title">應徵區域</div>
                             <span>*</span>
                             <div class="select-box">
                                 <select name="" id="">
                                     <option value=""></option>
                                 </select>
                             </div>
-
                         </div>
                         <div class="textarea-box">
                             <div class="input-title">經歷簡介</div>
@@ -248,14 +264,13 @@
                         <div class="button-box">
                             <button>送出表單</button>
                         </div>
-
-
-
                     </div>
-
-
                 </div>
-                <img class="mountain" src="../assets/images/join_us/mountain.webp" alt="" srcset="">
+
+                <picture>
+                    <source srcset="../assets/images/join_us/mountain_mobile.webp" media="(max-width: 1024px)">
+                    <img class="mountain" src="../assets/images/join_us/mountain.webp" alt="" srcset="">
+                </picture>
             </div>
         </div>
 

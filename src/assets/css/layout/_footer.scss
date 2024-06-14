@@ -14,7 +14,7 @@ footer {
   align-items: center;
   @media all and (max-width: 1024px) {
     flex-direction: column;
-    font-size: $font-moblie-25;
+    font-size: $font-mobile-25;
     line-height: 2;
     padding: 3vw 0vw;
   }
@@ -26,14 +26,23 @@ footer {
   //   letter-spacing: 0.2em;
 
   //   @media all and (max-width: 1024px) {
-  //     font-size: $font-moblie-28;
+  //     font-size: $font-mobile-28;
   //     margin-bottom: 2vw;
   //   }
   // }
-
-  .email {
+  .company {
     @media all and (max-width: 1024px) {
-      display: none;
+      order: 3;
+    }
+  }
+  .address {
+    @media all and (max-width: 1024px) {
+      order: 1;
+    }
+  }
+  .phone {
+    @media all and (max-width: 1024px) {
+      order: 2;
     }
   }
 

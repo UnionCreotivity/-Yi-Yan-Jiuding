@@ -37,8 +37,12 @@
 
     @media all and (max-width: 500px) {
       padding-top: 20vw !important;
-      height: auto;
-      min-height: calc(var(--vh, 2.8vh) * 70);
+      height: calc(var(--vh, 2.8vh) * 75);
+      min-height: calc(var(--vh, 2.8vh) * 75);
+    }
+
+    @media all and (max-width: 414px) {
+      min-height: calc(var(--vh, 2.8vh) * 86);
     }
 
     .left-box {
@@ -196,6 +200,10 @@
             top: 64%;
             right: -19%;
           }
+
+          @media all and (max-width: 500px) {
+            top: 66%;
+          }
         }
       }
     }
@@ -210,6 +218,10 @@
         width: 80%;
         top: 63.5%;
         right: -8%;
+      }
+
+      @media all and (max-width: 500px) {
+        top: 66%;
       }
     }
 
@@ -235,7 +247,7 @@
       }
 
       @media all and (max-width: 1024px) {
-        font-size: $font-moblie-45;
+        font-size: $font-mobile-45;
         right: 10vw;
         bottom: 2%;
       }
@@ -300,6 +312,8 @@
         @media all and (max-width: 1024px) {
           opacity: 1;
           flex-direction: column-reverse;
+          justify-content: center;
+          margin: 0 auto;
         }
         .en-title {
           @include indexENtitle();
@@ -321,16 +335,15 @@
           position: relative;
           font-weight: 500;
 
-          @media all and (max-width: 1024px) {
-            font-size: $font-moblie-40;
-            letter-spacing: 0.4em;
-            padding-bottom: 2vw;
-            margin-left: 2vw;
-          }
           .title {
             display: inline-block;
             padding-bottom: 0.3vw;
             position: relative;
+            @media all and (max-width: 1024px) {
+              font-size: $font-mobile-40;
+              letter-spacing: 0.4em;
+              padding-bottom: 2vw;
+            }
             &:after {
               content: " ";
               position: absolute;
@@ -354,6 +367,10 @@
           margin-top: 6vw;
           width: 100%;
         }
+
+        @media all and (max-width: 500px) {
+          margin-top: 10vw;
+        }
         .left-box {
           .smaill-title {
             color: #232323;
@@ -364,9 +381,10 @@
             opacity: 0;
             @media all and (max-width: 1024px) {
               opacity: 1;
-              font-size: $font-moblie-27;
+              font-size: $font-mobile-27;
               font-weight: 500;
             }
+
             &:after {
               content: " ";
               position: absolute;
@@ -383,7 +401,7 @@
 
               @media all and (max-width: 1024px) {
                 left: 24.5vw;
-                width: 12%;
+                width: 7%;
               }
             }
           }
@@ -553,18 +571,21 @@
             }
           }
 
-          .moblie-black-box {
+          .mobile-black-box {
             display: none;
 
             @media all and (max-width: 1024px) {
               display: flex;
               font-family: "Cormorant Garamond";
-              font-size: $font-moblie-33;
+              font-size: $font-mobile-33;
               flex-direction: column;
               margin-top: 1.5vw;
               line-height: 1.5;
-
               color: #232323;
+            }
+
+            @media all and (max-width: 500px) {
+              margin-top: 3vw;
             }
           }
         }
@@ -590,9 +611,6 @@
           margin-top: -4vw;
           @media all and (max-width: 1024px) {
             opacity: 1;
-
-            padding-left: 4vw;
-            padding-right: 4vw;
           }
           .zh-content {
             @include indexContent();
@@ -602,10 +620,10 @@
             margin-top: 2.5vw;
 
             @media all and (max-width: 1024px) {
-              margin-top: 6vw;
+              margin-top: 10vw;
               display: flex;
               flex-direction: column;
-              letter-spacing: 0.3em;
+              letter-spacing: 0.25em;
             }
 
             div {
@@ -616,6 +634,7 @@
               @media all and (max-width: 1024px) {
                 display: flex;
                 flex-direction: column;
+                margin-bottom: 2vw;
               }
 
               &:after {
@@ -646,6 +665,13 @@
             margin-top: 3vw;
             display: flex;
             justify-content: left;
+            @media all and (max-width: 1024px) {
+              justify-content: center;
+              margin-top: 6vw;
+            }
+            @media all and (max-width: 500px) {
+              margin-top: 10vw;
+            }
             div {
               display: flex;
               align-items: center;
@@ -665,7 +691,7 @@
               }
               @media all and (max-width: 500px) {
                 width: 6vw;
-                min-width: 35px;
+                min-width: 30px;
               }
             }
           }
@@ -753,7 +779,7 @@
         font-weight: 500;
 
         @media all and (max-width: 1024px) {
-          font-size: $font-moblie-40;
+          font-size: $font-mobile-40;
           letter-spacing: 0.4em;
           padding-bottom: 2vw;
           margin-left: 2vw;
@@ -818,7 +844,7 @@
 
           @media all and (max-width: 500px) {
             width: 6vw;
-            min-width: 35px;
+            min-width: 30px;
           }
         }
       }
@@ -885,7 +911,7 @@
 
           @media all and (max-width: 500px) {
             width: 6vw;
-            min-width: 35px;
+            min-width: 30px;
           }
         }
 
@@ -903,7 +929,7 @@
           }
           @media all and (max-width: 500px) {
             width: 6vw;
-            min-width: 35px;
+            min-width: 30px;
           }
         }
 
@@ -922,7 +948,7 @@
     position: relative;
     overflow: hidden;
     background-color: #d8d8d8;
-    padding-top: 8vw;
+    padding-top: 11vw;
     padding-bottom: 8vw;
     padding-left: 10%;
     justify-content: space-between;
@@ -941,7 +967,7 @@
       position: absolute;
       width: 55%;
       left: 0px;
-      bottom: 8vw;
+      bottom: 8.03vw;
       z-index: 5;
       @media all and (max-width: 1024px) {
         width: 100vw;
@@ -1001,7 +1027,7 @@
         z-index: 2;
         cursor: pointer;
         @media all and (max-width: 1024px) {
-          display: flex;
+          display: none;
           align-items: center;
           order: 3;
           margin-top: 12vw;
@@ -1030,7 +1056,7 @@
 
             @media all and (max-width: 500px) {
               width: 6vw;
-              min-width: 35px;
+              min-width: 30px;
             }
           }
         }
@@ -1097,7 +1123,7 @@
                   font-weight: 500;
                   margin-right: 0.4vw;
                   @media all and (max-width: 1024px) {
-                    font-size: $font-moblie-24;
+                    font-size: $font-mobile-24;
                     font-weight: initial;
                   }
                 }
@@ -1107,7 +1133,7 @@
                   letter-spacing: 0.15em;
                   color: #232323;
                   @media all and (max-width: 1024px) {
-                    font-size: $font-moblie-24;
+                    font-size: $font-mobile-24;
                   }
                 }
               }
@@ -1119,7 +1145,7 @@
                 color: #232323;
                 font-weight: 600;
                 @media all and (max-width: 1024px) {
-                  font-size: $font-moblie-30;
+                  font-size: $font-mobile-30;
                   font-weight: 600;
                 }
               }
@@ -1141,7 +1167,7 @@
           }
           @media all and (max-width: 500px) {
             width: 6vw;
-            min-width: 35px;
+            min-width: 30px;
           }
         }
 
@@ -1159,7 +1185,7 @@
           }
           @media all and (max-width: 500px) {
             width: 6vw;
-            min-width: 35px;
+            min-width: 30px;
           }
         }
 
@@ -1167,6 +1193,47 @@
           visibility: hidden;
           opacity: 0;
           transition: 1s ease-in-out;
+        }
+      }
+    }
+
+    .mobile-more-box {
+      margin-top: 2vw;
+      z-index: 2;
+      cursor: pointer;
+      display: none;
+      @media all and (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+        order: 3;
+        margin-top: 12vw;
+        justify-content: center;
+      }
+      div {
+        display: flex;
+      }
+      a {
+        @include indexMore();
+        color: #b78044;
+        display: flex;
+
+        .more-text {
+          align-self: center;
+          margin-right: 0.5vw;
+          @media all and (max-width: 1024px) {
+            margin-right: 3vw;
+          }
+        }
+        .more-icon {
+          width: 2vw;
+          @media all and (max-width: 1024px) {
+            width: 54px;
+          }
+
+          @media all and (max-width: 500px) {
+            width: 6vw;
+            min-width: 30px;
+          }
         }
       }
     }
@@ -1190,13 +1257,13 @@
 
     @media all and (max-width: 1024px) {
       height: 70vh;
-      background-image: url(../images/index/join_bg_moblie.webp);
+      background-image: url(../images/index/join_bg_mobile.webp);
     }
 
     @media all and (max-width: 500px) {
       height: auto;
       min-height: initial;
-      padding-bottom: 18vw;
+      padding-bottom: 8vw;
     }
 
     .index-join-content {
@@ -1206,9 +1273,9 @@
       transform: translate(-50%, -50%);
 
       @media all and (max-width: 1024px) {
-        position: relative;
-        top: 0px;
-        left: 0px;
+        position: initial;
+        top: initial;
+        left: initial;
         width: 100%;
         text-align: center;
         transform: initial;
@@ -1216,7 +1283,7 @@
       }
 
       @media all and (max-width: 500px) {
-        padding-top: 15vw;
+        padding-top: 8vw;
       }
     }
 
@@ -1227,7 +1294,7 @@
       margin-bottom: 2vw;
       @media all and (max-width: 1024px) {
         flex-direction: column-reverse;
-        margin-bottom: 10vw;
+        margin-bottom: 7vw;
       }
       .en-title {
         @include indexENtitle();
@@ -1279,17 +1346,17 @@
         display: none;
       }
     }
-    .content-moblie {
+    .content-mobile {
       display: none;
 
       @media all and (max-width: 1024px) {
         display: flex;
-        font-size: $font-moblie-30;
+        font-size: $font-mobile-30;
         font-family: "Noto Serif TC";
         letter-spacing: 0.4em;
         color: #fff;
         font-weight: 500;
-        margin-bottom: 13vw;
+        margin-bottom: 8vw;
         justify-content: center;
         line-height: 2;
       }
@@ -1318,7 +1385,7 @@
         }
         @media all and (max-width: 500px) {
           width: 6vw;
-          min-width: 35px;
+          min-width: 30px;
         }
       }
     }
@@ -1351,7 +1418,7 @@
       padding-bottom: 16vw;
       justify-content: center;
       flex-direction: column;
-      margin-bottom: 30vw;
+      margin-bottom: 23vw;
     }
 
     .left-swiper-box {
@@ -1427,7 +1494,7 @@
           }
         }
 
-        .en-title-moblie {
+        .en-title-mobile {
           @include indexENtitle();
           display: none;
           @media all and (max-width: 1024px) {
@@ -1494,7 +1561,7 @@
             }
             @media all and (max-width: 500px) {
               width: 6vw;
-              min-width: 35px;
+              min-width: 30px;
             }
           }
         }
@@ -1531,7 +1598,7 @@
       }
     }
 
-    .moblie-swiper-box {
+    .mobile-swiper-box {
       width: 100%;
 
       justify-content: right;
@@ -1541,7 +1608,7 @@
         order: 2;
         display: flex;
       }
-      .moblie-news2-swiper {
+      .mobile-news2-swiper {
         width: 100%;
         display: flex;
         overflow: hidden;
@@ -1594,7 +1661,7 @@
           }
           @media all and (max-width: 500px) {
             width: 6vw;
-            min-width: 35px;
+            min-width: 30px;
           }
         }
 
@@ -1612,7 +1679,7 @@
           }
           @media all and (max-width: 500px) {
             width: 6vw;
-            min-width: 35px;
+            min-width: 30px;
           }
         }
 
@@ -1620,6 +1687,47 @@
           visibility: hidden;
           opacity: 0;
           transition: 1s ease-in-out;
+        }
+      }
+    }
+
+    .mobile-more-box {
+      margin-top: 2vw;
+      z-index: 2;
+      cursor: pointer;
+      display: none;
+      @media all and (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+        order: 3;
+        margin-top: 12vw;
+        justify-content: center;
+      }
+      div {
+        display: flex;
+      }
+      a {
+        @include indexMore();
+        color: #b78044;
+        display: flex;
+
+        .more-text {
+          align-self: center;
+          margin-right: 0.5vw;
+          @media all and (max-width: 1024px) {
+            margin-right: 3vw;
+          }
+        }
+        .more-icon {
+          width: 2vw;
+          @media all and (max-width: 1024px) {
+            width: 54px;
+          }
+
+          @media all and (max-width: 500px) {
+            width: 6vw;
+            min-width: 30px;
+          }
         }
       }
     }

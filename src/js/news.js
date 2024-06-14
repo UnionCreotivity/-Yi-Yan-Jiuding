@@ -20,6 +20,10 @@ window.onload = function () {
     }
     updateProgress();
 
+    $(".scroll-top").click(function () {
+        $("html,body").animate({ scrollTop: 0 }, 800);
+    });
+
     function menuOpen() {
         let menu_btn = document.querySelector(".menu-box");
         let menu_box = document.querySelector(".menu-container-box");

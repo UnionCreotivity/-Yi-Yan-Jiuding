@@ -50,7 +50,6 @@ window.onload = function () {
     }
     menuOpen();
 
-
     let loadingScreen = document.querySelector(".loading-screen");
     let loadingText = document.getElementById("loading-text");
     let percent = 1;
@@ -162,7 +161,7 @@ window.onload = function () {
 
     } else {
 
-        const newsSwiper = new Swiper(".moblie-news2-swiper", {
+        const newsSwiper = new Swiper(".mobile-news2-swiper", {
             slidesPerView: 1,
             spaceBetween: 0,
             loop: true,
@@ -172,53 +171,39 @@ window.onload = function () {
             // },
 
             navigation: {
-                nextEl: ".moblie-news2-next",
-                prevEl: ".moblie-news2-prev",
+                nextEl: ".mobile-news2-next",
+                prevEl: ".mobile-news2-prev",
             },
 
 
         });
     }
 
-
-
     function c1PinAni() {
+
+        gsap.set('.main-content', { marginTop: "-100vh" })
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".c1-container",
                 start: "top top",
-                end: "+=180%",
+                end: "+=260%",
                 scrub: 2,
                 pin: ".c1-container",
                 pinSpacing: true,
+                invalidateOnRefresh: true
             },
         });
 
         tl.to(".first-bg", { duration: 1, filter: "grayscale(0) contrast(1)" }, "<")
-            .to(
-                ".c1-container",
-                { duration: 1, backgroundImage: "none", backgroundColor: "white" },
-                "<"
-            )
-            .to(
-                ".gray-fb,.gray-yt,.gray-line",
-                { duration: 1, opacity: 0 },
-                "<"
-            )
-            .to(
-                ".color-fb,.color-yt,.color-line",
-                { duration: 1, opacity: 1 },
-                "<0.3"
-            )
-            .to(
-                ".c1-container .left-box .text-box",
-                { duration: 1, color: "black" },
-                "<"
-            )
             .to(".first-bg", { duration: 1, opacity: 0 })
-            .to(".second-bg", { duration: 1, opacity: 1 }, "<");
+            .to(".second-bg", { duration: 1, opacity: 1 }, "<")
+            .to(".c1-container", {
+                duration: 1, onComplete: function () {
+                    gsap.set(".c1-container", { pinSpacing: false });
+                }
+            });
     }
-    // c1PinAni();
+    c1PinAni();
 
     function c2Ani() {
 
@@ -265,7 +250,6 @@ window.onload = function () {
                     from: "start",
                 },
             })
-
                 .to(
                     ".black2 .clip-text div div",
                     {
@@ -341,7 +325,23 @@ window.onload = function () {
                     },
                     "<"
                 )
+                .to(
+                    ".david-ogivy-box .title-box,.david-ogivy-box .bottom-content-box .smaill-title",
+                    {
+                        opacity: 1,
+                        duration: 1,
+                    },
+                    "<0.3"
+                )
+                .to(
+                    ".david-ogivy-box .bottom-content-box .center-box,.david-ogivy-box .bottom-content-box .right-box",
+                    {
+                        opacity: 1,
+                        duration: 1,
+                    },
+                    "<"
 
+                )
                 .to(".black2-1 .clip-text div div", {
                     clipPath: "inset(0% 0% 0% 0%)",
                     stagger: {
@@ -382,23 +382,27 @@ window.onload = function () {
                     },
                     "<"
                 )
-                .to(
-                    ".david-ogivy-box .title-box,.david-ogivy-box .bottom-content-box .smaill-title",
-                    {
-                        opacity: 1,
-                        duration: 1,
-                    },
-                    "<0.3"
-                )
-                .to(
-                    ".david-ogivy-box .bottom-content-box .center-box,.david-ogivy-box .bottom-content-box .right-box",
-                    {
-                        opacity: 1,
-                        duration: 1,
-                    },
-                    "<"
-                );
+
         }
     }
     c2Ani();
+
+    function newsPin() {
+
+        if (window_width > 1024) {
+            gsap.to(".news-container", {
+                scrollTrigger: {
+                    trigger: ".news-container",
+                    start: "top top",
+                    end: "bottom top",
+                    pin: true,
+                    pinSpacing: false,
+                },
+
+            });
+        }
+
+
+    }
+    newsPin();
 };

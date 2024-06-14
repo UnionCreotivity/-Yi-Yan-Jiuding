@@ -7,8 +7,9 @@
   background-repeat: no-repeat;
 
   @media all and (max-width: 1024px) {
-    background-image: url(../images/contact/bg_moblie.webp);
-    background-size: contain;
+    background-image: url(../images/contact/bg_mobile.webp);
+    background-size: cover;
+    background-position: 77%;
   }
   .contact-container {
     display: flex;
@@ -22,7 +23,7 @@
 
     @media all and (max-width: 500px) {
       padding-top: 18vw;
-      padding-bottom: 18vw;
+      padding-bottom: 12vw;
     }
 
     .top-title-box {
@@ -73,7 +74,7 @@
           padding: 5vw 7vw;
         }
         @media all and (max-width: 1024px) {
-          padding: 6vw 5vw;
+          padding: 8vw 6vw;
           padding-bottom: 7.5vw;
           min-width: initial;
           width: 88%;
@@ -86,8 +87,9 @@
           margin-bottom: 3vw;
         }
         @media all and (max-width: 1024px) {
-          margin-bottom: 6vw;
+          margin-bottom: 7vw;
         }
+
         .input-title {
           color: #ffffff;
           letter-spacing: 0.2em;
@@ -114,8 +116,12 @@
           }
 
           @media all and (max-width: 1024px) {
-            font-size: $font-moblie-30;
+            font-size: $font-mobile-30;
             width: 50%;
+          }
+
+          @media all and (max-width: 500px) {
+            width: 45%;
           }
         }
         span {
@@ -124,7 +130,7 @@
           padding-top: 0.3vw;
           padding-left: 0.1vw;
           @media all and (max-width: 1024px) {
-            font-size: $font-moblie-30;
+            font-size: $font-mobile-30;
           }
         }
         input {
@@ -146,8 +152,10 @@
           }
 
           @media all and (max-width: 1024px) {
-            font-size: $font-moblie-28;
+            font-size: $font-mobile-28;
             padding-left: 1vw;
+            line-height: 2;
+            margin-left: 5vw;
           }
         }
 
@@ -198,8 +206,12 @@
           }
 
           @media all and (max-width: 1024px) {
-            font-size: $font-moblie-30;
+            font-size: $font-mobile-30;
             width: 31.5%;
+          }
+
+          @media all and (max-width: 500px) {
+            width: 28%;
           }
         }
         textarea {
@@ -220,16 +232,12 @@
           }
 
           @media all and (max-width: 1024px) {
-            margin-left: 4.2vw;
             width: 63%;
             height: 28vw;
-            font-size: $font-moblie-28;
+            font-size: $font-mobile-28;
             line-height: 5.5vw;
             padding-left: 1vw;
-          }
-
-          @media all and (max-width: 500px) {
-            height: 36vw;
+            margin-left: 7vw;
           }
         }
       }
@@ -261,7 +269,7 @@
           cursor: pointer;
 
           @media all and (max-width: 1024px) {
-            font-size: $font-moblie-30;
+            font-size: $font-mobile-30;
             padding: 1.8vw 2.5vw;
             padding-left: 3.8vw;
           }

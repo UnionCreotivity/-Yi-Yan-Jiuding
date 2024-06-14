@@ -109,13 +109,18 @@
             </div>
             <div class="right-box">
                 <div class="project-title-box">
-                    <div class="year">2022</div>
-                    <div class="project-name">坤聯發中科匯</div>
+                    <div class="project-name-year-box">
+                        <div class="year">2022</div>
+                        <div class="project-name">坤聯發中科匯</div>
+                    </div>
                     <div class="project-local">
                         <div class="local">
                             台北市 中山區
                         </div>
                     </div>
+                </div>
+                <div class="img-box">
+                    <img class="project-bulid" src="../assets/images/project_content/bulid.webp" alt="" srcset="">
                 </div>
                 <div class="content-box">
                     <div class="content-item">
@@ -130,6 +135,7 @@
                         <div class="item-title">區域</div>
                         <div class="content">台中市西屯區</div>
                     </div>
+
                     <div class="content-item">
                         <div class="item-title">坪數</div>
                         <div class="content">42~48坪</div>
@@ -163,13 +169,25 @@
             <div class="swiper project-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="../assets/images/project_content/swiper1.webp" alt="swiper1" />
+                        <picture>
+                            <source srcset="../assets/images/project_content/swiper1_mobile.webp"
+                                media="(max-width: 1024px)">
+                            <img src="../assets/images/project_content/swiper1.webp" alt="swiper1" />
+                        </picture>
                     </div>
                     <div class="swiper-slide">
-                        <img src="../assets/images/project_content/9.webp" alt="swiper1" />
+                        <picture>
+                            <source srcset="../assets/images/project_content/swiper1_mobile.webp"
+                                media="(max-width: 1024px)">
+                            <img src="../assets/images/project_content/9.webp" alt="swiper1" />
+                        </picture>
                     </div>
                     <div class="swiper-slide">
-                        <img src="../assets/images/project_content/10.webp" alt="swiper1" />
+                        <picture>
+                            <source srcset="../assets/images/project_content/swiper1_mobile.webp"
+                                media="(max-width: 1024px)">
+                            <img src="../assets/images/project_content/10.webp" alt="swiper1" />
+                        </picture>
                     </div>
                 </div>
                 <div class="swiper-pagination swiperpagination1"></div>
@@ -186,9 +204,14 @@
             </div>
         </div>
 
-        <div class="swiper-text">五感集萃，細蘊豐景，謙退留白，塑永恆不變的環境氣質。</div>
+        <div class="text-box">
+            <div class="text">
+                五感集萃，細蘊豐景，謙退留白，塑永恆不變的環境氣質。
+            </div>
 
-        <div class="reserve-box">
+        </div>
+
+        <!-- <div class="reserve-box">
             <div class="reserve-title-box">
                 <div class="zh-title">預約賞屋</div>
                 <div class="en-title">CONTACT US</div>
@@ -220,12 +243,18 @@
                     </div>
                 </div>
                 <div class="right-box">
-                    <img src="../assets/images/project_content/map.webp" alt="" srcset="">
+                    <picture>
+                        <source srcset="../assets/images/project_content/mobile_map.png" media="(max-width: 1024px)">
+                        <img src="../assets/images/project_content/map.webp" alt="" srcset="">
+                    </picture>
+                </div>
+                <div class="button-box-mobile">
+                    <button>送出表單</button>
                 </div>
             </div>
 
 
-        </div>
+        </div> -->
 
         <div class="back-btn-box">
             <button class="back-btn" type="button">
@@ -234,6 +263,7 @@
         </div>
 
         <picture>
+            <source srcset="../assets/images/moblie_top.svg" media="(max-width: 1024px)">
             <img class="scroll-top" src="../assets/images/pc_top.svg" alt="" srcset="">
         </picture>
     </div>

@@ -70,23 +70,5 @@ window.onload = function () {
     $(".scroll-top").click(function () {
         $("html,body").animate({ scrollTop: 0 }, 800);
     });
-    const swiper1 = new Swiper(".news-swiper", {
-        loop: true,
 
-        speed: 1500,
-        effect: "fade",
-        autoplay: {
-            delay: 2000,
-        },
-
-        pagination: {
-            el: ".swiperpagination1",
-            type: "bullets",
-            clickable: true,
-        },
-        navigation: {
-            prevEl: ".prev1",
-            nextEl: ".next1",
-        },
-    });
 };

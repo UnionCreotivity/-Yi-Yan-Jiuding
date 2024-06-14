@@ -10,13 +10,10 @@ window.onload = function () {
         if (percent <= 100) {
             setTimeout(updateProgress, 10);
         } else {
-
             let tl = gsap.timeline({});
             tl.to(loadingScreen, { duration: 1, opacity: 0, ease: "power1.inOut" })
                 .to(loadingScreen, { duration: 1, display: 'none', })
-
         }
-
     }
 
     updateProgress();

@@ -14,10 +14,17 @@
     @media all and (max-width: 1920px) {
       padding-top: 9vw;
     }
+    @media all and (max-width: 1024px) {
+      padding-top: 18vw;
+      padding-bottom: 25vw;
+    }
     .top-img-box {
       width: 85%;
       margin: 0 auto;
       position: relative;
+      @media all and (max-width: 1024px) {
+        width: 88%;
+      }
       img {
         width: 100%;
         z-index: 1;
@@ -49,7 +56,9 @@
       position: relative;
       width: 100%;
       margin: 0 auto;
-
+      @media all and (max-width: 1024px) {
+        padding-top: 3.5vw;
+      }
       .left-nav-box {
         display: flex;
         flex-direction: column;
@@ -57,20 +66,65 @@
         top: 11vw;
         z-index: 10;
         left: 7.5vw;
+
+        @media all and (max-width: 1024px) {
+          flex-direction: row;
+          position: initial;
+          width: 70%;
+          top: initial;
+          left: initial;
+          justify-content: space-evenly;
+          margin: 0 auto;
+          margin-top: 3vw;
+          margin-bottom: 5vw;
+        }
+
         .nav-item {
           font-size: $font-18;
           letter-spacing: 0.4em;
           color: #232323;
-          font-weight: bold;
+          font-weight: 600;
           margin-bottom: 1vw;
           font-family: "Noto Serif TC";
           cursor: pointer;
           padding: 0.3vw 0.25vw 0.4vw 0.65vw;
+          @media all and (max-width: 1024px) {
+            font-size: $font-mobile-30;
+            position: relative;
+            color: #757575;
+            margin-right: 7vw;
+            letter-spacing: 0.15em;
+
+            &:after {
+              content: " ";
+              position: absolute;
+              bottom: 16%;
+              left: 26vw;
+              height: calc(100% - 0.6em);
+              width: 1.6px;
+              background-color: #434343;
+              pointer-events: none;
+              @media all and (max-width: 500px) {
+                width: 1px;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            margin-right: 0vw;
+            &:after {
+              display: none;
+            }
+          }
         }
 
         .tab-active {
           background-color: #434343;
           color: white;
+          @media all and (max-width: 1024px) {
+            background-color: initial;
+            color: #757575;
+          }
         }
       }
 
@@ -84,14 +138,30 @@
           position: relative;
           margin-top: 4vw;
           text-align: center;
+
+          @media all and (max-width: 1024px) {
+            margin-top: 0vw;
+          }
+
           .title-box {
             display: flex;
             flex-direction: column;
 
             .zh-title {
               @include pageZHTitle();
+              @media all and (max-width: 1024px) {
+                display: none;
+              }
             }
 
+            .zh-title-mobile {
+              @include pageZHTitle();
+              display: none;
+              @media all and (max-width: 1024px) {
+                display: flex;
+                justify-content: center;
+              }
+            }
             .en-title {
               @include pageENTitle();
             }
@@ -99,12 +169,33 @@
 
           .content {
             @include pageContent();
+            @media all and (max-width: 1024px) {
+              display: none;
+            }
+          }
+
+          .content-mobile {
+            @include pageContent();
+            display: none;
+            @media all and (max-width: 1024px) {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 88%;
+              text-align: justify;
+              margin: 0 auto;
+              margin-top: 5vw;
+            }
           }
 
           .join-us-img1 {
             margin: 0 auto;
             width: 60%;
             margin-top: 5vw;
+            @media all and (max-width: 1024px) {
+              width: 88%;
+              margin-top: 7vw;
+            }
           }
         }
         .together-box {
@@ -113,6 +204,9 @@
           position: relative;
           margin-top: 4vw;
           text-align: center;
+          @media all and (max-width: 1024px) {
+            margin-top: 7vw;
+          }
           .title-box {
             display: flex;
             flex-direction: column;
@@ -128,6 +222,23 @@
 
           .content {
             @include pageContent();
+            @media all and (max-width: 1024px) {
+              display: none;
+            }
+          }
+
+          .content-mobile {
+            @include pageContent();
+            display: none;
+            @media all and (max-width: 1024px) {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 88%;
+              text-align: justify;
+              margin: 0 auto;
+              margin-top: 5vw;
+            }
           }
         }
         .swiper-box {
@@ -136,6 +247,12 @@
           margin-top: 1vw;
           margin-bottom: 15vw;
           overflow: hidden;
+          @media all and (max-width: 1024px) {
+            width: 88%;
+            margin: 0 auto;
+            margin-top: 7vw;
+            margin-bottom: 13vw;
+          }
 
           .swiper-slide {
             text-align: center;
@@ -144,12 +261,14 @@
             justify-content: center;
             align-items: center;
             margin: 0px;
-
             transition: all 0.6s ease;
 
             &.swiper-slide-active {
               transform: scale(1.4);
               z-index: 2;
+              @media all and (max-width: 1024px) {
+                transform: initial;
+              }
             }
           }
         }
@@ -163,6 +282,11 @@
           margin: 0 auto;
           padding-top: 5%;
           padding-bottom: 5%;
+          @media all and (max-width: 1024px) {
+            padding-top: 0%;
+            padding-bottom: 0%;
+            width: 100%;
+          }
         }
 
         .swiper {
@@ -190,6 +314,9 @@
           &.swiper-slide-active {
             transform: scale(1.4);
             z-index: 2;
+            @media all and (max-width: 1024px) {
+              transform: initial;
+            }
           }
         }
 
@@ -201,9 +328,21 @@
               left: 20vw;
               z-index: 999;
               cursor: pointer;
+              @media all and (max-width: 1024px) {
+                left: 6%;
+                top: 45%;
+              }
 
               img {
                 width: 2vw;
+                @media all and (max-width: 1024px) {
+                  width: 54px;
+                  opacity: 0.7;
+                }
+                @media all and (max-width: 500px) {
+                  width: 6vw;
+                  min-width: 30px;
+                }
               }
             }
             .next1 {
@@ -212,9 +351,20 @@
               right: 20vw;
               z-index: 999;
               cursor: pointer;
-
+              @media all and (max-width: 1024px) {
+                right: 6%;
+                top: 45%;
+              }
               img {
                 width: 2vw;
+                @media all and (max-width: 1024px) {
+                  width: 54px;
+                  opacity: 0.7;
+                }
+                @media all and (max-width: 500px) {
+                  width: 6vw;
+                  min-width: 30px;
+                }
               }
             }
           }
@@ -259,10 +409,30 @@
 
         .content {
           @include pageContent();
+          @media all and (max-width: 1024px) {
+            display: none;
+          }
+        }
+
+        .content-mobile {
+          @include pageContent();
+          display: none;
+          @media all and (max-width: 1024px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 88%;
+            text-align: justify;
+            margin: 0 auto;
+            margin-top: 5vw;
+          }
         }
 
         .link-104 {
           margin-top: 2.5vw;
+          @media all and (max-width: 1024px) {
+            margin-top: 8vw;
+          }
           a {
             text-decoration: none;
             font-size: $font-18;
@@ -272,6 +442,12 @@
             color: white;
             background-color: #434343;
             padding: 0.3vw 0.8vw 0.4vw 1.2vw;
+            @media all and (max-width: 1024px) {
+              font-size: $font-mobile-30;
+              letter-spacing: 0.35em;
+              padding: 2vw 3.5vw;
+              padding-left: 4.5vw;
+            }
           }
         }
 
@@ -286,6 +462,12 @@
           @media all and (max-width: 1440px) {
             min-width: 700px;
           }
+          @media all and (max-width: 1024px) {
+            margin-top: 14vw;
+            min-width: initial;
+            width: 88%;
+            margin-bottom: 24vw;
+          }
           .form-box {
             background-color: rgb(rgb(255, 255, 255), 0.5);
             display: flex;
@@ -293,6 +475,10 @@
             flex-direction: column;
             padding-bottom: 18vw;
 
+            @media all and (max-width: 1024px) {
+              padding: 7vw 5vw;
+              padding-bottom: 30vw;
+            }
             .input-box {
               display: flex;
               margin-bottom: 1.5vw;
@@ -301,10 +487,14 @@
               @media all and (max-width: 1440px) {
                 margin-bottom: 2vw;
               }
+              @media all and (max-width: 1024px) {
+                margin-bottom: 7vw;
+                justify-content: left;
+              }
               .input-title {
                 color: #232323;
                 letter-spacing: 0.2em;
-                font-weight: bold;
+                font-weight: 600;
                 font-family: "Noto Serif TC";
                 font-size: $font-18;
                 width: 16%;
@@ -318,6 +508,10 @@
                 @media all and (max-width: 1440px) {
                   width: 13%;
                 }
+                @media all and (max-width: 1024px) {
+                  font-size: $font-mobile-30;
+                  width: 27%;
+                }
               }
 
               span {
@@ -325,6 +519,14 @@
                 font-size: $font-20;
                 padding-top: 0.4vw;
                 margin-left: 0.1vw;
+                @media all and (max-width: 1024px) {
+                  font-size: $font-mobile-30;
+                  padding-top: 0.8vw;
+                  margin-left: 1vw;
+                }
+                @media all and (max-width: 500px) {
+                  padding-top: 0vw;
+                }
               }
 
               input {
@@ -336,7 +538,6 @@
                 align-self: center;
                 color: #232323;
                 letter-spacing: 0.2em;
-                font-weight: 500;
                 font-size: $font-17;
                 font-family: "Noto Serif TC";
                 padding-left: 1vw;
@@ -348,6 +549,18 @@
                 }
                 @media all and (max-width: 1366px) {
                   width: 68%;
+                }
+                @media all and (max-width: 1024px) {
+                  font-size: $font-mobile-30;
+                  width: 65%;
+                  line-height: 7vw;
+                  margin-left: 4vw;
+                  padding-left: 2vw;
+                }
+
+                @media all and (max-width: 500px) {
+                  padding-left: 3vw;
+                  line-height: 2;
                 }
               }
 
@@ -364,6 +577,23 @@
                 }
                 @media all and (max-width: 1366px) {
                   width: 68%;
+                }
+                @media all and (max-width: 1024px) {
+                  margin-left: 0vw;
+                  width: 65%;
+                  position: absolute;
+                  left: 27vw;
+                }
+                @media all and (max-width: 500px) {
+                  line-height: 1.7em;
+                  width: 64.5%;
+                  left: 27.5vw;
+                }
+                @media all and (max-width: 375px) {
+                  line-height: 1.5em;
+                }
+                @media all and (max-width: 320px) {
+                  line-height: 1.2em;
                 }
                 select {
                   border: none;
@@ -382,6 +612,28 @@
                   background: url(../images/join_us/select_icon.svg) no-repeat
                     right 0.9em center;
                   background-size: 1em;
+                  @media all and (max-width: 1024px) {
+                    font-size: $font-mobile-30;
+                    padding-left: 2vw;
+                    background: url(../images/join_us/select_icon.svg) no-repeat
+                      right 0.5em center;
+                    background-size: 1em;
+                  }
+                }
+              }
+            }
+
+            .select-input-box {
+              @media all and (max-width: 1024px) {
+                justify-content: left;
+                margin-bottom: 7.5vw;
+              }
+              @media all and (max-width: 500px) {
+                margin-bottom: 9vw;
+              }
+              span {
+                @media all and (max-width: 500px) {
+                  margin-top: -0.4vw;
                 }
               }
             }
@@ -402,7 +654,6 @@
                 align-self: center;
                 color: #232323;
                 letter-spacing: 0.15em;
-                font-weight: 500;
                 font-family: "Noto Serif TC";
                 position: relative;
                 margin-left: 2vw;
@@ -416,6 +667,14 @@
                 @media all and (max-width: 1366px) {
                   width: 68%;
                 }
+                @media all and (max-width: 1024px) {
+                  width: 66%;
+                  margin-left: 6vw;
+                  height: 7.3vw;
+                }
+                @media all and (max-width: 500px) {
+                  height: 8.5vw;
+                }
               }
 
               img {
@@ -424,6 +683,14 @@
                 right: 0.5vw;
                 top: 0.45vw;
                 cursor: pointer;
+                @media all and (max-width: 1024px) {
+                  width: 4.5vw;
+                  right: 2vw;
+                  top: 1.5vw;
+                }
+                @media all and (max-width: 500px) {
+                  top: 2.1vw;
+                }
               }
 
               .file-name {
@@ -437,6 +704,14 @@
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
+                @media all and (max-width: 1024px) {
+                  font-size: $font-mobile-30;
+                  top: 0vw;
+                }
+                @media all and (max-width: 500px) {
+                  top: 1.2vw;
+                  left: 2.3vw;
+                }
               }
             }
             .textarea-box {
@@ -446,10 +721,14 @@
               @media all and (max-width: 1440px) {
                 margin-bottom: 2vw;
               }
+              @media all and (max-width: 1024px) {
+                margin-bottom: 7vw;
+                justify-content: left;
+              }
               .input-title {
                 color: #232323;
                 letter-spacing: 0.2em;
-                font-weight: bold;
+                font-weight: 600;
                 font-family: "Noto Serif TC";
                 font-size: $font-18;
                 width: 16%;
@@ -462,6 +741,11 @@
 
                 @media all and (max-width: 1440px) {
                   width: 13%;
+                }
+
+                @media all and (max-width: 1024px) {
+                  font-size: $font-mobile-30;
+                  width: 27%;
                 }
               }
               textarea {
@@ -477,6 +761,7 @@
                 font-family: "Noto Serif TC";
                 padding-top: 0.3vw;
                 padding-left: 1vw;
+
                 @media all and (max-width: 1920px) {
                   margin-left: 2.5vw;
                 }
@@ -486,11 +771,28 @@
                 @media all and (max-width: 1366px) {
                   width: 68%;
                 }
+                @media all and (max-width: 1024px) {
+                  font-size: $font-mobile-30;
+                  width: 65%;
+                  height: 25vw;
+                  margin-left: 6vw;
+                  padding-top: 0vw;
+                  line-height: 6.5vw;
+                  padding-left: 2vw;
+                }
+
+                @media all and (max-width: 500px) {
+                  padding: 1vw 3vw;
+                }
+
                 &::placeholder {
                   color: #929292;
                   letter-spacing: 0.2em;
                   font-family: "Noto Serif TC";
                   font-size: $font-18;
+                  @media all and (max-width: 1024px) {
+                    font-size: $font-mobile-30;
+                  }
                 }
               }
             }
@@ -498,7 +800,6 @@
             .button-box {
               display: flex;
               justify-content: center;
-
               margin-top: 1.5vw;
               button {
                 background-color: #434343;
@@ -511,6 +812,11 @@
                 letter-spacing: 0.3em;
                 border: none;
                 cursor: pointer;
+                @media all and (max-width: 1024px) {
+                  font-size: $font-mobile-30;
+                  padding: 2vw 3.2vw;
+                  padding-left: 4vw;
+                }
               }
             }
           }

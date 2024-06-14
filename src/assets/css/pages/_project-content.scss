@@ -15,17 +15,32 @@
     @media all and (max-width: 1440px) {
       padding-top: 13vw;
     }
+    @media all and (max-width: 1024px) {
+      padding-top: 17vw;
+      padding-bottom: 42vw;
+    }
+    @media all and (max-width: 500px) {
+      padding-top: 20vw;
+    }
     .top-content-box {
       display: flex;
       justify-content: center;
       margin: 0 auto;
       width: 85%;
+      @media all and (max-width: 1024px) {
+        flex-direction: column;
+        width: 88%;
+      }
       .left-box {
         width: 40%;
         flex-direction: column;
         display: flex;
         justify-content: center;
         padding-left: 5vw;
+        @media all and (max-width: 1024px) {
+          display: none;
+        }
+
         img {
           width: 94%;
         }
@@ -34,33 +49,73 @@
         width: 60%;
         display: flex;
         flex-direction: column;
-
         padding-left: 4vw;
+        @media all and (max-width: 1024px) {
+          width: 100%;
+          padding-left: 0vw;
+        }
+
+        .img-box {
+          display: none;
+          @media all and (max-width: 1024px) {
+            display: flex;
+            width: 100%;
+          }
+          img {
+            width: 100%;
+          }
+        }
         .project-title-box {
           display: flex;
           flex-direction: column;
-          .year {
-            font-size: $font-45;
-            font-weight: bold;
-            font-family: "Noto Serif TC";
-            letter-spacing: 0.25em;
-            color: #b78044;
+          @media all and (max-width: 1024px) {
+            margin-bottom: 10vw;
           }
-          .project-name {
-            @include pageZHTitle();
-            margin-top: 0.5vw;
-            margin-bottom: 1vw;
-          }
+
           .project-local {
             display: flex;
+            @media all and (max-width: 1024px) {
+              justify-content: center;
+            }
             .local {
               font-weight: 600;
               font-family: "Noto Serif TC";
               color: #b78044;
-              font-size: $font-15;
               background-color: rgb(rgb(170, 170, 170), 0.2);
               padding: 0.35vw 0.5vw;
               letter-spacing: 0.2em;
+              font-size: $font-15;
+              @media all and (max-width: 1024px) {
+                font-size: $font-mobile-30;
+                background-color: rgb(rgb(170, 170, 170), 0.2);
+                padding: 2vw 3.2vw;
+                padding-left: 4vw;
+              }
+            }
+          }
+          .project-name-year-box {
+            display: flex;
+            flex-direction: column;
+            @media all and (max-width: 1024px) {
+              flex-direction: row;
+              justify-content: center;
+              margin-bottom: 2vw;
+            }
+            .year {
+              font-size: $font-45;
+              font-weight: bold;
+              font-family: "Noto Serif TC";
+              letter-spacing: 0.25em;
+              color: #b78044;
+              @media all and (max-width: 1024px) {
+                font-size: $font-mobile-45;
+                margin-right: 5vw;
+              }
+            }
+            .project-name {
+              @include pageZHTitle();
+              margin-top: 0.5vw;
+              margin-bottom: 1vw;
             }
           }
         }
@@ -72,16 +127,30 @@
           border-bottom: 1.5px solid #757575;
           margin-top: 2vw;
           padding-top: 2vw;
-          margin-bottom: 2vw;
+          margin-bottom: 1.7vw;
           width: 92%;
           @media all and (max-width: 1680px) {
             border-top: 1px solid #757575;
             border-bottom: 1px solid #757575;
           }
 
+          @media all and (max-width: 1024px) {
+            border-top: none;
+            border-bottom: none;
+            width: 100%;
+            margin-top: 7vw;
+            padding-top: 0vw;
+            margin-bottom: 5vw;
+          }
+          @media all and (max-width: 500px) {
+            margin-bottom: 9vw;
+          }
           .content-item {
             display: flex;
             margin-bottom: 1vw;
+            @media all and (max-width: 1024px) {
+              margin-bottom: 3vw;
+            }
             .item-title {
               color: #757575;
               font-size: $font-18;
@@ -90,6 +159,11 @@
               margin-right: 2vw;
               width: 12%;
               align-self: center;
+              @media all and (max-width: 1024px) {
+                font-size: $font-mobile-30;
+                width: 31%;
+                font-weight: bold;
+              }
             }
             .content {
               color: #232323;
@@ -97,6 +171,9 @@
               font-family: "微軟正黑體";
               letter-spacing: 0.2em;
               align-self: center;
+              @media all and (max-width: 1024px) {
+                font-size: $font-mobile-30;
+              }
             }
 
             .history-content {
@@ -106,6 +183,13 @@
               letter-spacing: 0.2em;
               align-self: center;
               margin-top: 2vw;
+              @media all and (max-width: 1024px) {
+                font-size: $font-mobile-30;
+                padding-top: 2vw;
+                line-height: 2;
+                padding-bottom: 3vw;
+                border-bottom: 1px solid #757575;
+              }
             }
           }
         }
@@ -115,8 +199,14 @@
           .link-item {
             display: flex;
             margin-right: 1vw;
+            @media all and (max-width: 1024px) {
+              margin-right: 6vw;
+            }
             img {
               width: 1.7vw;
+              @media all and (max-width: 1024px) {
+                width: 6vw;
+              }
             }
             a {
               color: #232323;
@@ -131,6 +221,10 @@
               @media all and (max-width: 1680px) {
                 border-bottom: 1px solid #aaaaaa;
               }
+              @media all and (max-width: 1024px) {
+                font-size: $font-mobile-30;
+                margin-left: 2.5vw;
+              }
             }
           }
         }
@@ -144,7 +238,11 @@
       @media all and (max-width: 1680px) {
         margin-top: 10vw;
       }
-
+      @media all and (max-width: 1024px) {
+        margin: 0 auto;
+        margin-top: 10vw;
+        width: 88%;
+      }
       .swiper-wrapper {
         width: 100%;
         .swiper-slide {
@@ -162,6 +260,11 @@
             position: absolute;
             bottom: 1vw;
             right: 1vw;
+            @media all and (max-width: 1024px) {
+              font-size: 2.8vw;
+              bottom: 2%;
+              right: 1.5%;
+            }
           }
         }
       }
@@ -173,9 +276,15 @@
             left: 2vw;
             z-index: 999;
             cursor: pointer;
-
+            @media all and (max-width: 1024px) {
+              top: 45%;
+              left: 6%;
+            }
             img {
               width: 2vw;
+              @media all and (max-width: 1024px) {
+                width: 7vw;
+              }
             }
           }
           .next1 {
@@ -184,15 +293,24 @@
             right: 2vw;
             z-index: 999;
             cursor: pointer;
-
+            @media all and (max-width: 1024px) {
+              top: 45%;
+              right: 6%;
+            }
             img {
               width: 2vw;
+              @media all and (max-width: 1024px) {
+                width: 7vw;
+              }
             }
           }
         }
       }
       .swiper-pagination-horizontal {
         bottom: 40px;
+        @media all and (max-width: 1024px) {
+          bottom: 4vw;
+        }
       }
       .swiper-pagination-bullet {
         background-color: white;
@@ -203,14 +321,29 @@
       }
     }
 
-    .swiper-text {
-      color: #000;
-      font-size: $font-17;
-      font-family: "微軟正黑體";
-      letter-spacing: 0.2em;
+    .text-box {
       margin: 0 auto;
       margin-top: 2.5vw;
-      width: 80%;
+      width: 75%;
+
+      @media all and (max-width: 1024px) {
+        width: 88%;
+        margin-top: 6vw;
+        border-bottom: 1px solid #757575;
+      }
+      .text {
+        color: #000;
+        font-size: $font-17;
+        font-family: "微軟正黑體";
+        letter-spacing: 0.2em;
+        margin-bottom: 2.5vw;
+
+        @media all and (max-width: 1024px) {
+          font-size: $font-mobile-30;
+          text-align: justify;
+          line-height: 2;
+        }
+      }
     }
 
     .reserve-box {
@@ -222,6 +355,9 @@
       width: 63%;
       @media all and (max-width: 1920px) {
         width: 70%;
+      }
+      @media all and (max-width: 1024px) {
+        width: 88%;
       }
       .reserve-title-box {
         display: flex;
@@ -241,7 +377,14 @@
         display: flex;
         padding: 3.5vw 4vw;
         margin-top: 2.5vw;
-        // min-width: 1560px;
+
+        @media all and (max-width: 1024px) {
+          flex-direction: column;
+          position: relative;
+          padding: 7vw 5vw;
+          padding-bottom: 8vw;
+          margin-top: 4vw;
+        }
         .left-box {
           display: flex;
           flex-direction: column;
@@ -249,13 +392,20 @@
           @media all and (max-width: 1680px) {
             width: 94%;
           }
+          @media all and (max-width: 1024px) {
+            width: 100%;
+            position: relative;
+          }
           .input-box {
             display: flex;
             margin-bottom: 1.5vw;
+            @media all and (max-width: 1024px) {
+              margin-bottom: 7vw;
+            }
             .input-title {
               color: #232323;
               letter-spacing: 0.2em;
-              font-weight: bold;
+              font-weight: 600;
               font-family: "Noto Serif TC";
               font-size: $font-18;
               width: 16%;
@@ -267,11 +417,20 @@
               @media all and (max-width: 1680px) {
                 width: 20%;
               }
+
+              @media all and (max-width: 1024px) {
+                font-size: $font-mobile-30;
+                font-weight: 600;
+                width: 27%;
+              }
             }
             span {
               color: #ff0000;
               font-size: $font-20;
               padding-top: 0.3vw;
+              @media all and (max-width: 1024px) {
+                font-size: $font-mobile-30;
+              }
             }
             input {
               background-color: rgb(rgb(255, 255, 255), 0.5);
@@ -286,6 +445,17 @@
               font-size: $font-18;
               padding-left: 1vw;
               font-family: "Noto Serif TC";
+              @media all and (max-width: 1024px) {
+                width: 65%;
+                margin-left: 5vw;
+                font-size: $font-mobile-30;
+                padding-left: 2vw;
+                line-height: 2;
+              }
+
+              @media all and (max-width: 500px) {
+                padding-left: 3vw;
+              }
             }
           }
 
@@ -299,12 +469,16 @@
               font-size: $font-18;
               width: 16%;
               text-align: justify;
-
               display: block;
               text-align-last: justify;
 
               @media all and (max-width: 1680px) {
                 width: 20%;
+              }
+              @media all and (max-width: 1024px) {
+                font-size: $font-mobile-30;
+                font-weight: 600;
+                width: 27%;
               }
             }
             textarea {
@@ -330,6 +504,18 @@
               @media all and (max-width: 1280px) {
                 height: 20.5vw;
               }
+              @media all and (max-width: 1024px) {
+                width: 65%;
+                margin-left: 6.8vw;
+                height: 32vw;
+                font-size: $font-mobile-30;
+                padding-left: 2vw;
+                padding-top: 2vw;
+              }
+
+              @media all and (max-width: 500px) {
+                padding: 1vw 3vw;
+              }
             }
           }
 
@@ -338,6 +524,9 @@
             justify-content: center;
             padding-left: 7vw;
             margin-top: 1.5vw;
+            @media all and (max-width: 1024px) {
+              display: none;
+            }
             button {
               background-color: #b78044;
               color: #ffffff;
@@ -349,14 +538,47 @@
               letter-spacing: 0.3em;
               border: none;
               cursor: pointer;
+
+              @media all and (max-width: 1024px) {
+                font-size: $font-mobile-30;
+                padding: 2vw 3.2vw;
+                padding-left: 4vw;
+              }
             }
           }
         }
         .right-box {
           text-align: end;
-
+          @media all and (max-width: 1024px) {
+            text-align: center;
+            margin-top: 7vw;
+          }
           img {
             width: 90%;
+            @media all and (max-width: 1024px) {
+              width: 100%;
+            }
+          }
+        }
+
+        .button-box-mobile {
+          display: none;
+          @media all and (max-width: 1024px) {
+            display: flex;
+            justify-content: center;
+            margin-top: 7vw;
+          }
+          button {
+            background-color: #b78044;
+            color: #ffffff;
+            font-family: "Noto Serif TC";
+            letter-spacing: 0.3em;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: $font-mobile-30;
+            padding: 2vw 3.2vw;
+            padding-left: 4vw;
           }
         }
       }
@@ -366,6 +588,9 @@
       display: flex;
       justify-content: center;
       margin-top: 7vw;
+      @media all and (max-width: 1024px) {
+        margin-top: 14vw;
+      }
       .back-btn {
         color: #000000;
         font-size: $font-17;
@@ -374,7 +599,14 @@
         background: none;
         padding: 0.6vw 1.3vw;
         padding-right: 1vw;
-        letter-spacing: 0.2em;
+        font-weight: 500;
+        letter-spacing: 0.3em;
+        @media all and (max-width: 1024px) {
+          font-size: $font-mobile-30;
+          padding: 2vw 3.2vw;
+          padding-left: 4vw;
+        }
+
         a {
           color: #000000;
           text-decoration: none;
@@ -390,8 +622,8 @@
       cursor: pointer;
 
       @media all and (max-width: 1024px) {
-        width: 7vw;
-        bottom: 10%;
+        width: 11vw;
+        bottom: 8.5%;
         right: 7%;
       }
     }
