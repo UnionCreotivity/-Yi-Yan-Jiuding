@@ -1941,6 +1941,7 @@ footer div {
   background-size: cover;
   padding-top: 12vw;
   padding-bottom: 12vw;
+  background-color: #ffffff;
 }
 @media all and (max-width: 1680px) {
   .index-body .news2-container {
@@ -6927,6 +6928,11 @@ footer div {
   font-size: 1.1vw;
   padding-top: 0.3vw;
   padding-left: 0.1vw;
+}
+@media all and (max-width: 1920px) {
+  .contact-body .contact-container .form-box .input-box span {
+    padding-top: 0.7vw;
+  }
 }
 @media all and (max-width: 1024px) {
   .contact-body .contact-container .form-box .input-box span {

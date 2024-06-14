@@ -129,6 +129,9 @@
           font-size: $font-20;
           padding-top: 0.3vw;
           padding-left: 0.1vw;
+          @media all and (max-width: 1920px) {
+            padding-top: 0.7vw;
+          }
           @media all and (max-width: 1024px) {
             font-size: $font-mobile-30;
           }
