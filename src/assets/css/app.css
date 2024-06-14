@@ -385,8 +385,6 @@ footer div {
   .index-body .c1-container {
     padding-top: 28vw !important;
     height: 100svh;
-    height: 100vh;
-    height: -webkit-fill-available;
   }
 }
 .index-body .c1-container .left-box {
