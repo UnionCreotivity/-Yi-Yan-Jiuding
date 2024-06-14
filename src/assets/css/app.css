@@ -1057,7 +1057,7 @@ footer div {
 }
 .index-body .main-content .mountain {
   position: absolute;
-  bottom: 0px;
+  bottom: -1px;
   right: -5vw;
   width: 56%;
   z-index: 2;
