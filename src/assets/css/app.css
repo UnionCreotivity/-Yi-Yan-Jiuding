@@ -28,6 +28,11 @@ button {
 .loading-screen .logo-box {
   margin-right: 3vw;
 }
+@media all and (max-width: 500px) {
+  .loading-screen .logo-box {
+    margin-bottom: 25%;
+  }
+}
 .loading-screen .logo-box .loading-text {
   font-family: "Noto Serif TC";
   align-items: center;
@@ -121,6 +126,9 @@ footer {
   footer .address {
     order: 1;
   }
+}
+footer .phone a {
+  color: #d8d8d8;
 }
 @media all and (max-width: 1024px) {
   footer .phone {
@@ -375,14 +383,10 @@ footer div {
 }
 @media all and (max-width: 500px) {
   .index-body .c1-container {
-    padding-top: 20vw !important;
-    height: calc(var(--vh, 2.8vh) * 75);
-    min-height: calc(var(--vh, 2.8vh) * 75);
-  }
-}
-@media all and (max-width: 414px) {
-  .index-body .c1-container {
-    min-height: calc(var(--vh, 2.8vh) * 86);
+    padding-top: 28vw !important;
+    height: 100svh;
+    height: 100vh;
+    height: -webkit-fill-available;
   }
 }
 .index-body .c1-container .left-box {
@@ -625,14 +629,8 @@ footer div {
 }
 @media all and (max-width: 500px) {
   .index-body .main-content {
-    height: auto;
-    min-height: calc(var(--vh, 2.8vh) * 66);
-  }
-}
-@media all and (max-width: 375px) {
-  .index-body .main-content {
-    height: calc(var(--vh, 2.8vh) * 60);
-    min-height: 570px;
+    height: calc(var(--vh, 2.8vh) * 89);
+    min-height: calc(var(--vh, 2.8vh) * 89);
   }
 }
 .index-body .main-content .david-ogivy-box {

@@ -41,6 +41,9 @@ footer {
     }
   }
   .phone {
+    a {
+      color: #d8d8d8;
+    }
     @media all and (max-width: 1024px) {
       order: 2;
     }

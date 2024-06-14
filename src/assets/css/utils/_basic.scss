@@ -25,7 +25,9 @@ button {
   align-items: center;
   .logo-box {
     margin-right: 3vw;
-
+    @media all and (max-width: 500px) {
+      margin-bottom: 25%;
+    }
     .loading-text {
       font-family: "Noto Serif TC";
       align-items: center;

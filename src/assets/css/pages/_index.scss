@@ -36,13 +36,10 @@
     }
 
     @media all and (max-width: 500px) {
-      padding-top: 20vw !important;
-      height: calc(var(--vh, 2.8vh) * 75);
-      min-height: calc(var(--vh, 2.8vh) * 75);
-    }
-
-    @media all and (max-width: 414px) {
-      min-height: calc(var(--vh, 2.8vh) * 86);
+      padding-top: 28vw !important;
+      height: 100svh;
+      height: 100vh;
+      height: -webkit-fill-available;
     }
 
     .left-box {
@@ -281,13 +278,10 @@
     }
 
     @media all and (max-width: 500px) {
-      height: auto;
-      min-height: calc(var(--vh, 2.8vh) * 66);
-    }
-
-    @media all and (max-width: 375px) {
-      height: calc(var(--vh, 2.8vh) * 60);
-      min-height: 570px;
+      height: calc(var(--vh, 2.8vh) * 89);
+      min-height: calc(var(--vh, 2.8vh) * 89);
+      // height: 100vh;
+      // height: -webkit-fill-available;
     }
 
     .david-ogivy-box {
@@ -296,7 +290,6 @@
       width: 100%;
       position: relative;
       padding-top: 11vw;
-      // padding-bottom: 10vw;
       padding-left: 17%;
       @media all and (max-width: 1440px) {
         padding-top: 14vw;

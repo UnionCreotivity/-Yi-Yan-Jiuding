@@ -230,7 +230,7 @@ window.onload = function () {
             });
             tl.to('.right-circle-box', { duration: 1, y: '75%' })
                 .to('.left-circle-box', { duration: 1, y: '-77%' }, '<')
-                .to('.right-circle-box,.left-circle-box', { opacity: 0, }, '<0.85')
+                .to('.right-circle-box,.left-circle-box', { opacity: 0, }, '<0.5')
                 .to(".circle-box div .zh-text", { opacity: 0, }, '<')
                 .to(".circle-box div .en-text", { opacity: 0, }, "<")
                 .to(".circle-add", { opacity: 0, }, "<")
