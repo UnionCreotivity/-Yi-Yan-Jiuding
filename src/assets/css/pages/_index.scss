@@ -298,6 +298,9 @@
       padding-top: 11vw;
       // padding-bottom: 10vw;
       padding-left: 17%;
+      @media all and (max-width: 1440px) {
+        padding-top: 14vw;
+      }
       @media all and (max-width: 1024px) {
         padding-top: 10vw;
         padding-left: 8vw;

@@ -643,6 +643,11 @@ footer div {
   padding-top: 11vw;
   padding-left: 17%;
 }
+@media all and (max-width: 1440px) {
+  .index-body .main-content .david-ogivy-box {
+    padding-top: 14vw;
+  }
+}
 @media all and (max-width: 1024px) {
   .index-body .main-content .david-ogivy-box {
     padding-top: 10vw;
