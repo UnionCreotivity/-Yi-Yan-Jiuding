@@ -376,7 +376,7 @@ footer div {
 }
 @media all and (max-width: 1024px) {
   .index-body .c1-container {
-    height: calc(var(--vh, 2.8vh) * 100);
+    height: 100svh;
     padding-top: 17vw !important;
     overflow: hidden;
   }
@@ -1095,7 +1095,7 @@ footer div {
     padding-top: 10vw;
     padding-left: 8vw;
     padding-right: 8vw;
-    padding-bottom: 10vw;
+    padding-bottom: 12vw;
   }
 }
 .index-body .project-container .project-bg {
@@ -1135,6 +1135,9 @@ footer div {
     margin-right: 0vw;
     margin-top: 1.5vw;
   }
+}
+.index-body .project-container .title-box .en-title .clip-text div {
+  display: flex !important;
 }
 .index-body .project-container .title-box .zh-title {
   color: #232323;
@@ -1409,6 +1412,9 @@ footer div {
     margin-right: 0vw;
     margin-top: 1.5vw;
   }
+}
+.index-body .news-container .title-box .en-title .clip-text div {
+  display: flex !important;
 }
 .index-body .news-container .title-box .zh-title {
   color: #fff;

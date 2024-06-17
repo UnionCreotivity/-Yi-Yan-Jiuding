@@ -339,49 +339,49 @@ window.onload = function () {
                         opacity: 1,
                         duration: 1,
                     },
-                    "<"
+                    "<0.65"
 
                 )
-                .to(".black2-1 .clip-text div div", {
-                    clipPath: "inset(0% 0% 0% 0%)",
-                    stagger: {
-                        each: 0.05,
-                        from: "start",
-                    },
-                })
-                .to(
-                    ".black2-2 .clip-text div div",
-                    {
-                        clipPath: "inset(0% 0% 0% 0%)",
-                        stagger: {
-                            each: 0.05,
-                            from: "start",
-                        },
-                    },
-                    "<"
-                )
-                .to(
-                    ".black2-3 .clip-text div div",
-                    {
-                        clipPath: "inset(0% 0% 0% 0%)",
-                        stagger: {
-                            each: 0.05,
-                            from: "start",
-                        },
-                    },
-                    "<"
-                )
-                .to(
-                    ".black2-4 .clip-text div div",
-                    {
-                        clipPath: "inset(0% 0% 0% 0%)",
-                        stagger: {
-                            each: 0.05,
-                            from: "start",
-                        },
-                    },
-                    "<"
-                )
+            // .to(".black2-1 .clip-text div div", {
+            //     clipPath: "inset(0% 0% 0% 0%)",
+            //     stagger: {
+            //         each: 0.05,
+            //         from: "start",
+            //     },
+            // })
+            // .to(
+            //     ".black2-2 .clip-text div div",
+            //     {
+            //         clipPath: "inset(0% 0% 0% 0%)",
+            //         stagger: {
+            //             each: 0.05,
+            //             from: "start",
+            //         },
+            //     },
+            //     "<"
+            // )
+            // .to(
+            //     ".black2-3 .clip-text div div",
+            //     {
+            //         clipPath: "inset(0% 0% 0% 0%)",
+            //         stagger: {
+            //             each: 0.05,
+            //             from: "start",
+            //         },
+            //     },
+            //     "<"
+            // )
+            // .to(
+            //     ".black2-4 .clip-text div div",
+            //     {
+            //         clipPath: "inset(0% 0% 0% 0%)",
+            //         stagger: {
+            //             each: 0.05,
+            //             from: "start",
+            //         },
+            //     },
+            //     "<"
+            // )
 
         }
     }
@@ -390,7 +390,7 @@ window.onload = function () {
     function newsPin() {
 
         if (window_width > 1024) {
-            gsap.to(".news-container", {
+            let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".news-container",
                     start: "top top",
@@ -398,11 +398,125 @@ window.onload = function () {
                     pin: true,
                     pinSpacing: false,
                 },
-
             });
         }
 
-
     }
     newsPin();
+
+    function joinAni() {
+        let tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".index-join-container",
+                start: "-30%",
+            },
+        });
+
+        tl2.from('.index-join-content .ani-text', {
+            duration: 1,
+            y: '140',
+            opacity: 0,
+            ease: "power1.inOut",
+            stagger: {
+                each: 0.1,
+            }
+        })
+    }
+    joinAni();
+
+    function projectTextAni() {
+        let enTitle = gsap.utils.toArray(".project-container .title-box .en-title");
+        let splitEnTitle = enTitle.map(heading => new SplitText(heading, {
+            type: "chars,words,lines", linesClass: "clip-text"
+        }));
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".project-container",
+                start: "-40%",
+            },
+        });
+
+        tl.fromTo(splitEnTitle[0].chars, {
+            autoAlpha: 0,
+            y: 200,
+            filter: "blur(10px)",
+        }, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 1,
+            filter: "blur(0px)",
+            ease: "power2",
+            stagger: {
+                each: 0.07,
+                from: "random"
+            }
+        })
+    }
+    projectTextAni();
+
+
+    function newsTextAni() {
+        let enTitle = gsap.utils.toArray(".news-container .title-box .en-title");
+        let splitEnTitle = enTitle.map(heading => new SplitText(heading, {
+            type: "chars,words,lines", linesClass: "clip-text"
+        }));
+
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".news-container",
+                start: "-40%",
+            },
+        });
+
+        tl.fromTo(splitEnTitle[0].chars, {
+            autoAlpha: 0,
+            y: 200,
+            filter: "blur(10px)",
+        }, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 1,
+            filter: "blur(0px)",
+            ease: "power2",
+            stagger: {
+                each: 0.07,
+                from: "random"
+            }
+        })
+    }
+    newsTextAni();
+
+    function news2TextAni() {
+        let enTitle = gsap.utils.toArray(".news2-container .title-box .en-title");
+        let splitEnTitle = enTitle.map(heading => new SplitText(heading, {
+            type: "chars,words,lines", linesClass: "clip-text"
+        }));
+
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".news2-container",
+                start: "-40%",
+            },
+        });
+
+        tl.fromTo(splitEnTitle[0].chars, {
+            autoAlpha: 0,
+            y: 200,
+            filter: "blur(10px)",
+        }, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 1,
+            filter: "blur(0px)",
+            ease: "power2",
+            stagger: {
+                each: 0.07,
+                from: "random"
+            }
+        })
+    }
+    news2TextAni();
 };
