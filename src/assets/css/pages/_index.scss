@@ -266,11 +266,6 @@
     background-color: #d8d8d8;
     height: 100vh;
 
-    // @media all and (max-width: 1680px) {
-    //   min-height: 75vh;
-    //   height: 80vh;
-    // }
-
     @media all and (max-width: 1024px) {
       height: calc(var(--vh, 2.8vh) * 100);
     }
@@ -278,8 +273,6 @@
     @media all and (max-width: 500px) {
       height: calc(var(--vh, 2.8vh) * 89);
       min-height: calc(var(--vh, 2.8vh) * 89);
-      // height: 100vh;
-      // height: -webkit-fill-available;
     }
 
     .david-ogivy-box {

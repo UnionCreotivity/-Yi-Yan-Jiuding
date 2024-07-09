@@ -69,7 +69,7 @@ window.onload = function () {
 
     }
 
-    // updateProgress();
+    updateProgress();
 
     const mySwiper = new Swiper(".project-swiper", {
 
