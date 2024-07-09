@@ -1042,6 +1042,9 @@
       width: 50%;
       right: 0px;
       top: 11vw;
+      @media all and (max-width: 1024px) {
+        display: none;
+      }
     }
     .title-box {
       display: flex;

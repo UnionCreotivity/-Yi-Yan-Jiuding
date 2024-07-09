@@ -1474,6 +1474,11 @@ footer div {
   right: 0px;
   top: 11vw;
 }
+@media all and (max-width: 1024px) {
+  .index-body .history-container .history-line {
+    display: none;
+  }
+}
 .index-body .history-container .title-box {
   display: flex;
   flex-direction: column;
