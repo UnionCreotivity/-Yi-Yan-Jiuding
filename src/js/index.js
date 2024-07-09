@@ -402,7 +402,7 @@ window.onload = function () {
     }
     projectTextAni();
 
-    function newsTextAni() {
+    function historyTextAni() {
         let enTitle = gsap.utils.toArray(".history-container .title-box .en-title");
         let splitEnTitle = enTitle.map(heading => new SplitText(heading, {
             type: "chars,words,lines", linesClass: "clip-text"
@@ -431,7 +431,7 @@ window.onload = function () {
             }
         })
     }
-    newsTextAni();
+    historyTextAni();
 
     function news2TextAni() {
         let enTitle = gsap.utils.toArray(".news2-container .title-box .en-title");
