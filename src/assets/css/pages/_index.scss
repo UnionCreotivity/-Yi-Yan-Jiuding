@@ -718,38 +718,43 @@
     display: flex;
     width: 100%;
     position: relative;
-    background-color: white;
     overflow: hidden;
-    flex-direction: column;
-    padding-top: 8vw;
-    padding-bottom: 8vw;
+    background-color: #f4f4f4;
+    padding-top: 9vw;
     padding-left: 10%;
+    justify-content: space-between;
 
     @media all and (max-width: 1024px) {
-      height: auto;
+      flex-direction: column;
+      // height: auto;
       padding-left: 0%;
       overflow: hidden;
       padding-top: 10vw;
-      padding-left: 8vw;
-      padding-right: 8vw;
-      padding-bottom: 12vw;
+      padding-left: 0vw;
+      padding-right: 0vw;
+      padding-bottom: 25vw;
+      justify-content: initial;
     }
 
     .project-bg {
-      width: 100%;
       position: absolute;
-      top: 0px;
+      width: 43%;
       left: 0px;
+      bottom: 0vw;
+      z-index: 5;
+      @media all and (max-width: 1024px) {
+        width: 60%;
+      }
     }
 
     .title-box {
       display: flex;
       flex-direction: column;
+      z-index: 9;
       @media all and (max-width: 1024px) {
         flex-direction: column-reverse;
         display: flex;
         align-items: center;
-        order: 1;
       }
       .en-title {
         @include indexENtitle();
@@ -758,7 +763,6 @@
 
         @media all and (max-width: 1024px) {
           margin-left: 0vw;
-          color: #232323;
           margin-right: 0vw;
           margin-top: 1.5vw;
         }
@@ -800,14 +804,6 @@
           }
         }
       }
-      .project-line {
-        width: 100%;
-        margin-left: 29vw;
-
-        @media all and (max-width: 1024px) {
-          display: none;
-        }
-      }
     }
 
     .more-box {
@@ -815,7 +811,7 @@
       z-index: 2;
       cursor: pointer;
       @media all and (max-width: 1024px) {
-        display: flex;
+        display: none;
         align-items: center;
         order: 3;
         margin-top: 12vw;
@@ -851,12 +847,20 @@
     }
 
     .swiper-box {
-      width: 100%;
+      width: 82%;
       display: flex;
+      z-index: 10;
+      margin-top: 0vw;
       justify-content: right;
-      margin-top: 7vw;
+      margin-left: 9vw;
+      margin-bottom: 11vw;
       @media all and (max-width: 1024px) {
-        order: 2;
+        margin-left: 0vw;
+        width: 88%;
+        margin-top: 7vw;
+        margin-bottom: 0vw;
+        justify-content: center;
+        align-self: center;
       }
       .project-swiper {
         width: 100%;
@@ -870,45 +874,71 @@
             width: 100%;
             position: relative;
             overflow: hidden;
-
+            display: flex;
+            flex-direction: column;
             img {
               width: 100%;
               height: 100%;
             }
-
-            .project-name {
-              position: absolute;
-              bottom: 0vw;
-              padding-top: 0.4vw;
-              padding-bottom: 0.4vw;
-              padding-left: 1vw;
-              width: 100%;
-              @include indexContent();
-              background-color: rgb(255, 255, 255, 0.9);
-              color: #232323;
-              font-weight: 600;
+            a {
+              display: flex;
+              flex-direction: column;
+            }
+            .project-info {
+              display: flex;
+              background-color: white;
+              padding: 1.25vw 1.4vw;
               @media all and (max-width: 1024px) {
-                padding-top: 1.5vw;
-                padding-bottom: 1.5vw;
-                padding-left: 3vw;
+                padding: 2.5vw 3vw;
+              }
+              .project-name {
+                font-size: $font-18;
+                font-family: "Noto Serif TC";
+                letter-spacing: 0.35em;
+                color: #232323;
+                font-weight: 600;
+                margin-right: 1.5vw;
+                align-self: center;
+                @media all and (max-width: 1024px) {
+                  font-size: $font-mobile-30;
+                  font-weight: 600;
+                  margin-right: 3vw;
+                }
+              }
+
+              .project-local {
+                font-size: $font-15;
+                color: #b78044;
+                font-family: "Noto Serif TC";
+                background-color: #efefef;
+                font-weight: 600;
+                letter-spacing: 0.2em;
+                align-self: center;
+                padding: 0.3vw 0.7vw;
+                @media all and (max-width: 1024px) {
+                  font-size: $font-mobile-25;
+                  padding: 0.8vw 1.5vw;
+                  padding-bottom: 1vw;
+                  padding-left: 2vw;
+                }
               }
             }
           }
         }
+
         .swiper-prev {
           position: absolute;
           z-index: 10;
-          left: 2vw;
-          top: 8vw;
+          left: 3vw;
+          top: 11vw;
           cursor: pointer;
           width: 2vw;
-
           @media all and (max-width: 1024px) {
             width: 54px;
-            left: 6%;
-            top: 45%;
+            left: 7%;
+            top: 39%;
+            opacity: 0.85;
           }
-
           @media all and (max-width: 500px) {
             width: 6vw;
             min-width: 30px;
@@ -918,14 +948,15 @@
         .swiper-next {
           position: absolute;
           z-index: 10;
-          right: 2vw;
-          top: 8vw;
+          right: 13vw;
+          top: 11vw;
           width: 2vw;
           cursor: pointer;
           @media all and (max-width: 1024px) {
             width: 54px;
-            right: 6%;
-            top: 45%;
+            right: 7%;
+            top: 39%;
+            opacity: 0.85;
           }
           @media all and (max-width: 500px) {
             width: 6vw;
@@ -940,45 +971,83 @@
         }
       }
     }
+
+    .mobile-more-box {
+      display: none;
+      @media all and (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+        margin-top: 9vw;
+        z-index: 2;
+        cursor: pointer;
+        justify-content: center;
+      }
+      div {
+        display: flex;
+      }
+      a {
+        @include indexMore();
+        color: #b78044;
+        display: flex;
+
+        .more-text {
+          align-self: center;
+          margin-right: 0.5vw;
+          @media all and (max-width: 1024px) {
+            margin-right: 3vw;
+          }
+        }
+        .more-icon {
+          width: 2vw;
+          @media all and (max-width: 1024px) {
+            width: 54px;
+          }
+
+          @media all and (max-width: 500px) {
+            width: 6vw;
+            min-width: 30px;
+          }
+        }
+      }
+    }
   }
 
-  .news-container {
+  .history-container {
     display: flex;
     width: 100%;
     position: relative;
     overflow: hidden;
     background-color: #d8d8d8;
-    padding-top: 11vw;
-    padding-bottom: 8vw;
+    padding-top: 6vw;
     padding-left: 10%;
-    justify-content: space-between;
+    flex-direction: column;
     @media all and (max-width: 1024px) {
       flex-direction: column;
-      // height: auto;
       padding-left: 0%;
       overflow: hidden;
       padding-top: 10vw;
-      padding-left: 8vw;
-      padding-right: 8vw;
-      padding-bottom: 35vw;
-      justify-content: initial;
+      padding-bottom: 25vw;
     }
-    .news-mountain {
+    .history-mountain {
       position: absolute;
-      width: 55%;
-      left: 0px;
-      bottom: 8.03vw;
-      z-index: 5;
+      width: 37%;
+      right: 0px;
+      bottom: 0vw;
       @media all and (max-width: 1024px) {
-        width: 100vw;
-        bottom: 0vw;
+        width: 55%;
       }
     }
-
+    .history-line {
+      position: absolute;
+      width: 50%;
+      right: 0px;
+      top: 11vw;
+    }
     .title-box {
       display: flex;
       flex-direction: column;
       z-index: 9;
+
       @media all and (max-width: 1024px) {
         flex-direction: column-reverse;
         display: flex;
@@ -1069,18 +1138,20 @@
       }
     }
     .swiper-box {
-      width: 80%;
+      width: 88%;
       display: flex;
       z-index: 10;
-      margin-top: 2vw;
-      justify-content: right;
-      margin-left: 12vw;
+      margin-top: 3vw;
+      margin-bottom: 7vw;
+      @media all and (max-width: 1440px) {
+        margin-bottom: 6vw;
+      }
       @media all and (max-width: 1024px) {
-        margin-left: 0vw;
-        width: 100%;
+        align-self: center;
+        margin-bottom: 0vw;
         margin-top: 7vw;
       }
-      .news-swiper {
+      .history-swiper {
         width: 100%;
         display: flex;
         overflow: hidden;
@@ -1102,57 +1173,39 @@
               display: flex;
               flex-direction: column;
             }
-            .news-box {
+            .history-info {
               display: flex;
-              flex-direction: column;
-              background-image: url(../images/index/swiper_bg.png);
-              background-repeat: no-repeat;
-              background-size: cover;
-              padding: 0.8vw 1.1vw;
-              padding-bottom: 1.1vw;
+              padding: 0.4vw 1.3vw;
+              padding-bottom: 0.7vw;
+              background-color: white;
               @media all and (max-width: 1024px) {
-                padding: 2vw 3vw;
-                padding-bottom: 2.7vw;
+                justify-content: center;
+                padding: 1vw 0vw;
+                padding-bottom: 1.5vw;
               }
-              .news-date-box {
-                display: flex;
-                align-items: center;
-                margin-bottom: 0.7vw;
-                @media all and (max-width: 1024px) {
-                  margin-bottom: 1vw;
-                }
-                .year {
-                  font-size: $font-14;
-                  font-family: "Noto Serif TC";
-                  letter-spacing: 0.3em;
-                  color: #232323;
-                  font-weight: 500;
-                  margin-right: 0.4vw;
-                  @media all and (max-width: 1024px) {
-                    font-size: $font-mobile-24;
-                    font-weight: initial;
-                  }
-                }
-                .date {
-                  font-size: $font-18;
-                  font-family: "Noto Serif TC";
-                  letter-spacing: 0.15em;
-                  color: #232323;
-                  @media all and (max-width: 1024px) {
-                    font-size: $font-mobile-24;
-                  }
-                }
-              }
-
-              .news-name {
-                font-size: $font-18;
+              .history-year {
+                color: #b78044;
+                font-size: $font-34;
                 font-family: "Noto Serif TC";
                 letter-spacing: 0.15em;
+                align-self: center;
+                font-weight: bold;
+                margin-right: 1vw;
+                @media all and (max-width: 1024px) {
+                  font-size: $font-mobile-45;
+                  margin-right: 3vw;
+                  padding-bottom: 0.5vw;
+                }
+              }
+              .history-name {
                 color: #232323;
+                font-size: $font-18;
+                font-family: "Noto Serif TC";
+                letter-spacing: 0.35em;
+                align-self: center;
                 font-weight: 600;
                 @media all and (max-width: 1024px) {
                   font-size: $font-mobile-30;
-                  font-weight: 600;
                 }
               }
             }
@@ -1163,13 +1216,14 @@
           position: absolute;
           z-index: 10;
           left: 3vw;
-          top: 13.5vw;
+          top: 10vw;
           cursor: pointer;
           width: 2vw;
           @media all and (max-width: 1024px) {
             width: 54px;
-            left: 6%;
-            top: 45%;
+            top: 39%;
+            left: 7%;
+            opacity: 0.85;
           }
           @media all and (max-width: 500px) {
             width: 6vw;
@@ -1180,14 +1234,15 @@
         .swiper-next {
           position: absolute;
           z-index: 10;
-          right: 11vw;
-          top: 13.5vw;
+          right: 3vw;
+          top: 10vw;
           width: 2vw;
           cursor: pointer;
           @media all and (max-width: 1024px) {
             width: 54px;
-            right: 6%;
-            top: 45%;
+            top: 39%;
+            right: 7%;
+            opacity: 0.85;
           }
           @media all and (max-width: 500px) {
             width: 6vw;
@@ -1250,31 +1305,29 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: 95vh;
     flex-direction: column;
     background-image: url(../images/index/join_bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
+    background-color: white;
     @media all and (max-width: 1680px) {
       min-height: 67vh;
-      height: 77vh;
+      height: 80vh;
     }
 
     @media all and (max-width: 1024px) {
-      height: 70vh;
+      height: 100vh;
       background-image: url(../images/index/join_bg_mobile.webp);
     }
-
     @media all and (max-width: 500px) {
-      height: auto;
-      min-height: initial;
-      padding-bottom: 8vw;
+      height: 80svh;
     }
 
     .index-join-content {
       position: absolute;
-      top: 50%;
+      top: 29%;
       left: 50%;
       transform: translate(-50%, -50%);
 
@@ -1289,7 +1342,7 @@
       }
 
       @media all and (max-width: 500px) {
-        padding-top: 8vw;
+        padding-top: 10vw;
       }
     }
 
@@ -1297,7 +1350,7 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      margin-bottom: 2vw;
+      margin-bottom: 1.5vw;
       @media all and (max-width: 1024px) {
         flex-direction: column-reverse;
         margin-bottom: 7vw;
@@ -1305,7 +1358,7 @@
       .en-title {
         @include indexENtitle();
         color: #dda868;
-        margin-bottom: 1vw;
+
         @media all and (max-width: 1024px) {
           margin-left: 0vw;
           margin-right: 0vw;
@@ -1314,7 +1367,7 @@
       }
 
       .zh-title {
-        color: #fff;
+        color: #232323;
         font-size: $font-30;
         font-family: "Noto Serif TC";
         letter-spacing: 0.3em;
@@ -1326,6 +1379,7 @@
           @include indexZHtitle();
           padding-bottom: 2vw;
           margin-left: 2vw;
+          color: #232323;
         }
         &:after {
           content: " ";
@@ -1334,7 +1388,7 @@
           left: 0px;
           width: calc(100% - 0.3em);
           height: 1px;
-          background-color: #fff;
+          background-color: #232323;
           pointer-events: none;
         }
       }
@@ -1343,9 +1397,10 @@
     .content {
       font-size: $font-18;
       font-family: "Noto Serif TC";
-      letter-spacing: 0.4em;
-      color: #fff;
-      margin-bottom: 4vw;
+      letter-spacing: 0.3em;
+      color: #232323;
+      font-weight: 500;
+      margin-bottom: 2vw;
       text-align: center;
       line-height: 2.1;
       @media all and (max-width: 1024px) {
@@ -1359,8 +1414,8 @@
         display: flex;
         font-size: $font-mobile-30;
         font-family: "Noto Serif TC";
-        letter-spacing: 0.4em;
-        color: #fff;
+        letter-spacing: 0.3em;
+
         font-weight: 500;
         margin-bottom: 8vw;
         justify-content: center;
@@ -1380,7 +1435,7 @@
         align-items: center;
       }
       a {
-        color: white;
+        color: #b78044;
       }
       img {
         width: 2vw;
@@ -1403,12 +1458,9 @@
     position: relative;
     overflow: hidden;
     justify-content: space-between;
-    background-image: url(../images/index/bg.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 12vw;
-    padding-bottom: 12vw;
-    background-color: #ffffff;
+    padding-bottom: 13vw;
+    background-color: #d8d8d8;
 
     @media all and (max-width: 1680px) {
       padding-top: 13vw;
@@ -1494,7 +1546,7 @@
         }
         .en-title {
           @include indexENtitle();
-
+          color: #232323;
           margin-top: 0vw;
           @media all and (max-width: 1024px) {
             display: none;
@@ -1503,6 +1555,7 @@
 
         .en-title-mobile {
           @include indexENtitle();
+          color: #232323;
           display: none;
           @media all and (max-width: 1024px) {
             display: flex;
@@ -1607,7 +1660,6 @@
 
     .mobile-swiper-box {
       width: 100%;
-
       justify-content: right;
       margin-top: 9vw;
       display: none;
@@ -1620,6 +1672,7 @@
         display: flex;
         overflow: hidden;
         position: relative;
+
         .swiper-wrapper {
           width: 100%;
 
@@ -1631,25 +1684,6 @@
             img {
               width: 100%;
               height: 100%;
-            }
-
-            .project-name {
-              position: absolute;
-              bottom: 0vw;
-              padding-top: 0.4vw;
-              padding-bottom: 0.4vw;
-              padding-left: 1vw;
-              width: 100%;
-              background-color: rgb(117, 117, 117, 0.8);
-              @include indexContent();
-              @media all and (max-width: 1024px) {
-                background-color: rgb(255, 255, 255, 0.9);
-                color: #232323;
-                font-weight: bold;
-                padding-top: 1.5vw;
-                padding-bottom: 1.5vw;
-                padding-left: 3vw;
-              }
             }
           }
         }
@@ -1663,8 +1697,9 @@
 
           @media all and (max-width: 1024px) {
             width: 54px;
-            left: 6%;
+            left: 7%;
             top: 45%;
+            opacity: 0.85;
           }
           @media all and (max-width: 500px) {
             width: 6vw;
@@ -1681,8 +1716,9 @@
           cursor: pointer;
           @media all and (max-width: 1024px) {
             width: 54px;
-            right: 6%;
+            right: 7%;
             top: 45%;
+            opacity: 0.85;
           }
           @media all and (max-width: 500px) {
             width: 6vw;

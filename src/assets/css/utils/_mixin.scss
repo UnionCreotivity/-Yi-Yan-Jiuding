@@ -57,6 +57,7 @@
   letter-spacing: 0.1em;
   @media all and (max-width: 1024px) {
     font-size: $font-mobile-24;
+    letter-spacing: 0.3em;
   }
   @media all and (max-width: 500px) {
     font-size: $font-mobile-27;

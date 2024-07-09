@@ -3,7 +3,7 @@ window.onload = function () {
     var window_height = window.innerHeight;
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
-
+    gsap.registerPlugin();
     function menuOpen() {
         let menu_btn = document.querySelector(".menu-box");
         let menu_box = document.querySelector(".menu-container-box");
@@ -69,7 +69,7 @@ window.onload = function () {
 
     }
 
-    updateProgress();
+    // updateProgress();
 
     const mySwiper = new Swiper(".project-swiper", {
 
@@ -87,29 +87,29 @@ window.onload = function () {
         spaceBetween: 0,
         breakpoints: {
             1025: {
-                slidesPerView: 4,
-                spaceBetween: 15,
+                slidesPerView: 3,
+                spaceBetween: 30,
             },
         },
     });
 
-    const newsSwiper = new Swiper(".news-swiper", {
+    const historySwiper = new Swiper(".history-swiper", {
 
         loop: true,
         speed: 1500,
-        autoplay: {
-            delay: 3000,
-        },
+        // autoplay: {
+        //     delay: 3000,
+        // },
 
         navigation: {
-            nextEl: ".news-next",
-            prevEl: ".news-prev",
+            nextEl: ".history-swiper-next",
+            prevEl: ".history-swiper-prev",
         },
         slidesPerView: 1,
         spaceBetween: 0,
         breakpoints: {
             1025: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 30,
             },
         },
@@ -156,9 +156,6 @@ window.onload = function () {
                 },
             },
         });
-
-
-
     } else {
 
         const newsSwiper = new Swiper(".mobile-news2-swiper", {
@@ -166,21 +163,14 @@ window.onload = function () {
             spaceBetween: 0,
             loop: true,
             speed: 1500,
-            // autoplay: {
-            //     delay: 3000,
-            // },
-
             navigation: {
                 nextEl: ".mobile-news2-next",
                 prevEl: ".mobile-news2-prev",
             },
-
-
         });
     }
 
     function c1PinAni() {
-
         gsap.set('.main-content', { marginTop: "-100vh" })
         let tl = gsap.timeline({
             scrollTrigger: {
@@ -202,6 +192,7 @@ window.onload = function () {
                     gsap.set(".c1-container", { pinSpacing: false });
                 }
             });
+
     }
     c1PinAni();
 
@@ -272,7 +263,6 @@ window.onload = function () {
                     },
                     "<"
                 )
-
                 .to(
                     ".black4 .clip-text div div",
                     {
@@ -284,7 +274,6 @@ window.onload = function () {
                     },
                     "<"
                 )
-
                 .to(".gold1 .clip-text div div", {
                     clipPath: "inset(0% 0% 0% 0%)",
                     stagger: {
@@ -340,59 +329,16 @@ window.onload = function () {
                         duration: 1,
                     },
                     "<0.65"
-
                 )
-            // .to(".black2-1 .clip-text div div", {
-            //     clipPath: "inset(0% 0% 0% 0%)",
-            //     stagger: {
-            //         each: 0.05,
-            //         from: "start",
-            //     },
-            // })
-            // .to(
-            //     ".black2-2 .clip-text div div",
-            //     {
-            //         clipPath: "inset(0% 0% 0% 0%)",
-            //         stagger: {
-            //             each: 0.05,
-            //             from: "start",
-            //         },
-            //     },
-            //     "<"
-            // )
-            // .to(
-            //     ".black2-3 .clip-text div div",
-            //     {
-            //         clipPath: "inset(0% 0% 0% 0%)",
-            //         stagger: {
-            //             each: 0.05,
-            //             from: "start",
-            //         },
-            //     },
-            //     "<"
-            // )
-            // .to(
-            //     ".black2-4 .clip-text div div",
-            //     {
-            //         clipPath: "inset(0% 0% 0% 0%)",
-            //         stagger: {
-            //             each: 0.05,
-            //             from: "start",
-            //         },
-            //     },
-            //     "<"
-            // )
-
         }
     }
     c2Ani();
 
-    function newsPin() {
-
+    function historyPin() {
         if (window_width > 1024) {
             let tl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".news-container",
+                    trigger: ".history-container",
                     start: "top top",
                     end: "bottom top",
                     pin: true,
@@ -400,27 +346,28 @@ window.onload = function () {
                 },
             });
         }
-
     }
-    newsPin();
+    historyPin();
 
     function joinAni() {
-        let tl2 = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".index-join-container",
-                start: "-30%",
-            },
-        });
+        if (window_width > 1024) {
+            let tl2 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".index-join-container",
+                    start: "-30%",
+                },
+            });
 
-        tl2.from('.index-join-content .ani-text', {
-            duration: 1,
-            y: '140',
-            opacity: 0,
-            ease: "power1.inOut",
-            stagger: {
-                each: 0.1,
-            }
-        })
+            tl2.from('.index-join-content .ani-text', {
+                duration: 1,
+                y: '140',
+                opacity: 0,
+                ease: "power1.inOut",
+                stagger: {
+                    each: 0.1,
+                }
+            })
+        }
     }
     joinAni();
 
@@ -455,17 +402,15 @@ window.onload = function () {
     }
     projectTextAni();
 
-
     function newsTextAni() {
-        let enTitle = gsap.utils.toArray(".news-container .title-box .en-title");
+        let enTitle = gsap.utils.toArray(".history-container .title-box .en-title");
         let splitEnTitle = enTitle.map(heading => new SplitText(heading, {
             type: "chars,words,lines", linesClass: "clip-text"
         }));
 
-
         let tl = gsap.timeline({
             scrollTrigger: {
-                trigger: ".news-container",
+                trigger: ".history-container",
                 start: "-40%",
             },
         });
@@ -493,7 +438,6 @@ window.onload = function () {
         let splitEnTitle = enTitle.map(heading => new SplitText(heading, {
             type: "chars,words,lines", linesClass: "clip-text"
         }));
-
 
         let tl = gsap.timeline({
             scrollTrigger: {

@@ -319,8 +319,11 @@
         .bottom-gradient {
           position: absolute;
           left: 0px;
-          bottom: 3vw;
+          bottom: 2.8vw;
           width: 100%;
+          @media all and (max-width: 1024px) {
+            display: none;
+          }
         }
       }
 

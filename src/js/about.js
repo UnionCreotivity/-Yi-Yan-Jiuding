@@ -321,6 +321,7 @@ window.onload = function () {
             slidesPerView: 3,
             spaceBetween: 20,
             centeredSlides: true,
+            slideToClickedSlide: true,
             navigation: {
                 nextEl: ".mobile-nav-next",
                 prevEl: ".mobile-nav-prev",

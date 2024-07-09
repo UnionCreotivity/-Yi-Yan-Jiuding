@@ -51,5 +51,8 @@ footer {
 
   div {
     margin-left: 1.8vw;
+    @media all and (max-width: 1024px) {
+      margin-left: 0vw;
+    }
   }
 }
