@@ -1842,8 +1842,8 @@ footer div {
 }
 @media all and (max-width: 1680px) {
   .index-body .index-join-container {
-    min-height: 67vh;
-    height: 80vh;
+    min-height: 80vh;
+    height: 85vh;
   }
 }
 @media all and (max-width: 1024px) {
