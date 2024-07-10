@@ -1448,7 +1448,7 @@ footer div {
   position: relative;
   overflow: hidden;
   background-color: #d8d8d8;
-  padding-top: 9vw;
+  padding-top: 5vw;
   padding-left: 10%;
   flex-direction: column;
 }
@@ -1477,7 +1477,7 @@ footer div {
   position: absolute;
   width: 50%;
   right: 0px;
-  top: 11vw;
+  top: 10vw;
 }
 @media all and (max-width: 1024px) {
   .index-body .history-container .history-line {
@@ -1643,6 +1643,11 @@ footer div {
   z-index: 10;
   margin-top: 3vw;
   margin-bottom: 5vw;
+}
+@media all and (max-width: 1440px) {
+  .index-body .history-container .swiper-box {
+    margin-bottom: 8vw;
+  }
 }
 @media all and (max-width: 1024px) {
   .index-body .history-container .swiper-box {

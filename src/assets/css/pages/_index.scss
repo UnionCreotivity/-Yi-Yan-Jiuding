@@ -1007,10 +1007,11 @@
     position: relative;
     overflow: hidden;
     background-color: #d8d8d8;
-    padding-top: 9vw;
+    padding-top: 5vw;
     padding-left: 10%;
     // height: 94vh;
     flex-direction: column;
+
     @media all and (max-width: 1024px) {
       flex-direction: column;
       padding-left: 0%;
@@ -1032,7 +1033,7 @@
       position: absolute;
       width: 50%;
       right: 0px;
-      top: 11vw;
+      top: 10vw;
       @media all and (max-width: 1024px) {
         display: none;
       }
@@ -1137,7 +1138,7 @@
       margin-top: 3vw;
       margin-bottom: 5vw;
       @media all and (max-width: 1440px) {
-        // margin-bottom: 6vw;
+        margin-bottom: 8vw;
       }
       @media all and (max-width: 1024px) {
         align-self: center;
