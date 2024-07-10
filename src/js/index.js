@@ -380,7 +380,7 @@ window.onload = function () {
             let tl2 = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".index-join-container",
-                    start: "-40%",
+                    start: "-45%",
                 },
             });
 
