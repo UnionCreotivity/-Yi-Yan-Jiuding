@@ -1259,7 +1259,7 @@ footer div {
   margin-top: 0vw;
   justify-content: right;
   margin-left: 9vw;
-  margin-bottom: 11vw;
+  margin-bottom: 9vw;
 }
 @media all and (max-width: 1024px) {
   .index-body .project-container .swiper-box {
