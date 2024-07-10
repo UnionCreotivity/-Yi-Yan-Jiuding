@@ -12,34 +12,26 @@ footer {
   justify-content: center;
   padding: 1vw 0vw;
   align-items: center;
+
   @media all and (max-width: 1024px) {
     flex-direction: column;
     font-size: $font-mobile-25;
     line-height: 2;
     padding: 3vw 0vw;
   }
-  // .company {
-  //   color: #ffffff;
-  //   font-size: $font-17;
-  //   font-weight: 500;
-  //   font-family: "Noto Serif TC";
-  //   letter-spacing: 0.2em;
 
-  //   @media all and (max-width: 1024px) {
-  //     font-size: $font-mobile-28;
-  //     margin-bottom: 2vw;
-  //   }
-  // }
   .company {
     @media all and (max-width: 1024px) {
       order: 3;
     }
   }
+
   .address {
     @media all and (max-width: 1024px) {
       order: 1;
     }
   }
+
   .phone {
     a {
       color: #d8d8d8;

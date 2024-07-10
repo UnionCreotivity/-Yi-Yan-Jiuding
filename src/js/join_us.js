@@ -45,7 +45,10 @@ window.onload = function () {
                     x: -170,
                     opacity: 0,
                     ease: "power1.inOut",
-                    stagger: { each: 0.07, from: "start" },
+                    stagger: {
+                        each: 0.07,
+                        from: "start"
+                    },
                 },
                 "<0.3"
             );
@@ -117,9 +120,6 @@ window.onload = function () {
                 tab.classList.add("tab-active");
 
                 list[index].style.display = "flex";
-                // if (index = 1) {
-                //     document.querySelector('.mountain').style.display = 'flex';
-                // }
 
                 setTimeout(() => {
                     list[index].classList.add("active");

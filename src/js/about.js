@@ -18,11 +18,16 @@ window.onload = function () {
         } else {
 
             let tl = gsap.timeline({});
-            tl.to(loadingScreen, { duration: 1, opacity: 0, ease: "power1.inOut" })
-                .to(loadingScreen, { duration: 1, display: 'none', })
-
+            tl.to(loadingScreen, {
+                duration: 1,
+                opacity: 0,
+                ease: "power1.inOut"
+            })
+                .to(loadingScreen, {
+                    duration: 1,
+                    display: 'none',
+                })
         }
-
     }
 
     updateProgress();
@@ -44,7 +49,6 @@ window.onload = function () {
                 display: "flex",
                 ease: "power1.inOut",
             })
-
             .from(
                 ".menu-content .link-box",
                 {
@@ -52,7 +56,10 @@ window.onload = function () {
                     x: -170,
                     opacity: 0,
                     ease: "power1.inOut",
-                    stagger: { each: 0.07, from: "start" },
+                    stagger: {
+                        each: 0.07,
+                        from: "start"
+                    },
                 },
                 "<0.3"
             );
@@ -100,7 +107,6 @@ window.onload = function () {
                     mobileSwiperNav();
                 }
 
-
                 setTimeout(() => {
                     tabContent[index].classList.add("active");
                 }, 10);
@@ -127,15 +133,30 @@ window.onload = function () {
                 },
             });
 
-            tl.to(".left-circle-box", { duration: 1, x: "65%", width: "34%", y: "60%" })
+            tl.to(".left-circle-box", {
+                duration: 1,
+                x: "65%",
+                width: "34%",
+                y: "60%"
+            })
                 .to(
                     ".center-circle-box",
-                    { duration: 1, x: "3%", width: "34%", y: "1.2%" },
+                    {
+                        duration: 1,
+                        x: "3%",
+                        width: "34%",
+                        y: "1.2%"
+                    },
                     "<"
                 )
                 .to(
                     ".right-circle-box",
-                    { duration: 1, x: "-35%", width: "34%", y: "63%" },
+                    {
+                        duration: 1,
+                        x: "-35%",
+                        width: "34%",
+                        y: "63%"
+                    },
                     "<"
                 )
                 .to(".circle-box div .zh-text", {
@@ -173,46 +194,100 @@ window.onload = function () {
                     },
                     "<"
                 )
-                .to(".center-circle-box", { duration: 2, width: "31.5%", y: "-12%" })
+                .to(".center-circle-box", {
+                    duration: 2,
+                    width: "31.5%",
+                    y: "-12%"
+                })
                 .to(
                     ".left-circle-box",
-                    { duration: 2, width: "31.5%", y: "75%", x: "115%" },
+                    {
+                        duration: 2,
+                        width: "31.5%",
+                        y: "75%",
+                        x: "115%"
+                    },
                     "<"
                 )
                 .to(
                     ".right-circle-box",
-                    { duration: 2, width: "31.5%", y: "78%", x: "-85%" },
+                    {
+                        duration: 2,
+                        width: "31.5%",
+                        y: "78%",
+                        x: "-85%"
+                    },
                     "<"
                 )
                 .to(
                     ".center-circle-box .zh-text,.center-circle-box .en-text,.center-circle-box .circle-add",
-                    { duration: 1, y: "-5%", opacity: 0 },
+                    {
+                        duration: 1,
+                        y: "-5%",
+                        opacity: 0
+                    },
                     "<0.2"
                 )
                 .fromTo(
                     ".about-logo",
                     { scale: "0.3" },
-                    { scale: "0.8", duration: 1.5, opacity: 1 },
+                    {
+                        scale: "0.8",
+                        duration: 1.5,
+                        opacity: 1
+                    },
                     "<"
                 )
                 .to(
                     ".left-circle-box .zh-text,.left-circle-box .en-text,.left-circle-box .circle-add",
-                    { duration: 1, y: "-5%", opacity: 0 },
+                    {
+                        duration: 1,
+                        y: "-5%",
+                        opacity: 0
+                    },
                     "<0.2"
                 )
                 .to(
                     ".right-circle-box .zh-text,.right-circle-box .en-text",
-                    { duration: 1, y: "-5%", opacity: 0 },
+                    {
+                        duration: 1,
+                        y: "-5%",
+                        opacity: 0
+                    },
                     "<0.2"
                 )
-                .to(".center-circle-box", { duration: 2, y: "2%" })
-                .to(".left-circle-box", { duration: 2, y: "65.6%", x: "152.15%" }, "<")
-                .to(".about-logo", { duration: 1, scale: "1.5" }, "<")
-                .to(".right-circle-box", { duration: 2, y: "68.9%", x: "-128.8%" }, "<")
-                .to(".left-circle-box", { duration: 1, opacity: 0 })
-                .to(".right-circle-box", { duration: 1, opacity: 0 })
-        }
+                .to(".center-circle-box", {
+                    duration: 2,
+                    y: "2%"
+                })
 
+                .to(".left-circle-box", {
+                    duration: 2,
+                    y: "65.6%",
+                    x: "152.15%"
+                }, "<")
+
+                .to(".about-logo", {
+                    duration: 1,
+                    scale: "1.5"
+                }, "<")
+
+                .to(".right-circle-box", {
+                    duration: 2,
+                    y: "68.9%",
+                    x: "-128.8%"
+                }, "<")
+
+                .to(".left-circle-box", {
+                    duration: 1,
+                    opacity: 0
+                })
+
+                .to(".right-circle-box", {
+                    duration: 1,
+                    opacity: 0
+                })
+        }
     }
 
     function circlePinAni() {
@@ -228,13 +303,23 @@ window.onload = function () {
                     pinSpacing: true,
                 },
             });
-            tl.to('.right-circle-box', { duration: 1, y: '75%' })
-                .to('.left-circle-box', { duration: 1, y: '-77%' }, '<')
+            tl.to('.right-circle-box', {
+                duration: 1,
+                y: '75%'
+            })
+                .to('.left-circle-box', {
+                    duration: 1,
+                    y: '-77%'
+                }, '<')
                 .to('.right-circle-box,.left-circle-box', { opacity: 0, }, '<0.5')
                 .to(".circle-box div .zh-text", { opacity: 0, }, '<')
                 .to(".circle-box div .en-text", { opacity: 0, }, "<")
                 .to(".circle-add", { opacity: 0, }, "<")
-                .fromTo(".about-logo", { scale: "0.4" }, { scale: "1", duration: 1, opacity: 1 }, "<0.3")
+                .fromTo(".about-logo", { scale: "0.4" }, {
+                    scale: "1",
+                    duration: 1,
+                    opacity: 1
+                }, "<0.3")
 
         } else if (window_width <= 1024) {
 
@@ -248,13 +333,24 @@ window.onload = function () {
                     pinSpacing: true,
                 },
             });
-            tl.to('.right-circle-box', { duration: 1, y: '78%' })
-                .to('.left-circle-box', { duration: 1, y: '-80%' }, '<')
+            tl.to('.right-circle-box', {
+                duration: 1,
+                y: '78%'
+            })
+                .to('.left-circle-box', {
+                    duration: 1,
+                    y: '-80%'
+                }, '<')
                 .to('.right-circle-box,.left-circle-box', { opacity: 0, }, '<0.85')
                 .to(".circle-box div .zh-text", { opacity: 0, }, '<')
                 .to(".circle-box div .en-text", { opacity: 0, }, "<")
                 .to(".circle-add", { opacity: 0, }, "<")
-                .fromTo(".about-logo", { scale: "0.4" }, { scale: "1", duration: 1, opacity: 1 }, "<0.3")
+                .fromTo(".about-logo", { scale: "0.4" },
+                    {
+                        scale: "1",
+                        duration: 1,
+                        opacity: 1
+                    }, "<0.3")
 
         }
         else {
@@ -262,7 +358,6 @@ window.onload = function () {
                 scrollTrigger: {
                     trigger: ".circle-box",
                     start: "top top",
-                    end: "+=300%",
                     end: "+=330%",
                     scrub: 2,
                     pin: true, pinSpacing: false,
@@ -300,7 +395,6 @@ window.onload = function () {
     leftYearButton();
 
     function mobileSwiperNav() {
-
 
         const IMGSwiper = new Swiper(".mobile-content-img-swiper", {
             loop: true, effect: 'fade',

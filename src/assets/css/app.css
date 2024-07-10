@@ -1145,7 +1145,6 @@ footer div {
   .index-body .project-container .title-box .en-title {
     margin-left: 0vw;
     margin-right: 0vw;
-    margin-top: 1.5vw;
   }
 }
 .index-body .project-container .title-box .en-title .clip-text div {
@@ -1164,7 +1163,7 @@ footer div {
   .index-body .project-container .title-box .zh-title {
     font-size: 5.2vw;
     letter-spacing: 0.4em;
-    padding-bottom: 2vw;
+    padding-bottom: 3vw;
     margin-left: 2vw;
   }
 }
@@ -1182,6 +1181,11 @@ footer div {
   height: 1px;
   background-color: #232323;
   pointer-events: none;
+}
+@media all and (max-width: 1024px) {
+  .index-body .project-container .title-box .zh-title .title:after {
+    bottom: -13%;
+  }
 }
 .index-body .project-container .more-box {
   margin-top: 2vw;
@@ -1387,7 +1391,7 @@ footer div {
     display: flex;
     align-items: center;
     margin-top: 9vw;
-    z-index: 2;
+    z-index: 10;
     cursor: pointer;
     justify-content: center;
   }
@@ -1446,6 +1450,7 @@ footer div {
   background-color: #d8d8d8;
   padding-top: 6vw;
   padding-left: 10%;
+  height: 100vh;
   flex-direction: column;
 }
 @media all and (max-width: 1024px) {
@@ -5900,7 +5905,6 @@ footer div {
   }
 }
 .join-us-body .join-us-container .page-container .benefits-box {
-  display: none;
   display: flex;
   flex-direction: column;
 }

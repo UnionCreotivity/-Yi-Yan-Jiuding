@@ -4,19 +4,22 @@ window.onload = function () {
     let loadingText = document.getElementById("loading-text");
     let percent = 1;
     function updateProgress() {
-
         loadingText.textContent = percent + " %";
         percent++;
         if (percent <= 100) {
             setTimeout(updateProgress, 10);
         } else {
-
             let tl = gsap.timeline({});
-            tl.to(loadingScreen, { duration: 1, opacity: 0, ease: "power1.inOut" })
-                .to(loadingScreen, { duration: 1, display: 'none', })
-
+            tl.to(loadingScreen, {
+                duration: 1,
+                opacity: 0,
+                ease: "power1.inOut"
+            })
+                .to(loadingScreen, {
+                    duration: 1,
+                    display: 'none',
+                })
         }
-
     }
     updateProgress();
 
@@ -49,7 +52,10 @@ window.onload = function () {
                     x: -170,
                     opacity: 0,
                     ease: "power1.inOut",
-                    stagger: { each: 0.07, from: "start" },
+                    stagger: {
+                        each: 0.07,
+                        from: "start"
+                    },
                 },
                 "<0.3"
             );
@@ -80,7 +86,6 @@ window.onload = function () {
                         t.classList.remove("tab-active");
                     }
                 });
-
                 tab.classList.toggle("tab-active");
             });
         });

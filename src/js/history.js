@@ -16,8 +16,15 @@ window.onload = function () {
         } else {
 
             let tl = gsap.timeline({});
-            tl.to(loadingScreen, { duration: 1, opacity: 0, ease: "power1.inOut" })
-                .to(loadingScreen, { duration: 1, display: 'none', })
+            tl.to(loadingScreen, {
+                duration: 1,
+                opacity: 0,
+                ease: "power1.inOut"
+            })
+                .to(loadingScreen, {
+                    duration: 1,
+                    display: 'none',
+                })
         }
     }
 
@@ -47,7 +54,10 @@ window.onload = function () {
                     x: -170,
                     opacity: 0,
                     ease: "power1.inOut",
-                    stagger: { each: 0.07, from: "start" },
+                    stagger: {
+                        each: 0.07,
+                        from: "start"
+                    },
                 },
                 "<0.3"
             );

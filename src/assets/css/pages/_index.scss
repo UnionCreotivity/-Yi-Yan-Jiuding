@@ -258,7 +258,6 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    // margin-top: -7vw;
     width: 100%;
     position: relative;
     padding-bottom: 8vw;
@@ -292,7 +291,6 @@
       }
       .title-box {
         display: flex;
-
         flex-direction: column;
         margin-bottom: 3vw;
         opacity: 0;
@@ -401,11 +399,9 @@
             flex-direction: column;
             margin-top: 1.5vw;
             line-height: 1.4;
-
             @media all and (max-width: 1024px) {
               display: none;
             }
-
             .black1 {
               color: #232323;
               z-index: 1;
@@ -560,7 +556,6 @@
 
           .mobile-black-box {
             display: none;
-
             @media all and (max-width: 1024px) {
               display: flex;
               font-family: "Cormorant Garamond";
@@ -719,7 +714,6 @@
 
     @media all and (max-width: 1024px) {
       flex-direction: column;
-      // height: auto;
       padding-left: 0%;
       overflow: hidden;
       padding-top: 10vw;
@@ -757,7 +751,7 @@
         @media all and (max-width: 1024px) {
           margin-left: 0vw;
           margin-right: 0vw;
-          margin-top: 1.5vw;
+          // margin-top: 1.5vw;
         }
 
         .clip-text {
@@ -778,7 +772,7 @@
         @media all and (max-width: 1024px) {
           font-size: $font-mobile-40;
           letter-spacing: 0.4em;
-          padding-bottom: 2vw;
+          padding-bottom: 3vw;
           margin-left: 2vw;
         }
         .title {
@@ -794,6 +788,9 @@
             height: 1px;
             background-color: #232323;
             pointer-events: none;
+            @media all and (max-width: 1024px) {
+              bottom: -13%;
+            }
           }
         }
       }
@@ -862,7 +859,6 @@
         position: relative;
         .swiper-wrapper {
           width: 100%;
-
           .swiper-slide {
             width: 100%;
             position: relative;
@@ -971,7 +967,7 @@
         display: flex;
         align-items: center;
         margin-top: 9vw;
-        z-index: 2;
+        z-index: 10;
         cursor: pointer;
         justify-content: center;
       }
@@ -1013,6 +1009,7 @@
     background-color: #d8d8d8;
     padding-top: 6vw;
     padding-left: 10%;
+    height: 100vh;
     flex-direction: column;
     @media all and (max-width: 1024px) {
       flex-direction: column;
@@ -1083,7 +1080,6 @@
           position: absolute;
           bottom: 3%;
           left: 0px;
-
           background-color: black;
           pointer-events: none;
           @media all and (max-width: 1024px) {
@@ -1326,7 +1322,6 @@
       top: 29%;
       left: 50%;
       transform: translate(-50%, -50%);
-
       @media all and (max-width: 1024px) {
         position: initial;
         top: initial;
@@ -1411,7 +1406,6 @@
         font-size: $font-mobile-30;
         font-family: "Noto Serif TC";
         letter-spacing: 0.3em;
-
         font-weight: 500;
         margin-bottom: 8vw;
         justify-content: center;
@@ -1572,7 +1566,6 @@
             position: absolute;
             bottom: 3%;
             left: 0px;
-
             background-color: #232323;
             pointer-events: none;
             @media all and (max-width: 1024px) {

@@ -94,12 +94,11 @@ window.onload = function () {
     });
 
     const historySwiper = new Swiper(".history-swiper", {
-
         loop: true,
         speed: 1500,
-        // autoplay: {
-        //     delay: 3000,
-        // },
+        autoplay: {
+            delay: 3000,
+        },
 
         navigation: {
             nextEl: ".history-swiper-next",
@@ -184,11 +183,21 @@ window.onload = function () {
             },
         });
 
-        tl.to(".first-bg", { duration: 1, filter: "grayscale(0) contrast(1)" }, "<")
-            .to(".first-bg", { duration: 1, opacity: 0 })
-            .to(".second-bg", { duration: 1, opacity: 1 }, "<")
+        tl.to(".first-bg", {
+            duration: 1,
+            filter: "grayscale(0) contrast(1)"
+        }, "<")
+            .to(".first-bg", {
+                duration: 1,
+                opacity: 0
+            })
+            .to(".second-bg", {
+                duration: 1,
+                opacity: 1
+            }, "<")
             .to(".c1-container", {
-                duration: 1, onComplete: function () {
+                duration: 1,
+                onComplete: function () {
                     gsap.set(".c1-container", { pinSpacing: false });
                 }
             });

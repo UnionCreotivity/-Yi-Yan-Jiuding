@@ -47,7 +47,6 @@
         @media all and (max-width: 1024px) {
           display: flex;
           top: 41%;
-          // width: 100%;
         }
         .big-zh-title {
           @include pageBigZHTitle();
@@ -144,7 +143,6 @@
         @media all and (max-width: 1024px) {
           flex-direction: column;
           width: 88%;
-
           margin: 0 auto;
         }
         .project-item-box {
@@ -159,7 +157,6 @@
           }
 
           .project-item {
-            // width: 24%;
             flex-basis: 24%;
             display: flex;
             flex-direction: column;

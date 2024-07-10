@@ -11,13 +11,18 @@ window.onload = function () {
             setTimeout(updateProgress, 10);
         } else {
             let tl = gsap.timeline({});
-            tl.to(loadingScreen, { duration: 1, opacity: 0, ease: "power1.inOut" })
-                .to(loadingScreen, { duration: 1, display: 'none', })
+            tl.to(loadingScreen, {
+                duration: 1,
+                opacity: 0,
+                ease: "power1.inOut"
+            })
+                .to(loadingScreen, {
+                    duration: 1,
+                    display: 'none',
+                })
         }
     }
-
     updateProgress();
-
 
     function menuOpen() {
         let menu_btn = document.querySelector(".menu-box");
@@ -43,7 +48,10 @@ window.onload = function () {
                     x: -170,
                     opacity: 0,
                     ease: "power1.inOut",
-                    stagger: { each: 0.07, from: "start" },
+                    stagger: {
+                        each: 0.07,
+                        from: "start"
+                    },
                 },
                 "<0.3"
             );
