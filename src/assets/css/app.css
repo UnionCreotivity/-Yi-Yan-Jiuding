@@ -1644,6 +1644,11 @@ footer div {
   margin-top: 3vw;
   margin-bottom: 5vw;
 }
+@media all and (max-width: 1920px) {
+  .index-body .history-container .swiper-box {
+    margin-bottom: 6.5vw;
+  }
+}
 @media all and (max-width: 1440px) {
   .index-body .history-container .swiper-box {
     margin-bottom: 8vw;
