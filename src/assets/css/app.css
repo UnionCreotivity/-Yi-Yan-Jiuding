@@ -1450,7 +1450,6 @@ footer div {
   background-color: #d8d8d8;
   padding-top: 9vw;
   padding-left: 10%;
-  border: 1px solid red;
   flex-direction: column;
 }
 @media all and (max-width: 1024px) {
