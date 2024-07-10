@@ -1448,9 +1448,9 @@ footer div {
   position: relative;
   overflow: hidden;
   background-color: #d8d8d8;
-  padding-top: 6vw;
+  padding-top: 9vw;
   padding-left: 10%;
-  height: 100vh;
+  border: 1px solid red;
   flex-direction: column;
 }
 @media all and (max-width: 1024px) {
@@ -1460,6 +1460,7 @@ footer div {
     overflow: hidden;
     padding-top: 10vw;
     padding-bottom: 25vw;
+    height: initial;
   }
 }
 .index-body .history-container .history-mountain {
@@ -1642,12 +1643,7 @@ footer div {
   display: flex;
   z-index: 10;
   margin-top: 3vw;
-  margin-bottom: 7vw;
-}
-@media all and (max-width: 1440px) {
-  .index-body .history-container .swiper-box {
-    margin-bottom: 6vw;
-  }
+  margin-bottom: 5vw;
 }
 @media all and (max-width: 1024px) {
   .index-body .history-container .swiper-box {
