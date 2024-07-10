@@ -1141,6 +1141,11 @@ footer div {
     font-size: 5.8vw;
   }
 }
+@media all and (max-width: 1440px) {
+  .index-body .project-container .title-box .en-title {
+    margin-bottom: 0.5vw;
+  }
+}
 @media all and (max-width: 1024px) {
   .index-body .project-container .title-box .en-title {
     margin-left: 0vw;
@@ -2160,6 +2165,11 @@ footer div {
 @media all and (max-width: 1024px) {
   .index-body .news2-container .title-box .title .en-title {
     font-size: 5.8vw;
+  }
+}
+@media all and (max-width: 1440px) {
+  .index-body .news2-container .title-box .title .en-title {
+    margin-bottom: 0.5vw;
   }
 }
 @media all and (max-width: 1024px) {

@@ -748,6 +748,9 @@
         margin-right: 2vw;
         margin-top: -0.9vw;
 
+        @media all and (max-width: 1440px) {
+          margin-bottom: 0.5vw;
+        }
         @media all and (max-width: 1024px) {
           margin-left: 0vw;
           margin-right: 0vw;
@@ -1543,6 +1546,9 @@
           @include indexENtitle();
           color: #232323;
           margin-top: 0vw;
+          @media all and (max-width: 1440px) {
+            margin-bottom: 0.5vw;
+          }
           @media all and (max-width: 1024px) {
             display: none;
           }
