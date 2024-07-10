@@ -348,7 +348,7 @@ window.onload = function () {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".history-container",
-                    start: "top top",
+                    start: "-5%",
                     end: "bottom top",
                     pin: true,
                     pinSpacing: false,
