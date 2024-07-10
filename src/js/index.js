@@ -386,7 +386,7 @@ window.onload = function () {
 
             tl2.from('.index-join-content .ani-text', {
                 duration: 1,
-                y: '100',
+
                 opacity: 0,
                 ease: "power1.inOut",
                 stagger: {
