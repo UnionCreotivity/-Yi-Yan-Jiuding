@@ -2060,8 +2060,8 @@ footer div {
 }
 @media all and (max-width: 1680px) {
   .index-body .news2-container {
-    padding-top: 13vw;
-    padding-bottom: 18vw;
+    padding-top: 12vw;
+    padding-bottom: 14vw;
   }
 }
 @media all and (max-width: 1024px) {
