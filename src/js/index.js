@@ -185,12 +185,8 @@ window.onload = function () {
 
         tl.to(".first-bg", {
             duration: 1,
-            filter: "grayscale(0) contrast(1)"
+            opacity: 0
         }, "<")
-            .to(".first-bg", {
-                duration: 1,
-                opacity: 0
-            })
             .to(".second-bg", {
                 duration: 1,
                 opacity: 1
